@@ -19,7 +19,7 @@ DEUTSCHMAP is a free, open-source web application for learning German vocabulary
 ```
 deutschmap/
 ├── index.html          # Homepage with CECRL level overview & level selection
-├── wortmap-en.html     # Interactive vocabulary application (A1 level currently available)
+├── deutschmap.html     # Interactive vocabulary application (A1 to C2 study interface)
 └── README.md           # This file
 ```
 
@@ -113,7 +113,7 @@ deutschmap/
 - FAQ section for AI/SEO
 - Professional footer
 
-### wortmap-en.html (Vocabulary App)
+### deutschmap.html (Vocabulary App)
 - Level bar with pill buttons
 - Header with stats and progress bar
 - Search bar with live filtering
