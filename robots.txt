@@ -1,0 +1,11 @@
+# DEUTSCHMAP — SEO robots configuration
+# Allow all bots to crawl and index the site
+
+User-agent: *
+Allow: /
+
+# Specify sitemap for better indexation
+Sitemap: https://deutschmap.netlify.app/sitemap.xml
+
+# Crawl-delay and request-rate (optional, for large crawlers)
+# Crawl-delay: 1
