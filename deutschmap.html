@@ -116,6 +116,24 @@ body{
   margin: 0 auto;
 }
 .brand{ display:flex; align-items:center; gap: 9px; min-width:0; }
+.back-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.back-btn:hover{
+  background: rgba(255,255,255,0.2);
+  transform: translateX(-2px);
+}
 .brand .mark{
   font-family:'Space Grotesk', sans-serif;
   font-weight:700;
@@ -187,6 +205,15 @@ body{
   display:flex;
   flex-wrap: wrap;
   gap: 8px;
+  background: rgba(20, 23, 28, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--panel-border);
+  position: sticky;
+  top: 200px;
+  z-index: 15;
 }
 .search{
   flex: 1 1 100%;
@@ -297,13 +324,13 @@ body{
 
 .tile{
   position:relative;
-  background: linear-gradient(135deg, rgba(232, 226, 211, 0.95), rgba(232, 226, 211, 0.88));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(232, 226, 211, 0.92), rgba(232, 226, 211, 0.85));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--tile-unmarked-ink);
-  border-radius: var(--radius);
-  padding: 10px 8px 8px;
-  min-height: 70px;
+  border-radius: 8px;
+  padding: 12px 10px 10px;
+  min-height: 75px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -311,17 +338,27 @@ body{
   text-align:center;
   cursor:pointer;
   user-select:none;
-  transition: transform .1s ease, box-shadow .15s ease, background .15s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform .15s ease, box-shadow .2s ease, background .15s ease, border-color .15s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  border: 1.5px solid rgba(255,255,255,0.3);
 }
-.tile:active{ transform: scale(0.97); }
+.tile:active{ transform: scale(0.96); }
 @media (hover:hover){
-  .tile:hover{ box-shadow: 0 6px 14px rgba(0,0,0,0.28); }
+  .tile:hover{ 
+    box-shadow: 0 12px 32px rgba(0,0,0,0.32);
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.5);
+  }
 }
 
-.tile.status-review{ background: var(--tile-review); color: var(--tile-review-ink); }
-.tile.status-known{ background: var(--tile-known); color: var(--tile-known-ink); }
+.tile.status-review{ 
+  background: linear-gradient(135deg, rgba(240, 171, 28, 0.92), rgba(240, 171, 28, 0.85));
+  color: var(--tile-review-ink); 
+}
+.tile.status-known{ 
+  background: linear-gradient(135deg, rgba(63, 148, 87, 0.92), rgba(63, 148, 87, 0.85));
+  color: var(--tile-known-ink); 
+}
 
 .tile .de{
   font-family:'Space Grotesk', sans-serif;
@@ -442,6 +479,7 @@ body{
 <div class="topbar">
   <div class="brand-row">
     <div class="brand">
+      <a href="index.html" class="back-btn" title="Back to Level Selection">← Back</a>
       <span class="mark" id="level-mark">A1</span>
       <div class="brand-text">
         <h1>DEUTSCHMAP</h1>
@@ -452,9 +490,9 @@ body{
 
   <div class="stats">
     <div class="scroll-row">
-      <div class="stat"><span class="dot known"></span><b id="count-known">0</b>&nbsp;known</div>
-      <div class="stat"><span class="dot review"></span><b id="count-review">0</b>&nbsp;review</div>
-      <div class="stat"><span class="dot unmarked"></span><b id="count-unmarked">0</b>&nbsp;unmarked</div>
+      <div class="stat"><span class="dot known"></span><b id="count-mastered">0</b>&nbsp;Mastered</div>
+      <div class="stat"><span class="dot review"></span><b id="count-review">0</b>&nbsp;To Review</div>
+      <div class="stat"><span class="dot unmarked"></span><b id="count-tolearn">0</b>&nbsp;To Learn</div>
     </div>
   </div>
   <div class="progressbar" id="progressbar">
@@ -469,10 +507,10 @@ body{
     </div>
     <div class="filter-row">
       <div class="scroll-row" id="status-filter">
-        <button class="pill-btn active" data-f="all">All</button>
-        <button class="pill-btn" data-f="unmarked">Unmarked</button>
-        <button class="pill-btn" data-f="review">Review</button>
-        <button class="pill-btn" data-f="known">Known</button>
+        <button class="pill-btn active" data-f="all">All Words</button>
+        <button class="pill-btn" data-f="unmarked">To Learn</button>
+        <button class="pill-btn" data-f="review">To Review</button>
+        <button class="pill-btn" data-f="known">Mastered</button>
       </div>
       <button class="reset-btn" id="reset-btn" title="Reset progress">↺</button>
       <button class="reset-btn" id="export-btn" title="Export progress as JSON">⬇</button>
@@ -488,13 +526,13 @@ body{
 
 <!-- ======================= CONTENT: tile grid ============================= -->
 <div class="content">
-  <div class="shown-count" id="shown-count"></div>
+  <div class="shown-count" id="shown-count">Loading vocabulary...</div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none;">No word matches your search.</div>
 </div>
 
 <div class="hint">
-  <span>Tap a word to reveal its translation. Tap the circle to change its status (unmarked → review → known).</span>
+  <span>Tap a word to reveal its translation. Tap the circle to change its status (To Learn → To Review → Mastered).</span>
   <span>Your progress is saved automatically on this device.</span>
 </div>
 
@@ -923,18 +961,41 @@ const shownCountEl = document.getElementById("shown-count");
 const searchEl = document.getElementById("search");
 
 /* ---------------------------------- ACTIONS --------------------------------*/
-function speakGerman(word){
-  if(!window.speechSynthesis) return console.warn("Speech Synthesis not supported");
+function speakWord(text) {
+  if(!('speechSynthesis' in window)) {
+    console.warn("Speech Synthesis not supported");
+    return;
+  }
   
   // Cancel any ongoing speech
   window.speechSynthesis.cancel();
   
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "de-DE";
-  utterance.rate = 0.9;
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'de-DE';
+  
+  // Dynamic German voice detection
+  const voices = window.speechSynthesis.getVoices();
+  const germanVoice = voices.find(v => 
+    v.lang.startsWith('de') || 
+    v.lang.includes('DE') ||
+    v.name.toLowerCase().includes('german')
+  );
+  if (germanVoice) {
+    utterance.voice = germanVoice;
+  }
+  
+  utterance.rate = 0.85; // Optimized for learning
   utterance.pitch = 1.0;
+  utterance.volume = 1.0;
   
   window.speechSynthesis.speak(utterance);
+}
+
+// Force voice loading on page start
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.getVoices();
+  };
 }
 
 function cycleStatus(id){
@@ -1028,9 +1089,9 @@ function renderStats(){
   const review = vocab.filter(w => state.status[w.id] === "review").length;
   const total = vocab.length || 1;
   const unmarked = vocab.length - known - review;
-  document.getElementById("count-known").textContent = known;
+  document.getElementById("count-mastered").textContent = known;
   document.getElementById("count-review").textContent = review;
-  document.getElementById("count-unmarked").textContent = unmarked;
+  document.getElementById("count-tolearn").textContent = unmarked;
   document.getElementById("pb-known").style.width = (known/total*100) + "%";
   document.getElementById("pb-review").style.width = (review/total*100) + "%";
 }
@@ -1061,7 +1122,7 @@ function renderGrid(){
       audioBtn.title = "Speak German";
       audioBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        speakGerman(w.de);
+        speakWord(w.de);
       });
       
       const infoBtn = document.createElement("button");
