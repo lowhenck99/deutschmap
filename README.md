@@ -7,19 +7,29 @@ DEUTSCHMAP is a free, open-source web application for learning German vocabulary
 ## Features 🎯
 
 - **6 CECRL Levels**: A1 (Beginner) → A2 (Elementary) → B1 (Intermediate) → B2 (Upper Intermediate) → C1 (Advanced) → C2 (Mastery)
-- **Interactive Flashcards**: Learn German words with spaced repetition and visual mnemonics
-- **Vocabulary Maps**: Visualize word relationships and semantic connections
-- **Progress Tracking**: Automatic savings with localStorage + manual Export/Import backups
-- **Search & Filter**: Find words by German/English terms or by category
-- **Categorized Vocabulary**: 16 topics (Greetings, Family, Food, Time, etc.)
+- **Interactive Flashcards**: Tap a word to reveal its translation, mark it as To Review / Mastered
+- **Due for Review**: Lightweight spaced-repetition filter that surfaces "To Review" words not revisited in 3+ days
+- **Progress Tracking**: Automatic saving with `localStorage` (per-device, no size limit like cookies)
+- **Search & Filter**: Find words by German/English terms, by status, or by category
+- **Categorized Vocabulary**: 17 auto-classified topics (Greetings, Family, Food, Time, etc.)
+- **Shuffle Mode**: Randomize word order per level
+- **Gender Coloring**: der/die/das color-coded to help memorize grammatical gender
+- **Audio Pronunciation**: Native `.mp3` clips with a browser `speechSynthesis` fallback
+- **Keyboard Accessible**: Flashcards and status toggles are focusable and operable without a mouse
 - **100% Free**: No registration, no paywalls, no ads
 
 ## Structure 📂
 
 ```
 deutschmap/
-├── index.html          # Homepage with CECRL level overview & level selection
+├── index.html          # Homepage with CECRL level overview, level selection & live progress
 ├── deutschmap.html     # Interactive vocabulary application (A1 to C2 study interface)
+├── vocabulary.json     # Word lists per level, each word tagged with a category (cat)
+├── audio/              # Native German pronunciation clips (.mp3)
+├── favicon.svg          # Site icon
+├── sitemap.xml          # SEO sitemap
+├── robots.txt           # Crawler rules
+├── download_audio.py    # Script used to generate the audio clips (gTTS)
 └── README.md           # This file
 ```
 
@@ -45,57 +55,51 @@ deutschmap/
 ## How to Use 📖
 
 ### Navigation
-- **index.html**: Main landing page with all CECRL levels
+- **index.html**: Main landing page with all CECRL levels and your live progress per level
 - Click any level card to access the vocabulary trainer
-- Use level pills at the top to switch between A1, A2, B1, B2 (A2-B2 coming soon)
+- Use level pills at the top to switch between A1, A2 (live) and B1-C2 (coming soon)
 
 ### Vocabulary Trainer
-1. **Tap/Click a word** to reveal its English translation
-2. **Click the status circle** (top-right of each word) to mark:
-   - ❌ Unmarked (default)
-   - 🟡 Review (yellow) - words you need to practice
-   - 🟢 Known (green) - mastered words
-
+1. **Tap/Click a word** (or press Enter/Space when focused) to reveal its English translation
+2. **Click the status circle** (top-right of each word) to cycle:
+   - Unmarked (default) → 🟡 To Review → 🟢 Mastered → back to Unmarked
 3. **Filter & Search**:
-   - Use status filter buttons to show only "All", "Unmarked", "Review", or "Known"
+   - Status filters: All / To Learn / To Review / Mastered / Due for Review
    - Search by German or English words
-   - Filter by category (Greetings, Family, Food, etc.)
-
+   - Filter by category (17 auto-classified topics)
+   - Shuffle word order for the current level
 4. **Save & Backup**:
-   - Progress auto-saves to localStorage (device-specific)
-   - **Export ⬇**: Download your progress as JSON backup
-   - **Import ⬆**: Restore progress from JSON file
-   - **Reset ↺**: Clear all progress (with confirmation)
+   - Progress auto-saves to `localStorage` (device-specific)
+   - **Export ⬇**: Download your progress as a JSON backup
+   - **Import ⬆**: Restore progress from a JSON backup file
+   - **Reset ↺**: Clear all saved progress (with confirmation)
 
 ## Technology Stack 🛠️
 
-- **Frontend**: Pure HTML, CSS, JavaScript (no frameworks)
-- **Storage**: Browser localStorage + JSON export/import
-- **Typography**: Google Fonts (Space Grotesk, Inter, IBM Plex Mono)
-- **Design System**: Custom CSS tokens for consistency
+- **Frontend**: Pure HTML, CSS, JavaScript (no frameworks, no build step)
+- **Storage**: Browser `localStorage` + manual JSON export/import
+- **Typography**: System font stack (`-apple-system`, SF Pro, Helvetica Neue)
+- **Design System**: Custom CSS tokens, Apple-inspired minimalist theme
 
 ## Vocabulary Content 📚
 
-### Currently Available (A1)
-- 16 Categories
-- 400+ German words
-- Complete English translations
-- Progressive difficulty within each category
+### Currently Available
+- **A1 (Beginner)**: 681 German words, 17 categories
+- **A2 (Elementary)**: 594 German words, 17 categories
+- Each word: German term, English translation, auto-assigned category, native audio clip
 
 ### Coming Soon
-- A2 Elementary Level (~600 words)
 - B1 Intermediate Level (~900 words)
 - B2 Upper Intermediate Level (~1200 words)
 - C1 Advanced Level (~1500 words)
 - C2 Mastery Level (~2000+ words)
 
-## SEO & AI Optimization 🤖
+## SEO 🤖
 
-- Schema.org JSON-LD structured data
-- Bilingual meta descriptions (FR/EN)
-- CECRL-aligned keywords for search engines
-- FAQ section for LLM/AI indexing
-- Open Graph meta tags for social sharing
+- Schema.org `LearningResource` JSON-LD structured data
+- Open Graph & Twitter Card meta tags for social sharing
+- `sitemap.xml` + `robots.txt`
+- CECRL-aligned meta description and keywords
 
 ## Browser Support 🌐
 
@@ -108,32 +112,44 @@ deutschmap/
 
 ### index.html
 - Hero section with CTA
-- 6-card CECRL levels grid
-- Features showcase
-- FAQ section for AI/SEO
+- CECRL levels grid, with live per-level progress bars
+- SEO/feature showcase section
 - Professional footer
 
 ### deutschmap.html (Vocabulary App)
 - Level bar with pill buttons
-- Header with stats and progress bar
+- Header with stats (Mastered / To Review / To Learn / Due Now) and progress bar
 - Search bar with live filtering
-- Status filter buttons (All/Unmarked/Review/Known)
-- Category filter pills
-- Responsive vocabulary grid
-- Export/Import buttons for backups
-- Hint section with usage instructions
+- Status filter buttons (All / To Learn / To Review / Mastered / Due for Review)
+- Category filter pills (auto-generated per level)
+- Shuffle + Export/Import/Reset controls
+- Responsive, keyboard-accessible vocabulary grid
 
 ## Data Format 💾
 
-### Export Format (JSON)
+### vocabulary.json
+```json
+{
+  "A1": {
+    "words": [
+      { "de": "der Absender", "en": "sender", "cat": "General Vocabulary" }
+    ]
+  }
+}
+```
+
+### Export Format (JSON backup)
 ```json
 {
   "level": "a1",
   "timestamp": "2026-08-18T12:34:56.789Z",
   "status": {
-    "a1-0": "known",
-    "a1-1": "review",
-    "a1-2": "unmarked"
+    "a1-0": "is-know",
+    "a1-1": "is-review"
+  },
+  "lastSeen": {
+    "a1-0": 1755500000000,
+    "a1-1": 1755600000000
   }
 }
 ```
@@ -141,11 +157,12 @@ deutschmap/
 ## Contributing 🤝
 
 Contributions are welcome! Areas for enhancement:
-- Additional vocabulary for A2-C2 levels
-- Audio pronunciation (German native speakers)
-- Spaced repetition algorithm improvements
+- Additional vocabulary for B1-C2 levels
+- Manual review of the auto-assigned word categories (currently keyword-based, some noise expected)
+- Full spaced-repetition scheduling (current "Due for Review" is a simple 3-day heuristic)
+- Native-speaker audio recordings to replace/complement the generated clips
 - Mobile app version
-- Multi-language UI
+- Multi-language UI (French, Spanish...)
 - Gamification features (badges, streaks)
 
 ## License 📄

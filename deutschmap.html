@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>DEUTSCHMAP — Interactive Vocabulary Grid</title>
 <meta name="description" content="Learn German vocabulary from level A1 to C2 with DEUTSCHMAP. Interactive cards, audio pronunciation, and progress tracking." />
+<link rel="canonical" href="https://deutschmap.netlify.app/deutschmap.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
 <style>
 /* ==========================================================================
@@ -145,6 +147,35 @@ html, body {
 }
 .progressbar span { height: 100%; transition: width 0.3s ease; }
 
+/* Storage notice */
+.storage-notice {
+  max-width: 1200px;
+  margin: 16px auto 0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(0, 113, 227, 0.08);
+  border: 1px solid rgba(0, 113, 227, 0.2);
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text-primary);
+}
+.storage-notice button {
+  flex: none;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+.storage-notice button:hover { color: var(--text-primary); }
+@media (max-width: 640px) { .storage-notice { margin-left: 16px; margin-right: 16px; } }
+
 /* Controls & Search */
 .controls {
   max-width: 1200px;
@@ -232,10 +263,15 @@ html, body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
-.word-tile:hover { 
-  transform: scale(1.02); 
+.word-tile:hover {
+  transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   border-color: var(--panel-border-hover);
+}
+
+.word-tile:focus-visible {
+  outline: 2px solid var(--apple-blue);
+  outline-offset: 2px;
 }
 
 .tile-de {
@@ -253,6 +289,11 @@ html, body {
   margin-top: 6px;
 }
 .tile-en.hidden { display: none; }
+
+/* Grammatical gender coloring (der = blue, die = pink, das = teal) */
+.gender-der { color: #0071e3; }
+.gender-die { color: #ff375f; }
+.gender-das { color: #32ade6; }
 
 /* States */
 .word-tile.is-know {
@@ -288,17 +329,29 @@ html, body {
 
 /* Status Indicator */
 .status-indicator {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 12px;
-  height: 12px;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
   border-radius: 50%;
   border: 2px solid #d1d1d6;
   background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+  color: transparent;
 }
-.word-tile.is-know .status-indicator { background: var(--status-know-border); border-color: var(--status-know-border); }
-.word-tile.is-review .status-indicator { background: var(--status-review-border); border-color: var(--status-review-border); }
+.status-indicator:focus-visible { outline: 2px solid var(--apple-blue); outline-offset: 2px; }
+.word-tile.is-know .status-indicator { background: var(--status-know-border); border-color: var(--status-know-border); color: #ffffff; }
+.word-tile.is-review .status-indicator { background: var(--status-review-border); border-color: var(--status-review-border); color: #ffffff; }
 
 /* Coming Soon Banner */
 .coming-soon-banner {
@@ -338,13 +391,19 @@ html, body {
       <div class="stat-badge"><span class="dot known"></span><span id="count-mastered">0</span> Mastered</div>
       <div class="stat-badge"><span class="dot review"></span><span id="count-review">0</span> To Review</div>
       <div class="stat-badge"><span class="dot unmarked"></span><span id="count-tolearn">0</span> To Learn</div>
-      
+      <div class="stat-badge" id="due-badge" style="display:none"><span class="dot review"></span><span id="count-due">0</span> Due Now</div>
+
       <div class="progressbar">
         <span id="pb-known" style="background:#34c759"></span>
         <span id="pb-review" style="background:#ff9500"></span>
       </div>
     </div>
   </div>
+</div>
+
+<div class="storage-notice" id="storage-notice" style="display:none">
+  <span>💾 Your progress is saved automatically, but only in <strong>this browser</strong>. It won't sync across devices and may be lost if you clear your browser data. Use <strong>Export</strong> below to keep a backup.</span>
+  <button type="button" onclick="dismissStorageNotice()" aria-label="Dismiss this notice">✕</button>
 </div>
 
 <div class="controls">
@@ -358,7 +417,7 @@ html, body {
   </div>
 
   <div class="search-box">
-    <input id="search" type="text" placeholder="Search for a word..." />
+    <input id="search" type="text" placeholder="Search for a word..." aria-label="Search vocabulary" />
   </div>
   
   <div class="scroll-row" id="status-filter">
@@ -366,6 +425,17 @@ html, body {
     <button class="pill-btn" data-f="unmarked">To Learn</button>
     <button class="pill-btn" data-f="is-review">To Review</button>
     <button class="pill-btn" data-f="is-know">Mastered</button>
+    <button class="pill-btn" data-f="due">Due for Review</button>
+    <button class="pill-btn" id="shuffle-btn" onclick="shuffleWords()" title="Shuffle word order" aria-label="Shuffle word order">🔀 Shuffle</button>
+  </div>
+
+  <div class="scroll-row" id="category-filter"></div>
+
+  <div class="scroll-row" id="backup-controls">
+    <button class="pill-btn" onclick="exportProgress()" title="Download your progress as a JSON backup">Export ⬇</button>
+    <button class="pill-btn" onclick="document.getElementById('import-file').click()" title="Restore progress from a JSON backup">Import ⬆</button>
+    <input type="file" id="import-file" accept="application/json" style="display:none" onchange="importProgress(event)" />
+    <button class="pill-btn" onclick="resetProgress()" title="Clear all saved progress">Reset ↺</button>
   </div>
 </div>
 
@@ -377,42 +447,160 @@ html, body {
 </div>
 
 <script>
-// --- COOKIE MANAGEMENT SYSTEM --- //
-function setCookie(name, value, days = 365) {
-  const date = new Date();
-  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-  const expires = "expires=" + date.toUTCString();
-  document.cookie = `${name}=${encodeURIComponent(JSON.stringify(value))}; ${expires}; path=/; SameSite=Lax`;
+// --- PROGRESS STORAGE (localStorage) --- //
+const STORAGE_KEY = 'deutschmap_status';
+
+function loadStatus() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : migrateLegacyCookie();
+  } catch (e) {
+    return {};
+  }
 }
 
-function getCookie(name) {
-  const nameEQ = name + "=";
-  const ca = document.cookie.split(';');
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i].trim();
-    if (c.indexOf(nameEQ) === 0) {
-      try {
-        return JSON.parse(decodeURIComponent(c.substring(nameEQ.length, c.length)));
-      } catch(e) {
-        return null;
-      }
+// One-time migration for users who had progress saved in the old cookie-based system.
+function migrateLegacyCookie() {
+  try {
+    const match = document.cookie.match(/(?:^|; )deutschmap_status=([^;]*)/);
+    if (!match) return {};
+    const legacy = JSON.parse(decodeURIComponent(match[1]));
+    if (legacy && typeof legacy === 'object') {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(legacy));
+      document.cookie = 'deutschmap_status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      return legacy;
     }
+  } catch (e) {}
+  return {};
+}
+
+const NOTICE_DISMISSED_KEY = 'deutschmap_notice_dismissed';
+
+function dismissStorageNotice() {
+  try { localStorage.setItem(NOTICE_DISMISSED_KEY, '1'); } catch (e) {}
+  document.getElementById('storage-notice').style.display = 'none';
+}
+
+function maybeShowStorageNotice() {
+  let dismissed = false;
+  try { dismissed = !!localStorage.getItem(NOTICE_DISMISSED_KEY); } catch (e) {}
+  if (!dismissed) {
+    document.getElementById('storage-notice').style.display = 'flex';
   }
-  return null;
+}
+
+const LASTSEEN_KEY = 'deutschmap_lastseen';
+const DUE_THRESHOLD_DAYS = 3;
+
+function loadLastSeen() {
+  try {
+    const raw = localStorage.getItem(LASTSEEN_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveLastSeen() {
+  try {
+    localStorage.setItem(LASTSEEN_KEY, JSON.stringify(state.lastSeen));
+  } catch (e) {}
+}
+
+function isDue(id) {
+  if (state.status[id] !== "is-review") return false;
+  const seen = state.lastSeen[id];
+  if (!seen) return true;
+  return (Date.now() - seen) > DUE_THRESHOLD_DAYS * 24 * 60 * 60 * 1000;
 }
 
 // --- APP STATE --- //
 let VOCABULARY_DB = {};
 let currentLevel = 'a1';
 let state = {
-  status: getCookie('deutschmap_status') || {},
+  status: loadStatus(),
+  lastSeen: loadLastSeen(),
   revealed: {},
   query: "",
-  statusFilter: "all"
+  statusFilter: "all",
+  categoryFilter: "all",
+  order: {}
 };
 
-function saveStateToCookie() {
-  setCookie('deutschmap_status', state.status);
+function exportProgress() {
+  const payload = {
+    level: currentLevel,
+    timestamp: new Date().toISOString(),
+    status: state.status,
+    lastSeen: state.lastSeen
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `deutschmap-progress-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function importProgress(event) {
+  const file = event.target.files[0];
+  event.target.value = "";
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (!data || typeof data.status !== "object") throw new Error("Invalid backup file");
+      state.status = data.status;
+      state.lastSeen = (data.lastSeen && typeof data.lastSeen === "object") ? data.lastSeen : {};
+      saveState();
+      saveLastSeen();
+      render();
+      alert("Progress imported successfully.");
+    } catch (e) {
+      alert("Could not import this file: " + e.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function resetProgress() {
+  if (!confirm("This will permanently erase all your saved progress on this device. Continue?")) return;
+  state.status = {};
+  state.lastSeen = {};
+  saveState();
+  saveLastSeen();
+  render();
+}
+
+function shuffleWords() {
+  const words = getCurrentWords();
+  const idx = words.map((_, i) => i);
+  for (let i = idx.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [idx[i], idx[j]] = [idx[j], idx[i]];
+  }
+  state.order[currentLevel] = idx;
+  renderGrid();
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.status));
+  } catch (e) {
+    console.error('Could not save progress:', e);
+  }
+}
+
+function formatGermanWord(de) {
+  const match = de.match(/^(der|die|das)\s+(.*)$/);
+  if (!match) return de;
+  const [, article, rest] = match;
+  return `<span class="gender-${article}">${article}</span> ${rest}`;
 }
 
 function calculateFontScale(text) {
@@ -482,8 +670,9 @@ function getCurrentWords() {
 function switchLevel(lvl) {
   currentLevel = lvl;
   state.query = "";
+  state.categoryFilter = "all";
   document.getElementById('search').value = "";
-  
+
   const key = getLevelKey(lvl);
   document.getElementById('current-level-badge').textContent = (key || lvl).toUpperCase();
 
@@ -491,7 +680,23 @@ function switchLevel(lvl) {
     b.classList.toggle('active', b.getAttribute('data-level').toLowerCase() === lvl.toLowerCase());
   });
 
+  renderCategoryPills();
   render();
+}
+
+function renderCategoryPills() {
+  const container = document.getElementById('category-filter');
+  const words = getCurrentWords();
+  const cats = Array.from(new Set(words.map(w => w.cat).filter(Boolean))).sort();
+
+  if (cats.length === 0) {
+    container.innerHTML = "";
+    return;
+  }
+
+  const pills = [`<button class="pill-btn active" data-c="all">All Categories</button>`]
+    .concat(cats.map(c => `<button class="pill-btn" data-c="${c}">${c}</button>`));
+  container.innerHTML = pills.join("");
 }
 
 function cycleStatus(id, event) {
@@ -500,8 +705,10 @@ function cycleStatus(id, event) {
   if (!cur) state.status[id] = "is-review";
   else if (cur === "is-review") state.status[id] = "is-know";
   else delete state.status[id];
-  
-  saveStateToCookie();
+
+  state.lastSeen[id] = Date.now();
+  saveState();
+  saveLastSeen();
   render();
 }
 
@@ -509,11 +716,14 @@ function renderStats() {
   const words = getCurrentWords();
   const known = words.filter((w, i) => state.status[currentLevel + '-' + i] === "is-know").length;
   const review = words.filter((w, i) => state.status[currentLevel + '-' + i] === "is-review").length;
+  const due = words.filter((w, i) => isDue(currentLevel + '-' + i)).length;
   const total = words.length || 1;
-  
+
   document.getElementById("count-mastered").textContent = known;
   document.getElementById("count-review").textContent = review;
   document.getElementById("count-tolearn").textContent = words.length - known - review;
+  document.getElementById("count-due").textContent = due;
+  document.getElementById("due-badge").style.display = due > 0 ? "flex" : "none";
   document.getElementById("pb-known").style.width = (known / total * 100) + "%";
   document.getElementById("pb-review").style.width = (review / total * 100) + "%";
 }
@@ -537,9 +747,13 @@ function renderGrid() {
   container.innerHTML = '<div class="tile-grid" id="grid"></div>';
   const gridEl = document.getElementById("grid");
 
-  const filtered = words.map((w, i) => ({ ...w, id: currentLevel + '-' + i })).filter(w => {
+  const order = state.order[currentLevel];
+  const indices = (order && order.length === words.length) ? order : words.map((_, i) => i);
+  const filtered = indices.map(i => ({ ...words[i], id: currentLevel + '-' + i })).filter(w => {
     const st = state.status[w.id] || "unmarked";
-    if (state.statusFilter !== "all" && st !== state.statusFilter) return false;
+    if (state.statusFilter === "due" && !isDue(w.id)) return false;
+    if (state.statusFilter !== "all" && state.statusFilter !== "due" && st !== state.statusFilter) return false;
+    if (state.categoryFilter !== "all" && w.cat !== state.categoryFilter) return false;
     if (state.query && !w.de.toLowerCase().includes(state.query.toLowerCase()) && !w.en.toLowerCase().includes(state.query.toLowerCase())) return false;
     return true;
   });
@@ -550,24 +764,40 @@ function renderGrid() {
   filtered.forEach(w => {
     const st = state.status[w.id] || "";
     const scale = calculateFontScale(w.de);
-    
-    const tile = document.createElement("button");
-    tile.type = "button";
+    const statusLabel = st === "is-know" ? "Mastered" : st === "is-review" ? "To review" : "To learn";
+    const statusGlyph = st === "is-know" ? "&#10003;" : st === "is-review" ? "&#8635;" : "";
+
+    const tile = document.createElement("div");
+    tile.setAttribute("role", "button");
+    tile.setAttribute("tabindex", "0");
+    tile.setAttribute("aria-label", `${w.de}, ${state.revealed[w.id] ? w.en : "translation hidden"}. Tap to toggle translation.`);
     tile.className = `word-tile ${st}`;
     tile.style.setProperty('--tile-font-scale', scale);
-    
+
     tile.innerHTML = `
-      <button type="button" class="audio-btn" title="Listen" onclick="event.stopPropagation(); playWordAudio('${w.de.replace(/'/g, "\\'")}')">
+      <button type="button" class="audio-btn" title="Listen" aria-label="Listen to pronunciation of ${w.de.replace(/"/g, "&quot;")}" onclick="event.stopPropagation(); playWordAudio('${w.de.replace(/'/g, "\\'")}')">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
       </button>
-      <div class="status-indicator" onclick="cycleStatus('${w.id}', event)"></div>
-      <div class="tile-de">${w.de}</div>
+      <button type="button" class="status-indicator" title="${statusLabel}" aria-label="Status: ${statusLabel}. Click to change." onclick="cycleStatus('${w.id}', event)">${statusGlyph}</button>
+      <div class="tile-de" lang="de">${formatGermanWord(w.de)}</div>
       <div class="tile-en ${state.revealed[w.id] ? "" : "hidden"}">${w.en}</div>
     `;
 
-    tile.addEventListener("click", () => {
+    const toggleReveal = () => {
       state.revealed[w.id] = !state.revealed[w.id];
+      if (state.revealed[w.id]) {
+        state.lastSeen[w.id] = Date.now();
+        saveLastSeen();
+      }
       renderGrid();
+    };
+    tile.addEventListener("click", toggleReveal);
+    tile.addEventListener("keydown", (e) => {
+      if (e.target !== tile) return;
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleReveal();
+      }
     });
 
     frag.appendChild(tile);
@@ -586,7 +816,7 @@ document.getElementById("search").addEventListener("input", (e) => {
 });
 
 document.getElementById("status-filter").addEventListener("click", (e) => {
-  const btn = e.target.closest("button");
+  const btn = e.target.closest("button[data-f]");
   if (!btn) return;
   state.statusFilter = btn.getAttribute("data-f");
   document.querySelectorAll("#status-filter button").forEach(b => b.classList.remove("active"));
@@ -594,7 +824,17 @@ document.getElementById("status-filter").addEventListener("click", (e) => {
   renderGrid();
 });
 
+document.getElementById("category-filter").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-c]");
+  if (!btn) return;
+  state.categoryFilter = btn.getAttribute("data-c");
+  document.querySelectorAll("#category-filter button").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  renderGrid();
+});
+
 window.addEventListener("DOMContentLoaded", () => {
+  maybeShowStorageNotice();
   loadVocabulary();
 });
 </script>

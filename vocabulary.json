@@ -1,1281 +1,6385 @@
 {
   "A1": {
-    "ab": "from / off",
-    "aber": "but",
-    "abfahren": "to depart",
-    "abgeben": "to hand in / submit",
-    "abholen": "to pick up / collect",
-    "der Absender": "sender",
-    "Achtung": "attention / caution",
-    "die Adresse": "address",
-    "all-": "all",
-    "allein": "alone",
-    "also": "so / therefore",
-    "alt": "old",
-    "das Alter": "age",
-    "an": "on / at",
-    "anbieten": "to offer",
-    "das Angebot": "offer",
-    "ander-": "other",
-    "anfangen": "to begin",
-    "der Anfang": "beginning",
-    "anklicken": "to click on",
-    "ankommen": "to arrive",
-    "die Ankunft": "arrival",
-    "ankreuzen": "to tick / check a box",
-    "anmachen": "to turn on",
-    "sich anmelden": "to register",
-    "die Anmeldung": "registration",
-    "die Anrede": "salutation / form of address",
-    "anrufen": "to call (phone)",
-    "der Anruf": "phone call",
-    "der Anrufbeantworter": "answering machine",
-    "die Ansage": "announcement",
-    "der Anschluss": "connection",
-    "an sein": "to be on (switched on)",
-    "antworten": "to answer",
-    "die Antwort": "answer",
-    "die Anzeige": "advertisement / notice",
-    "sich anziehen": "to get dressed",
-    "das Apartment": "apartment",
-    "der Apfel": "apple",
-    "der Appetit": "appetite",
-    "arbeiten": "to work",
-    "die Arbeit": "work",
-    "arbeitslos": "unemployed",
-    "der Arbeitsplatz": "workplace",
-    "der Arm": "arm",
-    "der Arzt": "doctor",
-    "auch": "also",
-    "auf": "on",
-    "die Aufgabe": "task / exercise",
-    "aufhören": "to stop",
-    "auf sein": "to be open",
-    "aufstehen": "to get up",
-    "der Aufzug": "elevator / lift",
-    "das Auge": "eye",
-    "aus": "from / out of",
-    "der Ausflug": "excursion / trip",
-    "ausfüllen": "to fill out",
-    "der Ausgang": "exit",
-    "die Auskunft": "information",
-    "das Ausland": "abroad",
-    "der Ausländer": "foreigner",
-    "ausländisch": "foreign",
-    "ausmachen": "to turn off",
-    "die Aussage": "statement",
-    "aussehen": "to look / appear",
-    "aus sein": "to be off (switched off)",
-    "aussteigen": "to get off / out",
-    "der Ausweis": "ID card",
-    "sich ausziehen": "to undress",
-    "das Auto": "car",
-    "die Autobahn": "motorway / highway",
-    "der Automat": "vending machine",
-    "automatisch": "automatic",
-    "das Baby": "baby",
-    "die Bäckerei": "bakery",
-    "das Bad": "bath / bathroom",
-    "baden": "to bathe",
-    "die Bahn": "train / railway",
-    "der Bahnhof": "train station",
-    "der Bahnsteig": "platform",
-    "bald": "soon",
-    "der Balkon": "balcony",
-    "die Banane": "banana",
-    "die Bank": "bank / bench",
-    "bar": "cash",
-    "der Bauch": "belly / stomach",
-    "der Baum": "tree",
-    "der Beamte": "official / civil servant",
-    "bedeuten": "to mean",
-    "beginnen": "to begin",
-    "bei": "at / near",
-    "beide": "both",
-    "das Bein": "leg",
-    "das Beispiel": "example",
-    "bekannt": "known",
-    "der/die Bekannte": "acquaintance",
-    "bekommen": "to receive / get",
-    "benutzen": "to use",
-    "der Beruf": "profession",
-    "besetzt": "occupied / busy",
-    "besichtigen": "to visit / view (sightseeing)",
-    "besser": "better",
-    "best-": "best",
-    "bestellen": "to order",
-    "besuchen": "to visit",
-    "das Bett": "bed",
-    "bezahlen": "to pay",
-    "das Bier": "beer",
-    "das Bild": "picture",
-    "billig": "cheap",
-    "die Birne": "pear",
-    "bis": "until",
-    "bisschen": "a little",
-    "bitte": "please",
-    "die Bitte": "request",
-    "bitten": "to ask / request",
-    "bitter": "bitter",
-    "bleiben": "to stay",
-    "der Bleistift": "pencil",
-    "der Blick": "view / glance",
-    "die Blume": "flower",
-    "der Bogen": "sheet of paper / arc",
-    "böse": "angry / evil",
-    "brauchen": "to need",
-    "breit": "wide",
-    "der Brief": "letter",
-    "die Briefmarke": "stamp",
-    "bringen": "to bring",
-    "das Brot": "bread",
-    "das Brötchen": "bread roll",
-    "der Bruder": "brother",
-    "das Buch": "book",
-    "der Buchstabe": "letter (alphabet)",
-    "buchstabieren": "to spell",
-    "der Bus": "bus",
-    "die Butter": "butter",
-    "das Café": "café",
-    "die CD": "CD",
-    "der Chef": "boss",
-    "circa/ca.": "about / approximately",
-    "der Computer": "computer",
-    "da": "there / since",
-    "die Dame": "lady",
-    "daneben": "next to it",
-    "danken": "to thank",
-    "der Dank": "thanks",
-    "danke": "thank you",
-    "dann": "then",
-    "das Datum": "date",
-    "dauern": "to last",
-    "dein-": "your",
-    "denn": "because / for",
-    "der, die, das": "the",
-    "dich": "you (accusative)",
-    "dies-": "this",
-    "dir": "you (dative)",
-    "die Disco": "disco",
-    "der Doktor": "doctor",
-    "das Doppelzimmer": "double room",
-    "das Dorf": "village",
-    "dort": "there",
-    "draußen": "outside",
-    "drucken": "to print",
-    "der Drucker": "printer",
-    "drücken": "to press",
-    "durch": "through",
-    "die Durchsage": "announcement",
-    "dürfen": "to be allowed to",
-    "der Durst": "thirst",
-    "sich duschen": "to shower",
-    "die Dusche": "shower",
-    "die Ecke": "corner",
-    "die Ehefrau": "wife",
-    "der Ehemann": "husband",
-    "das Ei": "egg",
-    "eilig": "urgent / in a hurry",
-    "ein-": "a / one",
-    "einfach": "simple",
-    "der Eingang": "entrance",
-    "einkaufen": "to shop",
-    "einladen": "to invite",
-    "die Einladung": "invitation",
-    "einmal": "once",
-    "einsteigen": "to get in / board",
-    "der Eintritt": "entry",
-    "das Einzelzimmer": "single room",
-    "die Eltern": "parents",
-    "die E-Mail": "email",
-    "der Empfänger": "recipient",
-    "empfehlen": "to recommend",
-    "enden": "to end",
-    "das Ende": "end",
-    "entschuldigen": "to excuse / apologize",
-    "die Entschuldigung": "apology / excuse",
-    "er": "he",
-    "das Ergebnis": "result",
-    "erklären": "to explain",
-    "erlauben": "to allow",
-    "der Erwachsene": "adult",
-    "erzählen": "to tell / narrate",
-    "es": "it",
-    "essen": "to eat",
-    "das Essen": "food / meal",
-    "euer": "your (plural)",
-    "fahren": "to drive / travel",
-    "der Fahrer": "driver",
-    "die Fahrkarte": "ticket (transport)",
-    "das Fahrrad": "bicycle",
-    "falsch": "wrong",
-    "die Familie": "family",
-    "der Familienname": "surname",
-    "der Familienstand": "marital status",
-    "die Farbe": "color",
-    "das Fax": "fax",
-    "Feier-": "celebration-",
-    "feiern": "to celebrate",
-    "fehlen": "to be missing",
-    "der Fehler": "mistake",
-    "fernsehen": "to watch TV",
-    "fertig": "ready / finished",
-    "das Feuer": "fire",
-    "das Fieber": "fever",
-    "der Film": "film",
-    "finden": "to find",
-    "die Firma": "company",
-    "der Fisch": "fish",
-    "die Flasche": "bottle",
-    "das Fleisch": "meat",
-    "fliegen": "to fly",
-    "abfliegen": "to take off (plane)",
-    "der Abflug": "departure (flight)",
-    "der Flughafen": "airport",
-    "das Flugzeug": "airplane",
-    "das Formular": "form",
-    "das Foto": "photo",
-    "fragen": "to ask",
-    "die Frage": "question",
-    "die Frau": "woman / Mrs",
-    "frei": "free",
-    "die Freizeit": "free time",
-    "fremd": "foreign / strange",
-    "sich freuen": "to be happy",
-    "der Freund": "friend",
-    "früher": "earlier / formerly",
-    "frühstücken": "to have breakfast",
-    "das Frühstück": "breakfast",
-    "die Führung": "guided tour",
-    "für": "for",
-    "der Fuß": "foot",
-    "der Fußball": "football / soccer",
-    "der Garten": "garden",
-    "der Gast": "guest",
-    "geben": "to give",
-    "geboren": "born",
-    "das Geburtsjahr": "year of birth",
-    "der Geburtsort": "place of birth",
-    "der Geburtstag": "birthday",
-    "gefallen": "to please / like",
-    "gegen": "against",
-    "gehen": "to go",
-    "gehören": "to belong",
-    "das Geld": "money",
-    "das Gemüse": "vegetables",
-    "das Gepäck": "luggage",
-    "gerade": "just / straight",
-    "geradeaus": "straight ahead",
-    "gern(e)": "gladly",
-    "das Geschäft": "shop / business",
-    "das Geschenk": "gift",
-    "die Geschwister": "siblings",
-    "das Gespräch": "conversation",
-    "gestern": "yesterday",
-    "gestorben": "died",
-    "das Getränk": "drink",
-    "das Gewicht": "weight",
-    "gewinnen": "to win",
-    "das Glas": "glass",
-    "glauben": "to believe",
-    "gleich": "same / right away",
-    "das Gleis": "platform / track",
-    "das Glück": "luck",
-    "glücklich": "happy",
-    "der Glückwunsch": "congratulations",
-    "Grad": "degree",
-    "gratulieren": "to congratulate",
-    "grillen": "to grill / barbecue",
-    "groß": "big",
-    "die Größe": "size",
-    "die Großeltern": "grandparents",
-    "die Großmutter": "grandmother",
-    "der Großvater": "grandfather",
-    "die Gruppe": "group",
-    "der Gruß": "greeting",
-    "gültig": "valid",
-    "günstig": "favorable / cheap",
-    "gut": "good",
-    "das Haar": "hair",
-    "haben": "to have",
-    "das Hähnchen": "chicken",
-    "die Halbpension": "half board",
-    "die Halle": "hall",
-    "hallo": "hello",
-    "halten": "to hold / stop",
-    "die Haltestelle": "bus/tram stop",
-    "die Hand": "hand",
-    "das Handy": "mobile phone",
-    "das Haus": "house",
-    "die Hausaufgabe": "homework",
-    "die Hausfrau": "housewife",
-    "der Hausmann": "househusband",
-    "die Heimat": "homeland",
-    "heiraten": "to marry",
-    "heißen": "to be called",
-    "helfen": "to help",
-    "hell": "bright / light",
-    "der Herd": "stove",
-    "der Herr": "Mr / gentleman",
-    "herzlich": "warm / cordial",
-    "heute": "today",
-    "hier": "here",
-    "die Hilfe": "help",
-    "hinten": "at the back",
-    "das Hobby": "hobby",
-    "hoch": "high",
-    "die Hochzeit": "wedding",
-    "holen": "to fetch / get",
-    "hören": "to hear / listen",
-    "das Hotel": "hotel",
-    "der Hund": "dog",
-    "der Hunger": "hunger",
-    "ich": "I",
-    "ihr/ihm/ihn": "her / him / him (acc.)",
-    "immer": "always",
-    "in": "in",
-    "die Information": "information",
-    "international": "international",
-    "das Internet": "internet",
-    "ja": "yes",
-    "die Jacke": "jacket",
-    "jed-": "each / every",
-    "jetzt": "now",
-    "der Job": "job",
-    "der Jugendliche": "teenager",
-    "jung": "young",
-    "der Junge": "boy",
-    "der Kaffee": "coffee",
-    "kaputt": "broken",
-    "die Karte": "card / map / ticket",
-    "(Kredit-)Karte": "(credit) card",
-    "die Kartoffel": "potato",
-    "die Kasse": "checkout / cash register",
-    "kaufen": "to buy",
-    "kein": "no / not any",
-    "kennen": "to know (someone/something)",
-    "kennenlernen": "to get to know",
-    "das Kind": "child",
-    "der Kindergarten": "kindergarten",
-    "das Kino": "cinema",
-    "der Kiosk": "kiosk",
-    "klar": "clear",
-    "die Klasse": "class",
-    "die Kleidung": "clothing",
-    "klein": "small",
-    "kochen": "to cook",
-    "der Koffer": "suitcase",
-    "der Kollege": "colleague",
-    "kommen": "to come",
-    "können": "to be able to / can",
-    "das Konto": "account",
-    "der Kopf": "head",
-    "kosten": "to cost",
-    "krank": "sick",
-    "kriegen": "to get / receive",
-    "die Küche": "kitchen",
-    "der Kuchen": "cake",
-    "der Kugelschreiber": "ballpoint pen",
-    "der Kühlschrank": "refrigerator",
-    "kulturell": "cultural",
-    "sich kümmern": "to take care of",
-    "der Kunde": "customer",
-    "der Kurs": "course",
-    "kurz": "short",
-    "lachen": "to laugh",
-    "der Laden": "shop",
-    "das Land": "country",
-    "lang": "long",
-    "lange": "for a long time",
-    "langsam": "slow",
-    "laufen": "to run / walk",
-    "laut": "loud",
-    "leben": "to live",
-    "das Leben": "life",
-    "die Lebensmittel": "groceries / food",
-    "ledig": "single (unmarried)",
-    "legen": "to lay / put",
-    "der Lehrer": "teacher",
-    "leicht": "easy / light",
-    "leider": "unfortunately",
-    "leise": "quiet",
-    "lernen": "to learn",
-    "lesen": "to read",
-    "letzt-": "last",
-    "die Leute": "people",
-    "das Licht": "light",
-    "lieb-": "dear",
-    "lieben": "to love",
-    "lieber": "rather / preferably",
-    "Lieblings-": "favorite",
-    "das Lied": "song",
-    "liegen": "to lie (be located)",
-    "links": "left",
-    "der Lkw": "truck",
-    "das Lokal": "pub / restaurant",
-    "die Lösung": "solution",
-    "lustig": "funny",
-    "machen": "to do / make",
-    "das Mädchen": "girl",
-    "man": "one / you (impersonal)",
-    "der Mann": "man",
-    "männlich": "male",
-    "die Maschine": "machine",
-    "das Meer": "sea",
-    "mehr": "more",
-    "mein": "my",
-    "meist-": "most",
-    "der Mensch": "person / human",
-    "mieten": "to rent",
-    "die Miete": "rent",
-    "die Milch": "milk",
-    "mit": "with",
-    "mitbringen": "to bring along",
-    "mitkommen": "to come along",
-    "mitmachen": "to join in / participate",
-    "mitnehmen": "to take along",
-    "die Mitte": "middle",
-    "die Möbel": "furniture",
-    "möchten": "would like",
-    "mögen": "to like",
-    "möglich": "possible",
-    "der Moment": "moment",
-    "morgen": "tomorrow",
-    "müde": "tired",
-    "der Mund": "mouth",
-    "müssen": "to have to / must",
-    "die Mutter": "mother",
-    "nach": "after / to",
-    "nächst-": "next",
-    "der Name": "name",
-    "nehmen": "to take",
-    "nein": "no",
-    "neu": "new",
-    "nicht": "not",
-    "nichts": "nothing",
-    "nie": "never",
-    "noch": "still / yet",
-    "normal": "normal",
-    "die Nummer": "number",
-    "nur": "only",
-    "oben": "above / upstairs",
-    "das Obst": "fruit",
-    "oder": "or",
-    "öffnen": "to open",
-    "geöffnet": "open(ed)",
-    "oft": "often",
-    "ohne": "without",
-    "das Öl": "oil",
-    "die Oma": "grandma",
-    "der Opa": "grandpa",
-    "die Ordnung": "order",
-    "der Ort": "place",
-    "das Papier": "paper",
-    "die Papiere": "documents / papers",
-    "der Partner": "partner",
-    "die Partnerin": "partner (female)",
-    "die Party": "party",
-    "der Pass": "passport",
-    "die Pause": "break / pause",
-    "der Plan": "plan",
-    "der Platz": "place / seat / square",
-    "die Polizei": "police",
-    "die Pommes frites": "fries",
-    "die Post": "post office / mail",
-    "die Postleitzahl": "postal code",
-    "das Praktikum": "internship",
-    "die Praxis": "practice (doctor's office)",
-    "der Preis": "price",
-    "das Problem": "problem",
-    "der Prospekt": "brochure",
-    "die Prüfung": "exam",
-    "pünktlich": "punctual",
-    "Rad fahren": "to ride a bike",
-    "rauchen": "to smoke",
-    "der Raum": "room / space",
-    "die Rechnung": "bill / invoice",
-    "rechts": "right",
-    "regnen": "to rain",
-    "der Regen": "rain",
-    "der Reis": "rice",
-    "reisen": "to travel",
-    "die Reise": "trip / journey",
-    "das Reisebüro": "travel agency",
-    "der Reiseführer": "travel guide",
-    "reparieren": "to repair",
-    "die Reparatur": "repair",
-    "das Restaurant": "restaurant",
-    "die Rezeption": "reception",
-    "richtig": "correct",
-    "riechen": "to smell",
-    "ruhig": "calm / quiet",
-    "der Saft": "juice",
-    "sagen": "to say",
-    "der Salat": "salad",
-    "das Salz": "salt",
-    "der Satz": "sentence",
-    "die S-Bahn": "suburban train",
-    "der Schalter": "counter / switch",
-    "scheinen": "to shine / seem",
-    "schicken": "to send",
-    "das Schild": "sign",
-    "der Schinken": "ham",
-    "schlafen": "to sleep",
-    "schlecht": "bad",
-    "schließen": "to close",
-    "geschlossen": "closed",
-    "der Schluss": "end",
-    "der Schlüssel": "key",
-    "schmecken": "to taste",
-    "schnell": "fast",
-    "schon": "already",
-    "schön": "beautiful",
-    "der Schrank": "closet / cupboard",
-    "schreiben": "to write",
-    "der Schuh": "shoe",
-    "die Schule": "school",
-    "der Schüler": "pupil / student",
-    "schwer": "heavy / difficult",
-    "die Schwester": "sister",
-    "schwimmen": "to swim",
-    "das Schwimmbad": "swimming pool",
-    "der See": "lake",
-    "sehen": "to see",
-    "die Sehenswürdigkeit": "tourist attraction",
-    "sehr": "very",
-    "sein": "to be / his",
-    "seit": "since",
-    "selbstständig": "independent / self-employed",
-    "sich": "oneself",
-    "sie": "she / they",
-    "Sie": "you (formal)",
-    "sitzen": "to sit",
-    "so": "so / like this",
-    "das Sofa": "sofa",
-    "sofort": "immediately",
-    "der Sohn": "son",
-    "sollen": "should / to be supposed to",
-    "die Sonne": "sun",
-    "spät": "late",
-    "später": "later",
-    "die Speisekarte": "menu",
-    "spielen": "to play",
-    "der Sport": "sport",
-    "die Sprache": "language",
-    "sprechen": "to speak",
-    "die Stadt": "city",
-    "stehen": "to stand",
-    "die Stelle": "place / position",
-    "stellen": "to put / place",
-    "der Stock": "floor / storey",
-    "die Straße": "street",
-    "die Straßenbahn": "tram",
-    "studieren": "to study",
-    "das Studium": "studies (university)",
-    "der Student": "student",
-    "die Stunde": "hour",
-    "suchen": "to search",
-    "tanzen": "to dance",
-    "die Tasche": "bag",
-    "das Taxi": "taxi",
-    "der Tee": "tea",
-    "der Teil": "part",
-    "telefonieren": "to phone",
-    "das Telefon": "telephone",
-    "der Termin": "appointment",
-    "der Test": "test",
-    "teuer": "expensive",
-    "der Text": "text",
-    "das Thema": "topic",
-    "das Ticket": "ticket",
-    "der Tisch": "table",
-    "die Tochter": "daughter",
-    "die Toilette": "toilet",
-    "die Tomate": "tomato",
-    "tot": "dead",
-    "sich treffen": "to meet",
-    "die Treppe": "stairs",
-    "trinken": "to drink",
-    "tschüss": "bye",
-    "tun": "to do",
-    "über": "over / about",
-    "übernachten": "to stay overnight",
-    "überweisen": "to transfer (money)",
-    "die Uhr": "clock / watch",
-    "um": "around / at",
-    "umziehen": "to move (house)",
-    "und": "and",
-    "unser-": "our",
-    "unten": "below / downstairs",
-    "unter": "under",
-    "der Unterricht": "lesson / class",
-    "unterschreiben": "to sign",
-    "die Unterschrift": "signature",
-    "der Urlaub": "vacation",
-    "der Vater": "father",
-    "verboten": "forbidden",
-    "verdienen": "to earn",
-    "der Verein": "club / association",
-    "verheiratet": "married",
-    "verkaufen": "to sell",
-    "der Verkäufer": "salesperson",
-    "vermieten": "to rent out",
-    "der Vermieter": "landlord",
-    "verstehen": "to understand",
-    "der Verwandte": "relative",
-    "viel": "much / many",
-    "vielleicht": "maybe",
-    "von": "from / of",
-    "vor": "before / in front of",
-    "der Vorname": "first name",
-    "die Vorsicht": "caution",
-    "sich vorstellen": "to introduce",
-    "die Vorwahl": "area code",
-    "wandern": "to hike",
-    "wann": "when",
-    "warten": "to wait",
-    "warum": "why",
-    "was": "what",
-    "was für ein": "what kind of",
-    "sich waschen": "to wash",
-    "das Wasser": "water",
-    "weh tun": "to hurt",
-    "weiblich": "female",
-    "der Wein": "wine",
-    "weit": "far",
-    "weiter": "further",
-    "welch-": "which",
-    "die Welt": "world",
-    "wenig": "little / few",
-    "wer": "who",
-    "werden": "to become",
-    "das Wetter": "weather",
-    "wichtig": "important",
-    "wie": "how",
-    "wiederholen": "to repeat",
-    "das Wiederhören": "goodbye (on the phone)",
-    "das Wiedersehen": "goodbye / see you again",
-    "wie viel": "how much",
-    "willkommen": "welcome",
-    "der Wind": "wind",
-    "wir": "we",
-    "wissen": "to know (a fact)",
-    "wo": "where",
-    "woher": "where from",
-    "wohin": "where to",
-    "wohnen": "to live / reside",
-    "die Wohnung": "apartment",
-    "wollen": "to want",
-    "das Wort": "word",
-    "wunderbar": "wonderful",
-    "zahlen": "to pay",
-    "die Zeit": "time",
-    "zurzeit": "currently",
-    "die Zeitung": "newspaper",
-    "die Zigarette": "cigarette",
-    "das Zimmer": "room",
-    "der Zoll": "customs",
-    "zu": "to / closed",
-    "zufrieden": "satisfied",
-    "der Zug": "train",
-    "zurück": "back",
-    "zusammen": "together",
-    "zwischen": "between"
+    "words": [
+      {
+        "de": "ab",
+        "en": "from / off",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "aber",
+        "en": "but",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "abfahren",
+        "en": "to depart",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "abgeben",
+        "en": "to hand in / submit",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "abholen",
+        "en": "to pick up / collect",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Absender",
+        "en": "sender",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "Achtung",
+        "en": "attention / caution",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Adresse",
+        "en": "address",
+        "cat": "House & Home"
+      },
+      {
+        "de": "all-",
+        "en": "all",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "allein",
+        "en": "alone",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "also",
+        "en": "so / therefore",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "alt",
+        "en": "old",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Alter",
+        "en": "age",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "an",
+        "en": "on / at",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "anbieten",
+        "en": "to offer",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Angebot",
+        "en": "offer",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ander-",
+        "en": "other",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "anfangen",
+        "en": "to begin",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Anfang",
+        "en": "beginning",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "anklicken",
+        "en": "to click on",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "ankommen",
+        "en": "to arrive",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Ankunft",
+        "en": "arrival",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ankreuzen",
+        "en": "to tick / check a box",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "anmachen",
+        "en": "to turn on",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "sich anmelden",
+        "en": "to register",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Anmeldung",
+        "en": "registration",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Anrede",
+        "en": "salutation / form of address",
+        "cat": "House & Home"
+      },
+      {
+        "de": "anrufen",
+        "en": "to call (phone)",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "der Anruf",
+        "en": "phone call",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "der Anrufbeantworter",
+        "en": "answering machine",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Ansage",
+        "en": "announcement",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Anschluss",
+        "en": "connection",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "an sein",
+        "en": "to be on (switched on)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "antworten",
+        "en": "to answer",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Antwort",
+        "en": "answer",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Anzeige",
+        "en": "advertisement / notice",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich anziehen",
+        "en": "to get dressed",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Apartment",
+        "en": "apartment",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Apfel",
+        "en": "apple",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Appetit",
+        "en": "appetite",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "arbeiten",
+        "en": "to work",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Arbeit",
+        "en": "work",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "arbeitslos",
+        "en": "unemployed",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Arbeitsplatz",
+        "en": "workplace",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Arm",
+        "en": "arm",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Arzt",
+        "en": "doctor",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "auch",
+        "en": "also",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "auf",
+        "en": "on",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Aufgabe",
+        "en": "task / exercise",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "aufhören",
+        "en": "to stop",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "auf sein",
+        "en": "to be open",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "aufstehen",
+        "en": "to get up",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Aufzug",
+        "en": "elevator / lift",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Auge",
+        "en": "eye",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "aus",
+        "en": "from / out of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Ausflug",
+        "en": "excursion / trip",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "ausfüllen",
+        "en": "to fill out",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Ausgang",
+        "en": "exit",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Auskunft",
+        "en": "information",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Ausland",
+        "en": "abroad",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Ausländer",
+        "en": "foreigner",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ausländisch",
+        "en": "foreign",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "ausmachen",
+        "en": "to turn off",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Aussage",
+        "en": "statement",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "aussehen",
+        "en": "to look / appear",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "aus sein",
+        "en": "to be off (switched off)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "aussteigen",
+        "en": "to get off / out",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Ausweis",
+        "en": "ID card",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich ausziehen",
+        "en": "to undress",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Auto",
+        "en": "car",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Autobahn",
+        "en": "motorway / highway",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Automat",
+        "en": "vending machine",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "automatisch",
+        "en": "automatic",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Baby",
+        "en": "baby",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Bäckerei",
+        "en": "bakery",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Bad",
+        "en": "bath / bathroom",
+        "cat": "House & Home"
+      },
+      {
+        "de": "baden",
+        "en": "to bathe",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Bahn",
+        "en": "train / railway",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Bahnhof",
+        "en": "train station",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Bahnsteig",
+        "en": "platform",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "bald",
+        "en": "soon",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "der Balkon",
+        "en": "balcony",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Banane",
+        "en": "banana",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Bank",
+        "en": "bank / bench",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "bar",
+        "en": "cash",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Bauch",
+        "en": "belly / stomach",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Baum",
+        "en": "tree",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Beamte",
+        "en": "official / civil servant",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "bedeuten",
+        "en": "to mean",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "beginnen",
+        "en": "to begin",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "bei",
+        "en": "at / near",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "beide",
+        "en": "both",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Bein",
+        "en": "leg",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "das Beispiel",
+        "en": "example",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "bekannt",
+        "en": "known",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der/die Bekannte",
+        "en": "acquaintance",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "bekommen",
+        "en": "to receive / get",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "benutzen",
+        "en": "to use",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Beruf",
+        "en": "profession",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "besetzt",
+        "en": "occupied / busy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "besichtigen",
+        "en": "to visit / view (sightseeing)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "besser",
+        "en": "better",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "best-",
+        "en": "best",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "bestellen",
+        "en": "to order",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "besuchen",
+        "en": "to visit",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Bett",
+        "en": "bed",
+        "cat": "House & Home"
+      },
+      {
+        "de": "bezahlen",
+        "en": "to pay",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "das Bier",
+        "en": "beer",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Bild",
+        "en": "picture",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "billig",
+        "en": "cheap",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "die Birne",
+        "en": "pear",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "bis",
+        "en": "until",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "bisschen",
+        "en": "a little",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "bitte",
+        "en": "please",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "die Bitte",
+        "en": "request",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "bitten",
+        "en": "to ask / request",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "bitter",
+        "en": "bitter",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "bleiben",
+        "en": "to stay",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Bleistift",
+        "en": "pencil",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Blick",
+        "en": "view / glance",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Blume",
+        "en": "flower",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Bogen",
+        "en": "sheet of paper / arc",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "böse",
+        "en": "angry / evil",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "brauchen",
+        "en": "to need",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "breit",
+        "en": "wide",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Brief",
+        "en": "letter",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Briefmarke",
+        "en": "stamp",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "bringen",
+        "en": "to bring",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Brot",
+        "en": "bread",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Brötchen",
+        "en": "bread roll",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Bruder",
+        "en": "brother",
+        "cat": "People & Family"
+      },
+      {
+        "de": "das Buch",
+        "en": "book",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Buchstabe",
+        "en": "letter (alphabet)",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "buchstabieren",
+        "en": "to spell",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Bus",
+        "en": "bus",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Butter",
+        "en": "butter",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Café",
+        "en": "café",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die CD",
+        "en": "CD",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Chef",
+        "en": "boss",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "circa/ca.",
+        "en": "about / approximately",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Computer",
+        "en": "computer",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "da",
+        "en": "there / since",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Dame",
+        "en": "lady",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "daneben",
+        "en": "next to it",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "danken",
+        "en": "to thank",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "der Dank",
+        "en": "thanks",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "danke",
+        "en": "thank you",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "dann",
+        "en": "then",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Datum",
+        "en": "date",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "dauern",
+        "en": "to last",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "dein-",
+        "en": "your",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "denn",
+        "en": "because / for",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der, die, das",
+        "en": "the",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dich",
+        "en": "you (accusative)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dies-",
+        "en": "this",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dir",
+        "en": "you (dative)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Disco",
+        "en": "disco",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Doktor",
+        "en": "doctor",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "das Doppelzimmer",
+        "en": "double room",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "das Dorf",
+        "en": "village",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "dort",
+        "en": "there",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "draußen",
+        "en": "outside",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "drucken",
+        "en": "to print",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Drucker",
+        "en": "printer",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "drücken",
+        "en": "to press",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "durch",
+        "en": "through",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Durchsage",
+        "en": "announcement",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "dürfen",
+        "en": "to be allowed to",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Durst",
+        "en": "thirst",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich duschen",
+        "en": "to shower",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Dusche",
+        "en": "shower",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Ecke",
+        "en": "corner",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Ehefrau",
+        "en": "wife",
+        "cat": "People & Family"
+      },
+      {
+        "de": "der Ehemann",
+        "en": "husband",
+        "cat": "People & Family"
+      },
+      {
+        "de": "das Ei",
+        "en": "egg",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "eilig",
+        "en": "urgent / in a hurry",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "ein-",
+        "en": "a / one",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "einfach",
+        "en": "simple",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Eingang",
+        "en": "entrance",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "einkaufen",
+        "en": "to shop",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "einladen",
+        "en": "to invite",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Einladung",
+        "en": "invitation",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "einmal",
+        "en": "once",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "einsteigen",
+        "en": "to get in / board",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Eintritt",
+        "en": "entry",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Einzelzimmer",
+        "en": "single room",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Eltern",
+        "en": "parents",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die E-Mail",
+        "en": "email",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "der Empfänger",
+        "en": "recipient",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "empfehlen",
+        "en": "to recommend",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "enden",
+        "en": "to end",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Ende",
+        "en": "end",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "entschuldigen",
+        "en": "to excuse / apologize",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "die Entschuldigung",
+        "en": "apology / excuse",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "er",
+        "en": "he",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Ergebnis",
+        "en": "result",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "erklären",
+        "en": "to explain",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "erlauben",
+        "en": "to allow",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Erwachsene",
+        "en": "adult",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "erzählen",
+        "en": "to tell / narrate",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "es",
+        "en": "it",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "essen",
+        "en": "to eat",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Essen",
+        "en": "food / meal",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "euer",
+        "en": "your (plural)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "fahren",
+        "en": "to drive / travel",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Fahrer",
+        "en": "driver",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Fahrkarte",
+        "en": "ticket (transport)",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Fahrrad",
+        "en": "bicycle",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "falsch",
+        "en": "wrong",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Familie",
+        "en": "family",
+        "cat": "People & Family"
+      },
+      {
+        "de": "der Familienname",
+        "en": "surname",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Familienstand",
+        "en": "marital status",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Farbe",
+        "en": "color",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Fax",
+        "en": "fax",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "Feier-",
+        "en": "celebration-",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "feiern",
+        "en": "to celebrate",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "fehlen",
+        "en": "to be missing",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Fehler",
+        "en": "mistake",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "fernsehen",
+        "en": "to watch TV",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "fertig",
+        "en": "ready / finished",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Feuer",
+        "en": "fire",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Fieber",
+        "en": "fever",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Film",
+        "en": "film",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "finden",
+        "en": "to find",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Firma",
+        "en": "company",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Fisch",
+        "en": "fish",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Flasche",
+        "en": "bottle",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Fleisch",
+        "en": "meat",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "fliegen",
+        "en": "to fly",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "abfliegen",
+        "en": "to take off (plane)",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Abflug",
+        "en": "departure (flight)",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Flughafen",
+        "en": "airport",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Flugzeug",
+        "en": "airplane",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Formular",
+        "en": "form",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Foto",
+        "en": "photo",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "fragen",
+        "en": "to ask",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Frage",
+        "en": "question",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Frau",
+        "en": "woman / Mrs",
+        "cat": "People & Family"
+      },
+      {
+        "de": "frei",
+        "en": "free",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Freizeit",
+        "en": "free time",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "fremd",
+        "en": "foreign / strange",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sich freuen",
+        "en": "to be happy",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "der Freund",
+        "en": "friend",
+        "cat": "People & Family"
+      },
+      {
+        "de": "früher",
+        "en": "earlier / formerly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "frühstücken",
+        "en": "to have breakfast",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Frühstück",
+        "en": "breakfast",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Führung",
+        "en": "guided tour",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "für",
+        "en": "for",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Fuß",
+        "en": "foot",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Fußball",
+        "en": "football / soccer",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Garten",
+        "en": "garden",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Gast",
+        "en": "guest",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "geben",
+        "en": "to give",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "geboren",
+        "en": "born",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Geburtsjahr",
+        "en": "year of birth",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "der Geburtsort",
+        "en": "place of birth",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Geburtstag",
+        "en": "birthday",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "gefallen",
+        "en": "to please / like",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "gegen",
+        "en": "against",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "gehen",
+        "en": "to go",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "gehören",
+        "en": "to belong",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Geld",
+        "en": "money",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "das Gemüse",
+        "en": "vegetables",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Gepäck",
+        "en": "luggage",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "gerade",
+        "en": "just / straight",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "geradeaus",
+        "en": "straight ahead",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "gern(e)",
+        "en": "gladly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Geschäft",
+        "en": "shop / business",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "das Geschenk",
+        "en": "gift",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Geschwister",
+        "en": "siblings",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Gespräch",
+        "en": "conversation",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "gestern",
+        "en": "yesterday",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "gestorben",
+        "en": "died",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Getränk",
+        "en": "drink",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Gewicht",
+        "en": "weight",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "gewinnen",
+        "en": "to win",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Glas",
+        "en": "glass",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "glauben",
+        "en": "to believe",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "gleich",
+        "en": "same / right away",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Gleis",
+        "en": "platform / track",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Glück",
+        "en": "luck",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "glücklich",
+        "en": "happy",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "der Glückwunsch",
+        "en": "congratulations",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "Grad",
+        "en": "degree",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "gratulieren",
+        "en": "to congratulate",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "grillen",
+        "en": "to grill / barbecue",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "groß",
+        "en": "big",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Größe",
+        "en": "size",
+        "cat": "Clothing"
+      },
+      {
+        "de": "die Großeltern",
+        "en": "grandparents",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Großmutter",
+        "en": "grandmother",
+        "cat": "People & Family"
+      },
+      {
+        "de": "der Großvater",
+        "en": "grandfather",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Gruppe",
+        "en": "group",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Gruß",
+        "en": "greeting",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "gültig",
+        "en": "valid",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "günstig",
+        "en": "favorable / cheap",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "gut",
+        "en": "good",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Haar",
+        "en": "hair",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "haben",
+        "en": "to have",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Hähnchen",
+        "en": "chicken",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Halbpension",
+        "en": "half board",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "die Halle",
+        "en": "hall",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "hallo",
+        "en": "hello",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "halten",
+        "en": "to hold / stop",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Haltestelle",
+        "en": "bus/tram stop",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Hand",
+        "en": "hand",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "das Handy",
+        "en": "mobile phone",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Haus",
+        "en": "house",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Hausaufgabe",
+        "en": "homework",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Hausfrau",
+        "en": "housewife",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Hausmann",
+        "en": "househusband",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Heimat",
+        "en": "homeland",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "heiraten",
+        "en": "to marry",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "heißen",
+        "en": "to be called",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "helfen",
+        "en": "to help",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "hell",
+        "en": "bright / light",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Herd",
+        "en": "stove",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Herr",
+        "en": "Mr / gentleman",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "herzlich",
+        "en": "warm / cordial",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "heute",
+        "en": "today",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "hier",
+        "en": "here",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Hilfe",
+        "en": "help",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "hinten",
+        "en": "at the back",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "das Hobby",
+        "en": "hobby",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "hoch",
+        "en": "high",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Hochzeit",
+        "en": "wedding",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "holen",
+        "en": "to fetch / get",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "hören",
+        "en": "to hear / listen",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Hotel",
+        "en": "hotel",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Hund",
+        "en": "dog",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Hunger",
+        "en": "hunger",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ich",
+        "en": "I",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "ihr/ihm/ihn",
+        "en": "her / him / him (acc.)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "immer",
+        "en": "always",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "in",
+        "en": "in",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Information",
+        "en": "information",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "international",
+        "en": "international",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Internet",
+        "en": "internet",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "ja",
+        "en": "yes",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "die Jacke",
+        "en": "jacket",
+        "cat": "Clothing"
+      },
+      {
+        "de": "jed-",
+        "en": "each / every",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "jetzt",
+        "en": "now",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "der Job",
+        "en": "job",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Jugendliche",
+        "en": "teenager",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "jung",
+        "en": "young",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Junge",
+        "en": "boy",
+        "cat": "People & Family"
+      },
+      {
+        "de": "der Kaffee",
+        "en": "coffee",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "kaputt",
+        "en": "broken",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Karte",
+        "en": "card / map / ticket",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "(Kredit-)Karte",
+        "en": "(credit) card",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "die Kartoffel",
+        "en": "potato",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Kasse",
+        "en": "checkout / cash register",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "kaufen",
+        "en": "to buy",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "kein",
+        "en": "no / not any",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "kennen",
+        "en": "to know (someone/something)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "kennenlernen",
+        "en": "to get to know",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Kind",
+        "en": "child",
+        "cat": "People & Family"
+      },
+      {
+        "de": "der Kindergarten",
+        "en": "kindergarten",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Kino",
+        "en": "cinema",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Kiosk",
+        "en": "kiosk",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "klar",
+        "en": "clear",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Klasse",
+        "en": "class",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Kleidung",
+        "en": "clothing",
+        "cat": "Clothing"
+      },
+      {
+        "de": "klein",
+        "en": "small",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "kochen",
+        "en": "to cook",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Koffer",
+        "en": "suitcase",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Kollege",
+        "en": "colleague",
+        "cat": "People & Family"
+      },
+      {
+        "de": "kommen",
+        "en": "to come",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "können",
+        "en": "to be able to / can",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Konto",
+        "en": "account",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Kopf",
+        "en": "head",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "kosten",
+        "en": "to cost",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "krank",
+        "en": "sick",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "kriegen",
+        "en": "to get / receive",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Küche",
+        "en": "kitchen",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Kuchen",
+        "en": "cake",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Kugelschreiber",
+        "en": "ballpoint pen",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Kühlschrank",
+        "en": "refrigerator",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "kulturell",
+        "en": "cultural",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sich kümmern",
+        "en": "to take care of",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Kunde",
+        "en": "customer",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Kurs",
+        "en": "course",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "kurz",
+        "en": "short",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "lachen",
+        "en": "to laugh",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Laden",
+        "en": "shop",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "das Land",
+        "en": "country",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "lang",
+        "en": "long",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "lange",
+        "en": "for a long time",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "langsam",
+        "en": "slow",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "laufen",
+        "en": "to run / walk",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "laut",
+        "en": "loud",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "leben",
+        "en": "to live",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Leben",
+        "en": "life",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Lebensmittel",
+        "en": "groceries / food",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "ledig",
+        "en": "single (unmarried)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "legen",
+        "en": "to lay / put",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Lehrer",
+        "en": "teacher",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "leicht",
+        "en": "easy / light",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "leider",
+        "en": "unfortunately",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "leise",
+        "en": "quiet",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "lernen",
+        "en": "to learn",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "lesen",
+        "en": "to read",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "letzt-",
+        "en": "last",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Leute",
+        "en": "people",
+        "cat": "People & Family"
+      },
+      {
+        "de": "das Licht",
+        "en": "light",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "lieb-",
+        "en": "dear",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "lieben",
+        "en": "to love",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "lieber",
+        "en": "rather / preferably",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "Lieblings-",
+        "en": "favorite",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Lied",
+        "en": "song",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "liegen",
+        "en": "to lie (be located)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "links",
+        "en": "left",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Lkw",
+        "en": "truck",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Lokal",
+        "en": "pub / restaurant",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Lösung",
+        "en": "solution",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "lustig",
+        "en": "funny",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "machen",
+        "en": "to do / make",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Mädchen",
+        "en": "girl",
+        "cat": "People & Family"
+      },
+      {
+        "de": "man",
+        "en": "one / you (impersonal)",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "der Mann",
+        "en": "man",
+        "cat": "People & Family"
+      },
+      {
+        "de": "männlich",
+        "en": "male",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Maschine",
+        "en": "machine",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Meer",
+        "en": "sea",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "mehr",
+        "en": "more",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "mein",
+        "en": "my",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "meist-",
+        "en": "most",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Mensch",
+        "en": "person / human",
+        "cat": "People & Family"
+      },
+      {
+        "de": "mieten",
+        "en": "to rent",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Miete",
+        "en": "rent",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Milch",
+        "en": "milk",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "mit",
+        "en": "with",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "mitbringen",
+        "en": "to bring along",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "mitkommen",
+        "en": "to come along",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "mitmachen",
+        "en": "to join in / participate",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "mitnehmen",
+        "en": "to take along",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Mitte",
+        "en": "middle",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Möbel",
+        "en": "furniture",
+        "cat": "House & Home"
+      },
+      {
+        "de": "möchten",
+        "en": "would like",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "mögen",
+        "en": "to like",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "möglich",
+        "en": "possible",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Moment",
+        "en": "moment",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "morgen",
+        "en": "tomorrow",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "müde",
+        "en": "tired",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Mund",
+        "en": "mouth",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "müssen",
+        "en": "to have to / must",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Mutter",
+        "en": "mother",
+        "cat": "People & Family"
+      },
+      {
+        "de": "nach",
+        "en": "after / to",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nächst-",
+        "en": "next",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Name",
+        "en": "name",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "nehmen",
+        "en": "to take",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "nein",
+        "en": "no",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "neu",
+        "en": "new",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nicht",
+        "en": "not",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nichts",
+        "en": "nothing",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nie",
+        "en": "never",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "noch",
+        "en": "still / yet",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "normal",
+        "en": "normal",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Nummer",
+        "en": "number",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "nur",
+        "en": "only",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "oben",
+        "en": "above / upstairs",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Obst",
+        "en": "fruit",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "oder",
+        "en": "or",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "öffnen",
+        "en": "to open",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "geöffnet",
+        "en": "open(ed)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "oft",
+        "en": "often",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "ohne",
+        "en": "without",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Öl",
+        "en": "oil",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Oma",
+        "en": "grandma",
+        "cat": "People & Family"
+      },
+      {
+        "de": "der Opa",
+        "en": "grandpa",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Ordnung",
+        "en": "order",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Ort",
+        "en": "place",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Papier",
+        "en": "paper",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Papiere",
+        "en": "documents / papers",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Partner",
+        "en": "partner",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Partnerin",
+        "en": "partner (female)",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Party",
+        "en": "party",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Pass",
+        "en": "passport",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Pause",
+        "en": "break / pause",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Plan",
+        "en": "plan",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Platz",
+        "en": "place / seat / square",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Polizei",
+        "en": "police",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Pommes frites",
+        "en": "fries",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Post",
+        "en": "post office / mail",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Postleitzahl",
+        "en": "postal code",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Praktikum",
+        "en": "internship",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Praxis",
+        "en": "practice (doctor's office)",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Preis",
+        "en": "price",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "das Problem",
+        "en": "problem",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Prospekt",
+        "en": "brochure",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Prüfung",
+        "en": "exam",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "pünktlich",
+        "en": "punctual",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "Rad fahren",
+        "en": "to ride a bike",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "rauchen",
+        "en": "to smoke",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Raum",
+        "en": "room / space",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Rechnung",
+        "en": "bill / invoice",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "rechts",
+        "en": "right",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "regnen",
+        "en": "to rain",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Regen",
+        "en": "rain",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Reis",
+        "en": "rice",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "reisen",
+        "en": "to travel",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Reise",
+        "en": "trip / journey",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Reisebüro",
+        "en": "travel agency",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Reiseführer",
+        "en": "travel guide",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "reparieren",
+        "en": "to repair",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Reparatur",
+        "en": "repair",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Restaurant",
+        "en": "restaurant",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Rezeption",
+        "en": "reception",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "richtig",
+        "en": "correct",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "riechen",
+        "en": "to smell",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "ruhig",
+        "en": "calm / quiet",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Saft",
+        "en": "juice",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "sagen",
+        "en": "to say",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Salat",
+        "en": "salad",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Salz",
+        "en": "salt",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Satz",
+        "en": "sentence",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die S-Bahn",
+        "en": "suburban train",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Schalter",
+        "en": "counter / switch",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "scheinen",
+        "en": "to shine / seem",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "schicken",
+        "en": "to send",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Schild",
+        "en": "sign",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Schinken",
+        "en": "ham",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "schlafen",
+        "en": "to sleep",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "schlecht",
+        "en": "bad",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schließen",
+        "en": "to close",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "geschlossen",
+        "en": "closed",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Schluss",
+        "en": "end",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Schlüssel",
+        "en": "key",
+        "cat": "House & Home"
+      },
+      {
+        "de": "schmecken",
+        "en": "to taste",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "schnell",
+        "en": "fast",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schon",
+        "en": "already",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schön",
+        "en": "beautiful",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Schrank",
+        "en": "closet / cupboard",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "schreiben",
+        "en": "to write",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Schuh",
+        "en": "shoe",
+        "cat": "Clothing"
+      },
+      {
+        "de": "die Schule",
+        "en": "school",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Schüler",
+        "en": "pupil / student",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "schwer",
+        "en": "heavy / difficult",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Schwester",
+        "en": "sister",
+        "cat": "People & Family"
+      },
+      {
+        "de": "schwimmen",
+        "en": "to swim",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Schwimmbad",
+        "en": "swimming pool",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der See",
+        "en": "lake",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "sehen",
+        "en": "to see",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Sehenswürdigkeit",
+        "en": "tourist attraction",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sehr",
+        "en": "very",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sein",
+        "en": "to be / his",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "seit",
+        "en": "since",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "selbstständig",
+        "en": "independent / self-employed",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sich",
+        "en": "oneself",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sie",
+        "en": "she / they",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "Sie",
+        "en": "you (formal)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sitzen",
+        "en": "to sit",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "so",
+        "en": "so / like this",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "das Sofa",
+        "en": "sofa",
+        "cat": "House & Home"
+      },
+      {
+        "de": "sofort",
+        "en": "immediately",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Sohn",
+        "en": "son",
+        "cat": "People & Family"
+      },
+      {
+        "de": "sollen",
+        "en": "should / to be supposed to",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Sonne",
+        "en": "sun",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "spät",
+        "en": "late",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "später",
+        "en": "later",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Speisekarte",
+        "en": "menu",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "spielen",
+        "en": "to play",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Sport",
+        "en": "sport",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Sprache",
+        "en": "language",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sprechen",
+        "en": "to speak",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Stadt",
+        "en": "city",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "stehen",
+        "en": "to stand",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Stelle",
+        "en": "place / position",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "stellen",
+        "en": "to put / place",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Stock",
+        "en": "floor / storey",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Straße",
+        "en": "street",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "die Straßenbahn",
+        "en": "tram",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "studieren",
+        "en": "to study",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "das Studium",
+        "en": "studies (university)",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Student",
+        "en": "student",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Stunde",
+        "en": "hour",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "suchen",
+        "en": "to search",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "tanzen",
+        "en": "to dance",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Tasche",
+        "en": "bag",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Taxi",
+        "en": "taxi",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Tee",
+        "en": "tea",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Teil",
+        "en": "part",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "telefonieren",
+        "en": "to phone",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Telefon",
+        "en": "telephone",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Termin",
+        "en": "appointment",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Test",
+        "en": "test",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "teuer",
+        "en": "expensive",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Text",
+        "en": "text",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Thema",
+        "en": "topic",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Ticket",
+        "en": "ticket",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Tisch",
+        "en": "table",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Tochter",
+        "en": "daughter",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Toilette",
+        "en": "toilet",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Tomate",
+        "en": "tomato",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "tot",
+        "en": "dead",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sich treffen",
+        "en": "to meet",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Treppe",
+        "en": "stairs",
+        "cat": "House & Home"
+      },
+      {
+        "de": "trinken",
+        "en": "to drink",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "tschüss",
+        "en": "bye",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "tun",
+        "en": "to do",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "über",
+        "en": "over / about",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "übernachten",
+        "en": "to stay overnight",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "überweisen",
+        "en": "to transfer (money)",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "die Uhr",
+        "en": "clock / watch",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "um",
+        "en": "around / at",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "umziehen",
+        "en": "to move (house)",
+        "cat": "House & Home"
+      },
+      {
+        "de": "und",
+        "en": "and",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "unser-",
+        "en": "our",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "unten",
+        "en": "below / downstairs",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "unter",
+        "en": "under",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Unterricht",
+        "en": "lesson / class",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "unterschreiben",
+        "en": "to sign",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Unterschrift",
+        "en": "signature",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Urlaub",
+        "en": "vacation",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Vater",
+        "en": "father",
+        "cat": "People & Family"
+      },
+      {
+        "de": "verboten",
+        "en": "forbidden",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "verdienen",
+        "en": "to earn",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Verein",
+        "en": "club / association",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "verheiratet",
+        "en": "married",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "verkaufen",
+        "en": "to sell",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Verkäufer",
+        "en": "salesperson",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "vermieten",
+        "en": "to rent out",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Vermieter",
+        "en": "landlord",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "verstehen",
+        "en": "to understand",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Verwandte",
+        "en": "relative",
+        "cat": "People & Family"
+      },
+      {
+        "de": "viel",
+        "en": "much / many",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "vielleicht",
+        "en": "maybe",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "von",
+        "en": "from / of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "vor",
+        "en": "before / in front of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Vorname",
+        "en": "first name",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Vorsicht",
+        "en": "caution",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich vorstellen",
+        "en": "to introduce",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Vorwahl",
+        "en": "area code",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wandern",
+        "en": "to hike",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "wann",
+        "en": "when",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "warten",
+        "en": "to wait",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "warum",
+        "en": "why",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "was",
+        "en": "what",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "was für ein",
+        "en": "what kind of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sich waschen",
+        "en": "to wash",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Wasser",
+        "en": "water",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "weh tun",
+        "en": "to hurt",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "weiblich",
+        "en": "female",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Wein",
+        "en": "wine",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "weit",
+        "en": "far",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "weiter",
+        "en": "further",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "welch-",
+        "en": "which",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Welt",
+        "en": "world",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wenig",
+        "en": "little / few",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "wer",
+        "en": "who",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "werden",
+        "en": "to become",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Wetter",
+        "en": "weather",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "wichtig",
+        "en": "important",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wie",
+        "en": "how",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wiederholen",
+        "en": "to repeat",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Wiederhören",
+        "en": "goodbye (on the phone)",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "das Wiedersehen",
+        "en": "goodbye / see you again",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "wie viel",
+        "en": "how much",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "willkommen",
+        "en": "welcome",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "der Wind",
+        "en": "wind",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "wir",
+        "en": "we",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wissen",
+        "en": "to know (a fact)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "wo",
+        "en": "where",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "woher",
+        "en": "where from",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wohin",
+        "en": "where to",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wohnen",
+        "en": "to live / reside",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Wohnung",
+        "en": "apartment",
+        "cat": "House & Home"
+      },
+      {
+        "de": "wollen",
+        "en": "to want",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Wort",
+        "en": "word",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wunderbar",
+        "en": "wonderful",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "zahlen",
+        "en": "to pay",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "die Zeit",
+        "en": "time",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "zurzeit",
+        "en": "currently",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Zeitung",
+        "en": "newspaper",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "die Zigarette",
+        "en": "cigarette",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Zimmer",
+        "en": "room",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Zoll",
+        "en": "customs",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "zu",
+        "en": "to / closed",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "zufrieden",
+        "en": "satisfied",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Zug",
+        "en": "train",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "zurück",
+        "en": "back",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "zusammen",
+        "en": "together",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "zwischen",
+        "en": "between",
+        "cat": "Descriptions & Adjectives"
+      }
+    ]
   },
   "A2": {
-    "abschließen": "to lock / to finish, complete",
-    "die Ahnung": "idea / clue",
-    "aktiv": "active",
-    "aktuell": "current",
-    "als": "as / than / when",
-    "die Ampel": "traffic light",
-    "ändern": "to change",
-    "anders": "different(ly)",
-    "die Angst": "fear",
-    "ansehen": "to look at",
-    "der Anzug": "suit",
-    "die Apotheke": "pharmacy",
-    "der Apparat": "apparatus / device",
-    "sich ärgern": "to be annoyed",
-    "der Artikel": "article",
-    "aufmachen": "to open",
-    "aufpassen": "to pay attention / watch out",
-    "aufräumen": "to tidy up",
-    "aufregend": "exciting",
-    "die Ausbildung": "training / education",
-    "ausgeben": "to spend (money)",
-    "ausgehen": "to go out",
-    "auspacken": "to unpack",
-    "ausruhen": "to rest",
-    "außer": "except",
-    "außerdem": "besides / moreover",
-    "außerhalb": "outside of",
-    "aussprechen": "to pronounce",
-    "die Ausstellung": "exhibition",
-    "austragen": "to deliver (papers, mail)",
-    "der Babysitter": "babysitter",
-    "backen": "to bake",
-    "der Ball": "ball",
-    "das Band": "ribbon / band",
-    "der Basketball": "basketball",
-    "basteln": "to do crafts",
-    "bauen": "to build",
-    "die Baustelle": "construction site",
-    "beantworten": "to answer (a question)",
-    "sich bedanken": "to thank",
-    "sich beeilen": "to hurry",
-    "beenden": "to finish / end",
-    "begründen": "to justify",
-    "beliebt": "popular",
-    "bequem": "comfortable",
-    "beraten": "to advise",
-    "der Berg": "mountain",
-    "berichten": "to report",
-    "berühmt": "famous",
-    "der Bescheid": "information / notice (jdm. Bescheid geben)",
-    "beschreiben": "to describe",
-    "sich beschweren": "to complain",
-    "besonders": "especially",
-    "bestätigen": "to confirm",
-    "bestehen": "to pass (exam) / to exist",
-    "der Besuch": "visit",
-    "sich bewerben": "to apply (for a job)",
-    "die Bewerbung": "application",
-    "bewölkt": "cloudy",
-    "die Bibliothek": "library",
-    "das Blatt": "leaf / sheet",
-    "blöd": "stupid",
-    "der Blog": "blog",
-    "blond": "blond",
-    "die Bluse": "blouse",
-    "die Bohne": "bean",
-    "braten": "to fry / roast",
-    "die Brille": "glasses",
-    "die Brücke": "bridge",
-    "buchen": "to book",
-    "bunt": "colorful",
-    "das Büro": "office",
-    "die Cafeteria": "cafeteria",
-    "chatten": "to chat (online)",
-    "die Chefin": "boss (female)",
-    "der Club/Klub": "club",
-    "der Comic": "comic",
-    "die Creme": "cream",
-    "dabei": "with it / present",
-    "dafür/dagegen": "for it / against it",
-    "damals": "back then",
-    "dass": "that (conjunction)",
-    "die Datei": "file (computer)",
-    "denken": "to think",
-    "deshalb": "therefore",
-    "deutlich": "clear(ly)",
-    "dick": "thick / fat",
-    "das Ding": "thing",
-    "direkt": "direct",
-    "die Disco/Disko": "disco",
-    "diskutieren": "to discuss",
-    "doch": "yet / indeed",
-    "dorther": "from there",
-    "dorthin": "to there",
-    "dringend": "urgent",
-    "drinnen": "inside",
-    "drüben": "over there",
-    "dumm": "stupid",
-    "dunkel": "dark",
-    "dünn": "thin",
-    "das E-Book": "e-book",
-    "echt": "real(ly)",
-    "egal": "doesn't matter",
-    "der Ehepartner": "spouse",
-    "eigen-": "own",
-    "eigentlich": "actually",
-    "einig-": "some / a few",
-    "das Einkaufszentrum": "shopping center",
-    "einpacken": "to pack",
-    "eintragen": "to enter / register",
-    "einverstanden": "in agreement / OK",
-    "einzel-": "single / individual",
-    "einziehen": "to move in",
-    "das Eis": "ice / ice cream",
-    "endlich": "finally",
-    "eng": "narrow / tight",
-    "das Erdgeschoss": "ground floor",
-    "die Erfahrung": "experience",
-    "sich erinnern": "to remember",
-    "erkältet": "having a cold",
-    "erlaubt": "allowed",
-    "die Erlaubnis": "permission",
-    "die Ermäßigung": "discount / reduction",
-    "erreichen": "to reach",
-    "erst": "only / not until",
-    "etwas": "something",
-    "das Fach": "subject (school) / compartment",
-    "die Abfahrt": "departure",
-    "der Fahrplan": "timetable",
-    "fallen": "to fall",
-    "falls": "in case",
-    "der Fan": "fan",
-    "fantastisch": "fantastic",
-    "fast": "almost",
-    "faul": "lazy",
-    "die Feier": "celebration",
-    "der Feierabend": "end of the working day",
-    "der Feiertag": "holiday",
-    "das Fest": "festival / party",
-    "das Fenster": "window",
-    "die Ferien": "holidays / vacation",
-    "der Fernseher": "television set",
-    "das Festival": "festival",
-    "fett": "fat / greasy",
-    "fit": "fit",
-    "fleißig": "hardworking / diligent",
-    "der Flohmarkt": "flea market",
-    "der Flug": "flight",
-    "der Fluss": "river",
-    "der Fotoapparat": "camera",
-    "fotografieren": "to photograph",
-    "freiwillig": "voluntary",
-    "die Freundin": "friend / girlfriend",
-    "freundlich": "friendly",
-    "frisch": "fresh",
-    "froh": "glad",
-    "früh": "early",
-    "fühlen": "to feel",
-    "der Führerschein": "driving license",
-    "die Fundsachen": "lost and found",
-    "furchtbar": "terrible",
-    "die Gabel": "fork",
-    "ganz": "whole / quite",
-    "die Garage": "garage",
-    "geehrt": "honored (Sehr geehrte/r...)",
-    "gefährlich": "dangerous",
-    "das Gegenteil": "opposite",
-    "gegenüber": "opposite / across from",
-    "das Gehalt": "salary",
-    "die Geldbörse": "wallet / purse",
-    "genau": "exact(ly)",
-    "genug": "enough",
-    "das Gerät": "device / appliance",
-    "das Gericht": "dish (food) / court",
-    "gern": "gladly",
-    "die Geschichte": "story / history",
-    "das Geschirr": "dishes",
-    "das Gesicht": "face",
-    "gesund": "healthy",
-    "die Gesundheit": "health",
-    "das Gewitter": "thunderstorm",
-    "die Gitarre": "guitar",
-    "die Grippe": "flu",
-    "der Hals": "neck / throat",
-    "der Hamburger": "hamburger",
-    "das Handtuch": "towel",
-    "hängen": "to hang",
-    "hart": "hard",
-    "hässlich": "ugly",
-    "die Hauptstadt": "capital city",
-    "der Haushalt": "household",
-    "das Heft": "notebook",
-    "das Heimatland": "home country",
-    "heiß": "hot",
-    "die Heizung": "heating",
-    "das Hemd": "shirt",
-    "her": "here (towards the speaker)",
-    "heraus/raus": "out",
-    "herein/rein": "in(to)",
-    "herstellen": "to manufacture / produce",
-    "herunterladen": "to download",
-    "der Himmel": "sky",
-    "hin": "there (away from the speaker)",
-    "hinter": "behind",
-    "hoffen": "to hope",
-    "hoffentlich": "hopefully",
-    "die Homepage": "homepage / website",
-    "die Hose": "trousers / pants",
-    "husten": "to cough",
-    "die Idee": "idea",
-    "informieren": "to inform",
-    "die Insel": "island",
-    "das Instrument": "instrument",
-    "intelligent": "intelligent",
-    "das Interesse": "interest",
-    "sich interessieren": "to be interested",
-    "interessant": "interesting",
-    "das Interview": "interview",
-    "die Jeans": "jeans",
-    "jeder": "every / each",
-    "jemand": "someone",
-    "joggen": "to jog",
-    "die Jugendherberge": "youth hostel",
-    "der Kalender": "calendar",
-    "kalt": "cold",
-    "die Kamera": "camera",
-    "der Käse": "cheese",
-    "die Katze": "cat",
-    "das Kaufhaus": "department store",
-    "der Keller": "cellar / basement",
-    "die Kenntnisse": "knowledge / skills",
-    "die Kette": "chain / necklace",
-    "die Kirche": "church",
-    "klappen": "to work out (succeed)",
-    "das Klavier": "piano",
-    "das Kleid": "dress",
-    "klug": "smart / clever",
-    "die Kollegin": "colleague (female)",
-    "komisch": "strange / funny",
-    "der Kontakt": "contact",
-    "kontrollieren": "to check / control",
-    "das Konzert": "concert",
-    "der Körper": "body",
-    "die Kosmetik": "cosmetics",
-    "kostenfrei": "free of charge",
-    "kostenlos": "free of charge",
-    "das Krankenhaus": "hospital",
-    "die Krankenkasse": "health insurance",
-    "die Krankheit": "illness",
-    "der Kredit": "credit / loan",
-    "die Kreuzung": "intersection",
-    "der Krimi": "crime novel/film",
-    "kühl": "cool",
-    "die Kultur": "culture",
-    "die Kundin": "customer (female)",
-    "kündigen": "to give notice / quit",
-    "die Kunst": "art",
-    "die Lampe": "lamp",
-    "die Landschaft": "landscape",
-    "langweilig": "boring",
-    "der Laptop": "laptop",
-    "lassen": "to let / leave",
-    "leer": "empty",
-    "leidtun": "to be sorry",
-    "leihen": "to lend / borrow",
-    "liefern": "to deliver",
-    "der Link": "link",
-    "der Löffel": "spoon",
-    "die Lüge": "lie (untruth)",
-    "lügen": "to lie (tell untruth)",
-    "die Lust": "desire / mood (to do sth.)",
-    "der Magen": "stomach",
-    "die Mailbox": "voicemail",
-    "mal": "times / just (particle)",
-    "das Mal": "time / occasion",
-    "malen": "to paint",
-    "manch-": "some",
-    "manchmal": "sometimes",
-    "die Mannschaft": "team",
-    "der Mantel": "coat",
-    "der Markt": "market",
-    "das Medikament": "medication",
-    "meinen": "to think / mean (opinion)",
-    "die Meinung": "opinion",
-    "meistens": "mostly",
-    "die Menge": "amount / crowd",
-    "merken": "to notice / remember",
-    "die Messe": "trade fair",
-    "das Messer": "knife",
-    "mindestens": "at least",
-    "das Mineralwasser": "mineral water",
-    "der Mitarbeiter": "employee / colleague",
-    "das Mittagessen": "lunch",
-    "das Mittel": "means / remedy",
-    "das Mobiltelefon": "mobile phone",
-    "die Mode": "fashion",
-    "modern": "modern",
-    "der Motor": "engine",
-    "der Motorroller": "scooter",
-    "der Müll": "rubbish / trash",
-    "das Museum": "museum",
-    "die Musik": "music",
-    "die Mütze": "cap / hat",
-    "der Nachbar": "neighbor",
-    "die Nachbarin": "neighbor (female)",
-    "die Nachricht": "message / news",
-    "nächste": "next",
-    "die Nähe": "vicinity / closeness",
-    "nass": "wet",
-    "die Natur": "nature",
-    "natürlich": "naturally / of course",
-    "neben": "next to",
-    "nebenan": "next door",
-    "neblig": "foggy",
-    "nennen": "to name / call",
-    "nervös": "nervous",
-    "nett": "nice",
-    "niemand": "nobody",
-    "nirgends": "nowhere",
-    "die Note": "grade / mark",
-    "notieren": "to note down",
-    "die Notiz": "note",
-    "notwendig": "necessary",
-    "die Nudel": "noodle / pasta",
-    "nützlich": "useful",
-    "offen": "open",
-    "das Ohr": "ear",
-    "online": "online",
-    "die Orange": "orange (fruit)",
-    "organisieren": "to organize",
-    "das Paar": "pair",
-    "ein paar": "a few",
-    "packen": "to pack",
-    "das Paket": "parcel / package",
-    "das Parfüm": "perfume",
-    "der Park": "park",
-    "parken": "to park",
-    "passen": "to fit / suit",
-    "passieren": "to happen",
-    "die Qualität": "quality",
-    "das Quiz": "quiz",
-    "das Rad": "wheel / bike",
-    "das Radio": "radio",
-    "das Rathaus": "town hall",
-    "rechnen": "to calculate",
-    "das Recht": "right / law",
-    "die Rede": "speech",
-    "das Regal": "shelf",
-    "der Regenschirm": "umbrella",
-    "die Region": "region",
-    "die Regel": "rule",
-    "reich": "rich",
-    "der Reifen": "tire",
-    "die Reihe": "row",
-    "rein": "pure / clean",
-    "reiten": "to ride (a horse)",
-    "die Religion": "religion",
-    "die Rente": "pension",
-    "der Rentner": "pensioner / retiree",
-    "die Reportage": "report / feature",
-    "der Rest": "rest / remainder",
-    "retten": "to save / rescue",
-    "das Rezept": "recipe / prescription",
-    "die Richtung": "direction",
-    "der Ring": "ring",
-    "der Rock": "skirt",
-    "der Roman": "novel",
-    "rosa": "pink",
-    "rot": "red",
-    "der Rücken": "back (body)",
-    "der Rucksack": "backpack",
-    "rufen": "to call / shout",
-    "die Ruhe": "calm / quiet",
-    "rund": "round",
-    "die Sache": "thing / matter",
-    "sammeln": "to collect",
-    "der Samstag": "Saturday",
-    "der Sänger": "singer",
-    "satt": "full (not hungry)",
-    "sauber": "clean",
-    "sauer": "sour / angry",
-    "schade": "a pity / too bad",
-    "schaffen": "to manage / accomplish",
-    "der Schal": "scarf",
-    "scharf": "spicy / sharp",
-    "der Schatz": "treasure / darling",
-    "schauen": "to look",
-    "das Schaufenster": "shop window",
-    "der Schauspieler": "actor",
-    "der Scheck": "cheque",
-    "schenken": "to give (a gift)",
-    "das Schiff": "ship",
-    "das Schlafzimmer": "bedroom",
-    "schlagen": "to hit / beat",
-    "schlank": "slim",
-    "das Schließfach": "locker",
-    "der Schmerz": "pain",
-    "schmutzig": "dirty",
-    "der Schnee": "snow",
-    "schneiden": "to cut",
-    "schneien": "to snow",
-    "der Schreibtisch": "desk",
-    "schreien": "to scream",
-    "die Schulter": "shoulder",
-    "schwach": "weak",
-    "schwarz": "black",
-    "schwierig": "difficult",
-    "schwitzen": "to sweat",
-    "die Seife": "soap",
-    "die Seite": "page / side",
-    "die Sekretärin": "secretary",
-    "die Sekunde": "second (time)",
-    "selten": "rare(ly)",
-    "senden": "to send / broadcast",
-    "setzen": "to put / set",
-    "sicher": "safe / certain",
-    "die Sicherheit": "safety / security",
-    "singen": "to sing",
-    "der Sitzplatz": "seat",
-    "der Ski": "ski",
-    "das Smartphone": "smartphone",
-    "die SMS": "text message",
-    "die Socke": "sock",
-    "solch-": "such",
-    "der Sommer": "summer",
-    "der Sonntag": "Sunday",
-    "sonst": "otherwise",
-    "die Sorge": "worry",
-    "sorgen": "to take care / worry",
-    "das Souvenir": "souvenir",
-    "sparen": "to save (money)",
-    "der Spaß": "fun",
-    "spazieren": "to stroll",
-    "der Spaziergang": "walk / stroll",
-    "das Spiel": "game",
-    "springen": "to jump",
-    "der Staat": "state",
-    "der Stadtplan": "city map",
-    "stark": "strong",
-    "statt": "instead of",
-    "stattfinden": "to take place",
-    "staubsaugen": "to vacuum",
-    "steigen": "to climb / rise",
-    "sterben": "to die",
-    "die Steuer": "tax",
-    "der Stiefel": "boot",
-    "der Stift": "pen",
-    "still": "quiet / silent",
-    "die Stimme": "voice",
-    "stolz": "proud",
-    "stören": "to disturb",
-    "der Strand": "beach",
-    "streiten": "to argue",
-    "der Stress": "stress",
-    "das Stück": "piece",
-    "der Stuhl": "chair",
-    "der Süden": "south",
-    "super": "great",
-    "der Supermarkt": "supermarket",
-    "die Suppe": "soup",
-    "süß": "sweet",
-    "das Symbol": "symbol",
-    "sympathisch": "likeable",
-    "die Tablette": "pill / tablet",
-    "die Tafel": "board / bar (chocolate)",
-    "der Tag": "day",
-    "die Tante": "aunt",
-    "die Tasse": "cup",
-    "tauschen": "to exchange",
-    "das Team": "team",
-    "die Technik": "technology",
-    "der Teller": "plate",
-    "die Temperatur": "temperature",
-    "die Terrasse": "terrace",
-    "testen": "to test",
-    "das Theater": "theater",
-    "das Tier": "animal",
-    "der Titel": "title",
-    "toll": "great / cool",
-    "der Ton": "sound / tone",
-    "der Topf": "pot",
-    "die Tour": "tour",
-    "der Tourist": "tourist",
-    "tragen": "to carry / wear",
-    "trainieren": "to train",
-    "das Training": "training",
-    "der Traum": "dream",
-    "träumen": "to dream",
-    "trennen": "to separate",
-    "trocken": "dry",
-    "trotzdem": "nevertheless",
-    "das Tuch": "cloth",
-    "die Tür": "door",
-    "der Turm": "tower",
-    "die Tüte": "bag (paper/plastic)",
-    "üben": "to practice",
-    "überall": "everywhere",
-    "überlegen": "to consider / think over",
-    "überraschen": "to surprise",
-    "die Überraschung": "surprise",
-    "die Übung": "exercise",
-    "die Umgebung": "surroundings / area",
-    "die Umleitung": "detour",
-    "umsonst": "for free / in vain",
-    "umsteigen": "to change (trains)",
-    "unbedingt": "absolutely / definitely",
-    "ungefähr": "approximately",
-    "ungesund": "unhealthy",
-    "die Uniform": "uniform",
-    "die Universität": "university",
-    "unmöglich": "impossible",
-    "der Unterschied": "difference",
-    "die Untersuchung": "examination",
-    "unterwegs": "on the way",
-    "die Ursache": "cause / reason",
-    "die Vase": "vase",
-    "verbrauchen": "to consume",
-    "vergessen": "to forget",
-    "vergleichen": "to compare",
-    "verletzen": "to injure",
-    "verlieren": "to lose",
-    "verpassen": "to miss (a train, etc.)",
-    "verschieden": "different / various",
-    "verschreiben": "to prescribe",
-    "versichern": "to insure / assure",
-    "die Versicherung": "insurance",
-    "sich verspäten": "to be late",
-    "die Verspätung": "delay",
-    "versprechen": "to promise",
-    "versuchen": "to try",
-    "der Vertrag": "contract",
-    "das Video": "video",
-    "das Viertel": "quarter",
-    "der Vogel": "bird",
-    "das Volk": "people / nation",
-    "voll": "full",
-    "vollständig": "complete",
-    "vorbei": "past / over",
-    "vorbereiten": "to prepare",
-    "der Vorschlag": "suggestion",
-    "vorschlagen": "to suggest",
-    "vorsichtig": "careful",
-    "die Vorstellung": "idea / performance",
-    "der Vorteil": "advantage",
-    "wachsen": "to grow",
-    "während": "during / while",
-    "der Wald": "forest",
-    "die Wand": "wall",
-    "warm": "warm",
-    "die Waschmaschine": "washing machine",
-    "das WC": "toilet (WC)",
-    "das Wechselgeld": "change (money)",
-    "wechseln": "to change / exchange",
-    "der Weg": "way / path",
-    "weg": "away / gone",
-    "wegen": "because of",
-    "weich": "soft",
-    "Weihnachten": "Christmas",
-    "weil": "because",
-    "weinen": "to cry",
-    "weiß": "white",
-    "wenden": "to turn",
-    "wenn": "if / when",
-    "werfen": "to throw",
-    "die Werkstatt": "workshop / garage",
-    "der Wert": "value",
-    "wieder": "again",
-    "der Winter": "winter",
-    "wirklich": "really",
-    "der Witz": "joke",
-    "die Woche": "week",
-    "das Wochenende": "weekend",
-    "wohl": "probably / well",
-    "das Wohnzimmer": "living room",
-    "das Wörterbuch": "dictionary",
-    "wünschen": "to wish",
-    "der Zahn": "tooth",
-    "der Zahnarzt": "dentist",
-    "zeigen": "to show",
-    "die Zeitschrift": "magazine",
-    "das Zelt": "tent",
-    "das Zentrum": "center",
-    "zerbrechen": "to break",
-    "ziehen": "to pull / move",
-    "das Ziel": "goal / destination",
-    "ziemlich": "quite / rather",
-    "der Zoo": "zoo",
-    "der Zucker": "sugar",
-    "zuerst": "first (of all)",
-    "der Zufall": "coincidence",
-    "die Zukunft": "future",
-    "zumachen": "to close",
-    "zwar": "indeed / admittedly",
-    "die Zwiebel": "onion"
+    "words": [
+      {
+        "de": "abschließen",
+        "en": "to lock / to finish, complete",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Ahnung",
+        "en": "idea / clue",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "aktiv",
+        "en": "active",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "aktuell",
+        "en": "current",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "als",
+        "en": "as / than / when",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Ampel",
+        "en": "traffic light",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ändern",
+        "en": "to change",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "anders",
+        "en": "different(ly)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Angst",
+        "en": "fear",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "ansehen",
+        "en": "to look at",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Anzug",
+        "en": "suit",
+        "cat": "Clothing"
+      },
+      {
+        "de": "die Apotheke",
+        "en": "pharmacy",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Apparat",
+        "en": "apparatus / device",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "sich ärgern",
+        "en": "to be annoyed",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Artikel",
+        "en": "article",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "aufmachen",
+        "en": "to open",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "aufpassen",
+        "en": "to pay attention / watch out",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "aufräumen",
+        "en": "to tidy up",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "aufregend",
+        "en": "exciting",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Ausbildung",
+        "en": "training / education",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "ausgeben",
+        "en": "to spend (money)",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "ausgehen",
+        "en": "to go out",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "auspacken",
+        "en": "to unpack",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "ausruhen",
+        "en": "to rest",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "außer",
+        "en": "except",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "außerdem",
+        "en": "besides / moreover",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "außerhalb",
+        "en": "outside of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "aussprechen",
+        "en": "to pronounce",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Ausstellung",
+        "en": "exhibition",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "austragen",
+        "en": "to deliver (papers, mail)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Babysitter",
+        "en": "babysitter",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "backen",
+        "en": "to bake",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Ball",
+        "en": "ball",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Band",
+        "en": "ribbon / band",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Basketball",
+        "en": "basketball",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "basteln",
+        "en": "to do crafts",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "bauen",
+        "en": "to build",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Baustelle",
+        "en": "construction site",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "beantworten",
+        "en": "to answer (a question)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "sich bedanken",
+        "en": "to thank",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "sich beeilen",
+        "en": "to hurry",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "beenden",
+        "en": "to finish / end",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "begründen",
+        "en": "to justify",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "beliebt",
+        "en": "popular",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "bequem",
+        "en": "comfortable",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "beraten",
+        "en": "to advise",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Berg",
+        "en": "mountain",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "berichten",
+        "en": "to report",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "berühmt",
+        "en": "famous",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Bescheid",
+        "en": "information / notice (jdm. Bescheid geben)",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "beschreiben",
+        "en": "to describe",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "sich beschweren",
+        "en": "to complain",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "besonders",
+        "en": "especially",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "bestätigen",
+        "en": "to confirm",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "bestehen",
+        "en": "to pass (exam) / to exist",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Besuch",
+        "en": "visit",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich bewerben",
+        "en": "to apply (for a job)",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Bewerbung",
+        "en": "application",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "bewölkt",
+        "en": "cloudy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Bibliothek",
+        "en": "library",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Blatt",
+        "en": "leaf / sheet",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "blöd",
+        "en": "stupid",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Blog",
+        "en": "blog",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "blond",
+        "en": "blond",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Bluse",
+        "en": "blouse",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Bohne",
+        "en": "bean",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "braten",
+        "en": "to fry / roast",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Brille",
+        "en": "glasses",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Brücke",
+        "en": "bridge",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "buchen",
+        "en": "to book",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "bunt",
+        "en": "colorful",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Büro",
+        "en": "office",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Cafeteria",
+        "en": "cafeteria",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "chatten",
+        "en": "to chat (online)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Chefin",
+        "en": "boss (female)",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Club/Klub",
+        "en": "club",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Comic",
+        "en": "comic",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Creme",
+        "en": "cream",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "dabei",
+        "en": "with it / present",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dafür/dagegen",
+        "en": "for it / against it",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "damals",
+        "en": "back then",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "dass",
+        "en": "that (conjunction)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Datei",
+        "en": "file (computer)",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "denken",
+        "en": "to think",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "deshalb",
+        "en": "therefore",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "deutlich",
+        "en": "clear(ly)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dick",
+        "en": "thick / fat",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Ding",
+        "en": "thing",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "direkt",
+        "en": "direct",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Disco/Disko",
+        "en": "disco",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "diskutieren",
+        "en": "to discuss",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "doch",
+        "en": "yet / indeed",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dorther",
+        "en": "from there",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dorthin",
+        "en": "to there",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "dringend",
+        "en": "urgent",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "drinnen",
+        "en": "inside",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "drüben",
+        "en": "over there",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dumm",
+        "en": "stupid",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dunkel",
+        "en": "dark",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "dünn",
+        "en": "thin",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das E-Book",
+        "en": "e-book",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "echt",
+        "en": "real(ly)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "egal",
+        "en": "doesn't matter",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Ehepartner",
+        "en": "spouse",
+        "cat": "People & Family"
+      },
+      {
+        "de": "eigen-",
+        "en": "own",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "eigentlich",
+        "en": "actually",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "einig-",
+        "en": "some / a few",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "das Einkaufszentrum",
+        "en": "shopping center",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "einpacken",
+        "en": "to pack",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "eintragen",
+        "en": "to enter / register",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "einverstanden",
+        "en": "in agreement / OK",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "einzel-",
+        "en": "single / individual",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "einziehen",
+        "en": "to move in",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Eis",
+        "en": "ice / ice cream",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "endlich",
+        "en": "finally",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "eng",
+        "en": "narrow / tight",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Erdgeschoss",
+        "en": "ground floor",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Erfahrung",
+        "en": "experience",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich erinnern",
+        "en": "to remember",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "erkältet",
+        "en": "having a cold",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "erlaubt",
+        "en": "allowed",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Erlaubnis",
+        "en": "permission",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Ermäßigung",
+        "en": "discount / reduction",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "erreichen",
+        "en": "to reach",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "erst",
+        "en": "only / not until",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "etwas",
+        "en": "something",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Fach",
+        "en": "subject (school) / compartment",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "die Abfahrt",
+        "en": "departure",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Fahrplan",
+        "en": "timetable",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "fallen",
+        "en": "to fall",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "falls",
+        "en": "in case",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Fan",
+        "en": "fan",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "fantastisch",
+        "en": "fantastic",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "fast",
+        "en": "almost",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "faul",
+        "en": "lazy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Feier",
+        "en": "celebration",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Feierabend",
+        "en": "end of the working day",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Feiertag",
+        "en": "holiday",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Fest",
+        "en": "festival / party",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Fenster",
+        "en": "window",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Ferien",
+        "en": "holidays / vacation",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Fernseher",
+        "en": "television set",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Festival",
+        "en": "festival",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "fett",
+        "en": "fat / greasy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "fit",
+        "en": "fit",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "fleißig",
+        "en": "hardworking / diligent",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Flohmarkt",
+        "en": "flea market",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Flug",
+        "en": "flight",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Fluss",
+        "en": "river",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Fotoapparat",
+        "en": "camera",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "fotografieren",
+        "en": "to photograph",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "freiwillig",
+        "en": "voluntary",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Freundin",
+        "en": "friend / girlfriend",
+        "cat": "People & Family"
+      },
+      {
+        "de": "freundlich",
+        "en": "friendly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "frisch",
+        "en": "fresh",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "froh",
+        "en": "glad",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "früh",
+        "en": "early",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "fühlen",
+        "en": "to feel",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "der Führerschein",
+        "en": "driving license",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Fundsachen",
+        "en": "lost and found",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "furchtbar",
+        "en": "terrible",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Gabel",
+        "en": "fork",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ganz",
+        "en": "whole / quite",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Garage",
+        "en": "garage",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "geehrt",
+        "en": "honored (Sehr geehrte/r...)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "gefährlich",
+        "en": "dangerous",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Gegenteil",
+        "en": "opposite",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "gegenüber",
+        "en": "opposite / across from",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Gehalt",
+        "en": "salary",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Geldbörse",
+        "en": "wallet / purse",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "genau",
+        "en": "exact(ly)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "genug",
+        "en": "enough",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Gerät",
+        "en": "device / appliance",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Gericht",
+        "en": "dish (food) / court",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "gern",
+        "en": "gladly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Geschichte",
+        "en": "story / history",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Geschirr",
+        "en": "dishes",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Gesicht",
+        "en": "face",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "gesund",
+        "en": "healthy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Gesundheit",
+        "en": "health",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "das Gewitter",
+        "en": "thunderstorm",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Gitarre",
+        "en": "guitar",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Grippe",
+        "en": "flu",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Hals",
+        "en": "neck / throat",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Hamburger",
+        "en": "hamburger",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Handtuch",
+        "en": "towel",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "hängen",
+        "en": "to hang",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "hart",
+        "en": "hard",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "hässlich",
+        "en": "ugly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Hauptstadt",
+        "en": "capital city",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Haushalt",
+        "en": "household",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Heft",
+        "en": "notebook",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Heimatland",
+        "en": "home country",
+        "cat": "House & Home"
+      },
+      {
+        "de": "heiß",
+        "en": "hot",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "die Heizung",
+        "en": "heating",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Hemd",
+        "en": "shirt",
+        "cat": "Clothing"
+      },
+      {
+        "de": "her",
+        "en": "here (towards the speaker)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "heraus/raus",
+        "en": "out",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "herein/rein",
+        "en": "in(to)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "herstellen",
+        "en": "to manufacture / produce",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "herunterladen",
+        "en": "to download",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "der Himmel",
+        "en": "sky",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "hin",
+        "en": "there (away from the speaker)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "hinter",
+        "en": "behind",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "hoffen",
+        "en": "to hope",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "hoffentlich",
+        "en": "hopefully",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Homepage",
+        "en": "homepage / website",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "die Hose",
+        "en": "trousers / pants",
+        "cat": "Clothing"
+      },
+      {
+        "de": "husten",
+        "en": "to cough",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Idee",
+        "en": "idea",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "informieren",
+        "en": "to inform",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Insel",
+        "en": "island",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Instrument",
+        "en": "instrument",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "intelligent",
+        "en": "intelligent",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Interesse",
+        "en": "interest",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich interessieren",
+        "en": "to be interested",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "interessant",
+        "en": "interesting",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Interview",
+        "en": "interview",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Jeans",
+        "en": "jeans",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "jeder",
+        "en": "every / each",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "jemand",
+        "en": "someone",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "joggen",
+        "en": "to jog",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Jugendherberge",
+        "en": "youth hostel",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Kalender",
+        "en": "calendar",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "kalt",
+        "en": "cold",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "die Kamera",
+        "en": "camera",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "der Käse",
+        "en": "cheese",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Katze",
+        "en": "cat",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "das Kaufhaus",
+        "en": "department store",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Keller",
+        "en": "cellar / basement",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Kenntnisse",
+        "en": "knowledge / skills",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Kette",
+        "en": "chain / necklace",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Kirche",
+        "en": "church",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "klappen",
+        "en": "to work out (succeed)",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "das Klavier",
+        "en": "piano",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Kleid",
+        "en": "dress",
+        "cat": "Clothing"
+      },
+      {
+        "de": "klug",
+        "en": "smart / clever",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Kollegin",
+        "en": "colleague (female)",
+        "cat": "People & Family"
+      },
+      {
+        "de": "komisch",
+        "en": "strange / funny",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Kontakt",
+        "en": "contact",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "kontrollieren",
+        "en": "to check / control",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Konzert",
+        "en": "concert",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Körper",
+        "en": "body",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "die Kosmetik",
+        "en": "cosmetics",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "kostenfrei",
+        "en": "free of charge",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "kostenlos",
+        "en": "free of charge",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Krankenhaus",
+        "en": "hospital",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "die Krankenkasse",
+        "en": "health insurance",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "die Krankheit",
+        "en": "illness",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Kredit",
+        "en": "credit / loan",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "die Kreuzung",
+        "en": "intersection",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Krimi",
+        "en": "crime novel/film",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "kühl",
+        "en": "cool",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Kultur",
+        "en": "culture",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Kundin",
+        "en": "customer (female)",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "kündigen",
+        "en": "to give notice / quit",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Kunst",
+        "en": "art",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Lampe",
+        "en": "lamp",
+        "cat": "House & Home"
+      },
+      {
+        "de": "die Landschaft",
+        "en": "landscape",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "langweilig",
+        "en": "boring",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Laptop",
+        "en": "laptop",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "lassen",
+        "en": "to let / leave",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "leer",
+        "en": "empty",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "leidtun",
+        "en": "to be sorry",
+        "cat": "Greetings & Basics"
+      },
+      {
+        "de": "leihen",
+        "en": "to lend / borrow",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "liefern",
+        "en": "to deliver",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Link",
+        "en": "link",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Löffel",
+        "en": "spoon",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Lüge",
+        "en": "lie (untruth)",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "lügen",
+        "en": "to lie (tell untruth)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Lust",
+        "en": "desire / mood (to do sth.)",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Magen",
+        "en": "stomach",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "die Mailbox",
+        "en": "voicemail",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "mal",
+        "en": "times / just (particle)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Mal",
+        "en": "time / occasion",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "malen",
+        "en": "to paint",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "manch-",
+        "en": "some",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "manchmal",
+        "en": "sometimes",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "die Mannschaft",
+        "en": "team",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Mantel",
+        "en": "coat",
+        "cat": "Clothing"
+      },
+      {
+        "de": "der Markt",
+        "en": "market",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "das Medikament",
+        "en": "medication",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "meinen",
+        "en": "to think / mean (opinion)",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "die Meinung",
+        "en": "opinion",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "meistens",
+        "en": "mostly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Menge",
+        "en": "amount / crowd",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "merken",
+        "en": "to notice / remember",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Messe",
+        "en": "trade fair",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Messer",
+        "en": "knife",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "mindestens",
+        "en": "at least",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Mineralwasser",
+        "en": "mineral water",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "der Mitarbeiter",
+        "en": "employee / colleague",
+        "cat": "People & Family"
+      },
+      {
+        "de": "das Mittagessen",
+        "en": "lunch",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Mittel",
+        "en": "means / remedy",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Mobiltelefon",
+        "en": "mobile phone",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "die Mode",
+        "en": "fashion",
+        "cat": "Clothing"
+      },
+      {
+        "de": "modern",
+        "en": "modern",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Motor",
+        "en": "engine",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Motorroller",
+        "en": "scooter",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Müll",
+        "en": "rubbish / trash",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Museum",
+        "en": "museum",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Musik",
+        "en": "music",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "die Mütze",
+        "en": "cap / hat",
+        "cat": "Clothing"
+      },
+      {
+        "de": "der Nachbar",
+        "en": "neighbor",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Nachbarin",
+        "en": "neighbor (female)",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Nachricht",
+        "en": "message / news",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "nächste",
+        "en": "next",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Nähe",
+        "en": "vicinity / closeness",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "nass",
+        "en": "wet",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Natur",
+        "en": "nature",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "natürlich",
+        "en": "naturally / of course",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "neben",
+        "en": "next to",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nebenan",
+        "en": "next door",
+        "cat": "House & Home"
+      },
+      {
+        "de": "neblig",
+        "en": "foggy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nennen",
+        "en": "to name / call",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "nervös",
+        "en": "nervous",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nett",
+        "en": "nice",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "niemand",
+        "en": "nobody",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "nirgends",
+        "en": "nowhere",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Note",
+        "en": "grade / mark",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "notieren",
+        "en": "to note down",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Notiz",
+        "en": "note",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "notwendig",
+        "en": "necessary",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Nudel",
+        "en": "noodle / pasta",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "nützlich",
+        "en": "useful",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "offen",
+        "en": "open",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Ohr",
+        "en": "ear",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "online",
+        "en": "online",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Orange",
+        "en": "orange (fruit)",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "organisieren",
+        "en": "to organize",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Paar",
+        "en": "pair",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "ein paar",
+        "en": "a few",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "packen",
+        "en": "to pack",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Paket",
+        "en": "parcel / package",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Parfüm",
+        "en": "perfume",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Park",
+        "en": "park",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "parken",
+        "en": "to park",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "passen",
+        "en": "to fit / suit",
+        "cat": "Clothing"
+      },
+      {
+        "de": "passieren",
+        "en": "to happen",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Qualität",
+        "en": "quality",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Quiz",
+        "en": "quiz",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Rad",
+        "en": "wheel / bike",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Radio",
+        "en": "radio",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Rathaus",
+        "en": "town hall",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "rechnen",
+        "en": "to calculate",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Recht",
+        "en": "right / law",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Rede",
+        "en": "speech",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Regal",
+        "en": "shelf",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Regenschirm",
+        "en": "umbrella",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Region",
+        "en": "region",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Regel",
+        "en": "rule",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "reich",
+        "en": "rich",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Reifen",
+        "en": "tire",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Reihe",
+        "en": "row",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "rein",
+        "en": "pure / clean",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "reiten",
+        "en": "to ride (a horse)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Religion",
+        "en": "religion",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Rente",
+        "en": "pension",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Rentner",
+        "en": "pensioner / retiree",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Reportage",
+        "en": "report / feature",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Rest",
+        "en": "rest / remainder",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "retten",
+        "en": "to save / rescue",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Rezept",
+        "en": "recipe / prescription",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "die Richtung",
+        "en": "direction",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "der Ring",
+        "en": "ring",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Rock",
+        "en": "skirt",
+        "cat": "Clothing"
+      },
+      {
+        "de": "der Roman",
+        "en": "novel",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "rosa",
+        "en": "pink",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "rot",
+        "en": "red",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Rücken",
+        "en": "back (body)",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Rucksack",
+        "en": "backpack",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "rufen",
+        "en": "to call / shout",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "die Ruhe",
+        "en": "calm / quiet",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "rund",
+        "en": "round",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Sache",
+        "en": "thing / matter",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sammeln",
+        "en": "to collect",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Samstag",
+        "en": "Saturday",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "der Sänger",
+        "en": "singer",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "satt",
+        "en": "full (not hungry)",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "sauber",
+        "en": "clean",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "sauer",
+        "en": "sour / angry",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "schade",
+        "en": "a pity / too bad",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schaffen",
+        "en": "to manage / accomplish",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Schal",
+        "en": "scarf",
+        "cat": "Clothing"
+      },
+      {
+        "de": "scharf",
+        "en": "spicy / sharp",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Schatz",
+        "en": "treasure / darling",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "schauen",
+        "en": "to look",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Schaufenster",
+        "en": "shop window",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Schauspieler",
+        "en": "actor",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Scheck",
+        "en": "cheque",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "schenken",
+        "en": "to give (a gift)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Schiff",
+        "en": "ship",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Schlafzimmer",
+        "en": "bedroom",
+        "cat": "House & Home"
+      },
+      {
+        "de": "schlagen",
+        "en": "to hit / beat",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "schlank",
+        "en": "slim",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Schließfach",
+        "en": "locker",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Schmerz",
+        "en": "pain",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "schmutzig",
+        "en": "dirty",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Schnee",
+        "en": "snow",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "schneiden",
+        "en": "to cut",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "schneien",
+        "en": "to snow",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Schreibtisch",
+        "en": "desk",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "schreien",
+        "en": "to scream",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Schulter",
+        "en": "shoulder",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "schwach",
+        "en": "weak",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schwarz",
+        "en": "black",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schwierig",
+        "en": "difficult",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "schwitzen",
+        "en": "to sweat",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Seife",
+        "en": "soap",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Seite",
+        "en": "page / side",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Sekretärin",
+        "en": "secretary",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Sekunde",
+        "en": "second (time)",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "selten",
+        "en": "rare(ly)",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "senden",
+        "en": "to send / broadcast",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "setzen",
+        "en": "to put / set",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "sicher",
+        "en": "safe / certain",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Sicherheit",
+        "en": "safety / security",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "singen",
+        "en": "to sing",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Sitzplatz",
+        "en": "seat",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Ski",
+        "en": "ski",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Smartphone",
+        "en": "smartphone",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die SMS",
+        "en": "text message",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "die Socke",
+        "en": "sock",
+        "cat": "Clothing"
+      },
+      {
+        "de": "solch-",
+        "en": "such",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Sommer",
+        "en": "summer",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "der Sonntag",
+        "en": "Sunday",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "sonst",
+        "en": "otherwise",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Sorge",
+        "en": "worry",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sorgen",
+        "en": "to take care / worry",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Souvenir",
+        "en": "souvenir",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sparen",
+        "en": "to save (money)",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "der Spaß",
+        "en": "fun",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "spazieren",
+        "en": "to stroll",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Spaziergang",
+        "en": "walk / stroll",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Spiel",
+        "en": "game",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "springen",
+        "en": "to jump",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Staat",
+        "en": "state",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Stadtplan",
+        "en": "city map",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "stark",
+        "en": "strong",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "statt",
+        "en": "instead of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "stattfinden",
+        "en": "to take place",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "staubsaugen",
+        "en": "to vacuum",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "steigen",
+        "en": "to climb / rise",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "sterben",
+        "en": "to die",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Steuer",
+        "en": "tax",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Stiefel",
+        "en": "boot",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Stift",
+        "en": "pen",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "still",
+        "en": "quiet / silent",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Stimme",
+        "en": "voice",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "stolz",
+        "en": "proud",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "stören",
+        "en": "to disturb",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Strand",
+        "en": "beach",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "streiten",
+        "en": "to argue",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Stress",
+        "en": "stress",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Stück",
+        "en": "piece",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Stuhl",
+        "en": "chair",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Süden",
+        "en": "south",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "super",
+        "en": "great",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Supermarkt",
+        "en": "supermarket",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Suppe",
+        "en": "soup",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "süß",
+        "en": "sweet",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "das Symbol",
+        "en": "symbol",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sympathisch",
+        "en": "likeable",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Tablette",
+        "en": "pill / tablet",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Tafel",
+        "en": "board / bar (chocolate)",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Tag",
+        "en": "day",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Tante",
+        "en": "aunt",
+        "cat": "People & Family"
+      },
+      {
+        "de": "die Tasse",
+        "en": "cup",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "tauschen",
+        "en": "to exchange",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Team",
+        "en": "team",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Technik",
+        "en": "technology",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Teller",
+        "en": "plate",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Temperatur",
+        "en": "temperature",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "die Terrasse",
+        "en": "terrace",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "testen",
+        "en": "to test",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Theater",
+        "en": "theater",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Tier",
+        "en": "animal",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "der Titel",
+        "en": "title",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "toll",
+        "en": "great / cool",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Ton",
+        "en": "sound / tone",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Topf",
+        "en": "pot",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Tour",
+        "en": "tour",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Tourist",
+        "en": "tourist",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "tragen",
+        "en": "to carry / wear",
+        "cat": "Clothing"
+      },
+      {
+        "de": "trainieren",
+        "en": "to train",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "das Training",
+        "en": "training",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "der Traum",
+        "en": "dream",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "träumen",
+        "en": "to dream",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "trennen",
+        "en": "to separate",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "trocken",
+        "en": "dry",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "trotzdem",
+        "en": "nevertheless",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Tuch",
+        "en": "cloth",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Tür",
+        "en": "door",
+        "cat": "House & Home"
+      },
+      {
+        "de": "der Turm",
+        "en": "tower",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Tüte",
+        "en": "bag (paper/plastic)",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "üben",
+        "en": "to practice",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "überall",
+        "en": "everywhere",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "überlegen",
+        "en": "to consider / think over",
+        "cat": "Feelings & Opinions"
+      },
+      {
+        "de": "überraschen",
+        "en": "to surprise",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Überraschung",
+        "en": "surprise",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Übung",
+        "en": "exercise",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Umgebung",
+        "en": "surroundings / area",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Umleitung",
+        "en": "detour",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "umsonst",
+        "en": "for free / in vain",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "umsteigen",
+        "en": "to change (trains)",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "unbedingt",
+        "en": "absolutely / definitely",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "ungefähr",
+        "en": "approximately",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "ungesund",
+        "en": "unhealthy",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Uniform",
+        "en": "uniform",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Universität",
+        "en": "university",
+        "cat": "Work & Education"
+      },
+      {
+        "de": "unmöglich",
+        "en": "impossible",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Unterschied",
+        "en": "difference",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Untersuchung",
+        "en": "examination",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "unterwegs",
+        "en": "on the way",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Ursache",
+        "en": "cause / reason",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Vase",
+        "en": "vase",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "verbrauchen",
+        "en": "to consume",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "vergessen",
+        "en": "to forget",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "vergleichen",
+        "en": "to compare",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "verletzen",
+        "en": "to injure",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "verlieren",
+        "en": "to lose",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "verpassen",
+        "en": "to miss (a train, etc.)",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "verschieden",
+        "en": "different / various",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "verschreiben",
+        "en": "to prescribe",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "versichern",
+        "en": "to insure / assure",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Versicherung",
+        "en": "insurance",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "sich verspäten",
+        "en": "to be late",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "die Verspätung",
+        "en": "delay",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "versprechen",
+        "en": "to promise",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "versuchen",
+        "en": "to try",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Vertrag",
+        "en": "contract",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Video",
+        "en": "video",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Viertel",
+        "en": "quarter",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Vogel",
+        "en": "bird",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "das Volk",
+        "en": "people / nation",
+        "cat": "People & Family"
+      },
+      {
+        "de": "voll",
+        "en": "full",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "vollständig",
+        "en": "complete",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "vorbei",
+        "en": "past / over",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "vorbereiten",
+        "en": "to prepare",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Vorschlag",
+        "en": "suggestion",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "vorschlagen",
+        "en": "to suggest",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "vorsichtig",
+        "en": "careful",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Vorstellung",
+        "en": "idea / performance",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Vorteil",
+        "en": "advantage",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wachsen",
+        "en": "to grow",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "während",
+        "en": "during / while",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Wald",
+        "en": "forest",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "die Wand",
+        "en": "wall",
+        "cat": "House & Home"
+      },
+      {
+        "de": "warm",
+        "en": "warm",
+        "cat": "Nature & Weather"
+      },
+      {
+        "de": "die Waschmaschine",
+        "en": "washing machine",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das WC",
+        "en": "toilet (WC)",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Wechselgeld",
+        "en": "change (money)",
+        "cat": "Shopping & Money"
+      },
+      {
+        "de": "wechseln",
+        "en": "to change / exchange",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Weg",
+        "en": "way / path",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "weg",
+        "en": "away / gone",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wegen",
+        "en": "because of",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "weich",
+        "en": "soft",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "Weihnachten",
+        "en": "Christmas",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "weil",
+        "en": "because",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "weinen",
+        "en": "to cry",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "weiß",
+        "en": "white",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "wenden",
+        "en": "to turn",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "wenn",
+        "en": "if / when",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "werfen",
+        "en": "to throw",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Werkstatt",
+        "en": "workshop / garage",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Wert",
+        "en": "value",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wieder",
+        "en": "again",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Winter",
+        "en": "winter",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "wirklich",
+        "en": "really",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Witz",
+        "en": "joke",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Woche",
+        "en": "week",
+        "cat": "Time & Dates"
+      },
+      {
+        "de": "das Wochenende",
+        "en": "weekend",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wohl",
+        "en": "probably / well",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "das Wohnzimmer",
+        "en": "living room",
+        "cat": "House & Home"
+      },
+      {
+        "de": "das Wörterbuch",
+        "en": "dictionary",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "wünschen",
+        "en": "to wish",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "der Zahn",
+        "en": "tooth",
+        "cat": "Body & Health"
+      },
+      {
+        "de": "der Zahnarzt",
+        "en": "dentist",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "zeigen",
+        "en": "to show",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "die Zeitschrift",
+        "en": "magazine",
+        "cat": "Technology & Media"
+      },
+      {
+        "de": "das Zelt",
+        "en": "tent",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "das Zentrum",
+        "en": "center",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "zerbrechen",
+        "en": "to break",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "ziehen",
+        "en": "to pull / move",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "das Ziel",
+        "en": "goal / destination",
+        "cat": "Travel & Transport"
+      },
+      {
+        "de": "ziemlich",
+        "en": "quite / rather",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "der Zoo",
+        "en": "zoo",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "der Zucker",
+        "en": "sugar",
+        "cat": "Food & Drink"
+      },
+      {
+        "de": "zuerst",
+        "en": "first (of all)",
+        "cat": "Numbers & Quantities"
+      },
+      {
+        "de": "der Zufall",
+        "en": "coincidence",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "die Zukunft",
+        "en": "future",
+        "cat": "General Vocabulary"
+      },
+      {
+        "de": "zumachen",
+        "en": "to close",
+        "cat": "Actions & Verbs"
+      },
+      {
+        "de": "zwar",
+        "en": "indeed / admittedly",
+        "cat": "Descriptions & Adjectives"
+      },
+      {
+        "de": "die Zwiebel",
+        "en": "onion",
+        "cat": "General Vocabulary"
+      }
+    ]
   }
 }

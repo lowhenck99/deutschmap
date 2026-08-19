@@ -7,6 +7,37 @@
 <meta name="description" content="Master German vocabulary effortlessly from A1 to C2 with DEUTSCHMAP. Interactive cards aligned with Goethe-Institut standards, audio pronunciation, and progress tracking." />
 <meta name="keywords" content="German vocabulary, Goethe Institut A1 A2 B1 B2 C1 C2, learn German, German words flashcards, Deutsch lernen, German pronunciation" />
 <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://deutschmap.netlify.app/" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DEUTSCHMAP" />
+<meta property="og:title" content="DEUTSCHMAP — Learn German Vocabulary A1 to C2" />
+<meta property="og:description" content="Master German vocabulary effortlessly from A1 to C2 with DEUTSCHMAP. Interactive cards aligned with Goethe-Institut standards, audio pronunciation, and progress tracking." />
+<meta property="og:url" content="https://deutschmap.netlify.app/" />
+<meta property="og:image" content="https://deutschmap.netlify.app/favicon.svg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DEUTSCHMAP — Learn German Vocabulary A1 to C2" />
+<meta name="twitter:description" content="Master German vocabulary effortlessly from A1 to C2 with DEUTSCHMAP. Interactive cards, audio pronunciation, and progress tracking." />
+<meta name="twitter:image" content="https://deutschmap.netlify.app/favicon.svg" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "DEUTSCHMAP",
+  "description": "Interactive platform to learn and memorize German vocabulary from A1 to C2, aligned with Goethe-Institut standards, featuring native audio pronunciation and progress tracking.",
+  "url": "https://deutschmap.netlify.app/",
+  "inLanguage": ["en", "de"],
+  "learningResourceType": "Flashcards",
+  "educationalLevel": ["A1", "A2", "B1", "B2", "C1", "C2"],
+  "isAccessibleForFree": true,
+  "provider": {
+    "@type": "Organization",
+    "name": "DEUTSCHMAP"
+  }
+}
+</script>
 
 <style>
 /* ==========================================================================
@@ -232,6 +263,26 @@ body {
   margin-top: 20px;
 }
 
+.level-progress { margin-top: 16px; }
+.level-progress-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+.level-progress-bar {
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: #e8e8ed;
+  overflow: hidden;
+}
+.level-progress-bar span {
+  display: block;
+  height: 100%;
+  background: #34c759;
+  border-radius: var(--radius-pill);
+}
+
 .level-card.disabled .card-action {
   color: var(--text-tertiary);
 }
@@ -351,6 +402,10 @@ body {
           </div>
           <h3 class="card-title">Beginner</h3>
           <p class="card-desc">Essential greetings, daily expressions, and basic foundation words.</p>
+          <div class="level-progress" data-progress="a1" style="display:none">
+            <div class="level-progress-label"></div>
+            <div class="level-progress-bar"><span style="width:0%"></span></div>
+          </div>
         </div>
         <div class="card-action">Start A1 →</div>
       </a>
@@ -363,6 +418,10 @@ body {
           </div>
           <h3 class="card-title">Elementary</h3>
           <p class="card-desc">Everyday conversations, shopping, travel, and routine situations.</p>
+          <div class="level-progress" data-progress="a2" style="display:none">
+            <div class="level-progress-label"></div>
+            <div class="level-progress-bar"><span style="width:0%"></span></div>
+          </div>
         </div>
         <div class="card-action">Start A2 →</div>
       </a>
@@ -448,7 +507,7 @@ body {
         </div>
         <div class="feature-item">
           <h4>Interactive Memory Tracking</h4>
-          <p>Easily mark words as "Mastered" or "To Review" with persistent cookie tracking so you never lose sight of your learning progress.</p>
+          <p>Easily mark words as "Mastered" or "To Review", filter by topic, and get nudged when it's time to revisit words you're still learning.</p>
         </div>
         <div class="feature-item">
           <h4>Audio Pronunciation</h4>
@@ -468,6 +527,42 @@ body {
     <p>© 2026 DEUTSCHMAP. Designed for intuitive German learning.</p>
   </div>
 </footer>
+
+<script>
+(async function renderHomeProgress() {
+  let status;
+  try {
+    status = JSON.parse(localStorage.getItem('deutschmap_status') || '{}');
+  } catch (e) {
+    return;
+  }
+  if (!status || Object.keys(status).length === 0) return;
+
+  let vocab;
+  try {
+    const res = await fetch('vocabulary.json');
+    vocab = await res.json();
+  } catch (e) {
+    return;
+  }
+
+  document.querySelectorAll('[data-progress]').forEach(el => {
+    const level = el.getAttribute('data-progress');
+    const key = Object.keys(vocab).find(k => k.toLowerCase() === level);
+    if (!key) return;
+    const total = Object.keys(vocab[key]).length;
+    if (!total) return;
+
+    const known = Object.keys(status).filter(id => id.startsWith(level + '-') && status[id] === 'is-know').length;
+    if (known === 0) return;
+
+    const pct = Math.round((known / total) * 100);
+    el.querySelector('.level-progress-label').textContent = `${known}/${total} mastered`;
+    el.querySelector('.level-progress-bar span').style.width = pct + '%';
+    el.style.display = 'block';
+  });
+})();
+</script>
 
 </body>
 </html>
