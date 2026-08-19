@@ -3,61 +3,62 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>DEUTSCHMAP — Interactive German Vocabulary Grid</title>
-<meta name="description" content="Learn German vocabulary from level A1 to C2 with DEUTSCHMAP. Interactive cards, German audio, and progress tracking." />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<title>DEUTSCHMAP — Interactive Vocabulary Grid</title>
+<meta name="description" content="Learn German vocabulary from level A1 to C2 with DEUTSCHMAP. Interactive cards, audio pronunciation, and progress tracking." />
 
 <style>
+/* ==========================================================================
+   DEUTSCHMAP — Apple Minimalist Grid Theme
+   ========================================================================== */
 :root {
-  --bg: #181b22;
-  --panel: #222732;
-  --panel-hover: #2b3240;
-  --panel-border: rgba(255, 255, 255, 0.08);
-  --panel-border-hover: rgba(255, 255, 255, 0.2);
+  --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
-  --ink: #f4f4f6;
-  --ink-muted: #949ba8;
-  --ink-dim: #5c6475;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-dim: #a1a1a6;
 
-  /* HSKMap Style Colors for States */
-  --status-know-bg: rgba(52, 199, 89, 0.12);
-  --status-know-border: #34C759;
-  --status-know-color: #34C759;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
 
-  --status-review-bg: rgba(255, 204, 0, 0.12);
-  --status-review-border: #FFCC00;
-  --status-review-color: #FFCC00;
+  /* State Colors */
+  --status-know-bg: rgba(52, 199, 89, 0.08);
+  --status-know-border: #34c759;
+  --status-know-color: #248a3d;
 
-  --accent-red: #d1382e;
-  --glass: rgba(24, 27, 34, 0.88);
-  
-  --radius-lg: 14px;
+  --status-review-bg: rgba(255, 149, 0, 0.08);
+  --status-review-border: #ff9500;
+  --status-review-color: #c77300;
+
+  --panel-bg: #ffffff;
+  --panel-border: rgba(0, 0, 0, 0.08);
+  --panel-border-hover: rgba(0, 0, 0, 0.2);
+
+  --radius-lg: 16px;
   --radius-md: 10px;
-  
+  --radius-pill: 980px;
+
   --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
-html, body { 
-  margin: 0; 
-  padding: 0; 
-  background-color: var(--bg); 
-  color: var(--ink); 
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
-  min-height: 100vh; 
-  padding-bottom: 60px; 
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-apple);
+  min-height: 100vh;
+  padding-bottom: 60px;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
 }
-
-.display-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.03em; }
 
 .scroll-row {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   overflow-x: auto;
   scrollbar-width: none;
   padding: 4px 0;
@@ -67,133 +68,144 @@ html, body {
 
 /* Header */
 .header-wrapper {
-  background: var(--glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--panel-border);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.topbar { max-width: 1280px; margin: 0 auto; padding: 16px 24px; }
+.topbar { max-width: 1200px; margin: 0 auto; padding: 14px 24px; }
 .brand-row { display: flex; align-items: center; justify-content: space-between; }
-.brand { display: flex; align-items: center; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 14px; }
 
 .back-btn {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: var(--panel);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-secondary);
   border: 1px solid var(--panel-border);
-  color: var(--ink);
+  color: var(--text-primary);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   transition: var(--transition);
 }
-.back-btn:hover { background: var(--panel-hover); border-color: var(--panel-border-hover); }
+.back-btn:hover { background: #e8e8ed; }
 
-.brand-info { display: flex; align-items: center; gap: 12px; }
+.brand-info { display: flex; align-items: center; gap: 10px; }
+.brand h1 { font-size: 18px; font-weight: 600; margin: 0; letter-spacing: -0.02em; }
+.brand .sub { font-size: 12px; color: var(--text-secondary); font-weight: 400; }
+
 .brand-tag {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  background: var(--accent-red);
-  color: #FFFFFF;
-  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--text-primary);
+  color: #ffffff;
+  padding: 3px 8px;
   border-radius: 6px;
 }
-.brand h1 { font-size: 22px; margin: 0; }
-.brand .sub { font-size: 13px; color: var(--ink-muted); font-weight: 500; }
 
 /* Statistics */
 .stats-bar {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--panel-border);
 }
 
 .stat-badge {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-muted);
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
 }
-.dot { width: 8px; height: 8px; border-radius: 50%; }
-.dot.known { background: #34C759; }
-.dot.review { background: #FFCC00; }
-.dot.unmarked { background: var(--ink-dim); }
+.dot { width: 7px; height: 7px; border-radius: 50%; }
+.dot.known { background: #34c759; }
+.dot.review { background: #ff9500; }
+.dot.unmarked { background: var(--text-dim); }
 
 .progressbar {
   flex: 1;
   height: 6px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
   display: flex;
-  background: var(--panel);
+  background: #e8e8ed;
 }
 .progressbar span { height: 100%; transition: width 0.3s ease; }
 
 /* Controls & Search */
 .controls {
-  max-width: 1280px;
-  margin: 24px auto 0;
+  max-width: 1200px;
+  margin: 20px auto 0;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  background: var(--panel);
+  background: var(--panel-bg);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius-md);
-  padding: 12px 18px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 .search-box input {
   background: none;
   border: none;
   outline: none;
-  color: var(--ink);
+  color: var(--text-primary);
   font-family: inherit;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
   width: 100%;
 }
-.search-box input::placeholder { color: var(--ink-dim); }
+.search-box input::placeholder { color: var(--text-dim); }
 
 .pill-btn, .level-pill {
   border: 1px solid var(--panel-border);
-  background: var(--panel);
-  color: var(--ink-muted);
+  background: var(--panel-bg);
+  color: var(--text-secondary);
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
-  padding: 8px 18px;
-  border-radius: 999px;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.pill-btn:hover, .level-pill:hover { border-color: var(--panel-border-hover); color: var(--ink); }
-.pill-btn.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.level-pill.active { background: var(--accent-red); border-color: var(--accent-red); color: #FFFFFF; }
+.pill-btn:hover, .level-pill:hover { border-color: var(--panel-border-hover); color: var(--text-primary); }
+.pill-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #ffffff; }
+.level-pill.active { background: var(--apple-blue); border-color: var(--apple-blue); color: #ffffff; }
 
-/* HSKMAP Style Grid */
-.content { max-width: 1280px; margin: 24px auto 0; padding: 0 24px; }
-.shown-count { font-size: 13px; font-weight: 600; color: var(--ink-muted); margin-bottom: 16px; }
+.badge-coming {
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #e8e8ed;
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Grid Container */
+.content { max-width: 1200px; margin: 20px auto 0; padding: 0 24px; }
+.shown-count { font-size: 13px; font-weight: 500; color: var(--text-secondary); margin-bottom: 14px; }
 
 .tile-grid {
   display: grid;
@@ -201,14 +213,13 @@ html, body {
   gap: 12px;
 }
 
-/* HSKMAP Tile Button */
 .word-tile {
   position: relative;
-  background: var(--panel);
+  background: var(--panel-bg);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius-lg);
   padding: 16px 12px;
-  min-height: 100px;
+  min-height: 96px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,32 +229,32 @@ html, body {
   outline: none;
   width: 100%;
   transition: var(--transition);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .word-tile:hover { 
-  transform: translateY(-2px); 
-  background: var(--panel-hover);
+  transform: scale(1.02); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   border-color: var(--panel-border-hover);
 }
 
 .tile-de {
-  font-size: calc(20px * var(--tile-font-scale, 1));
-  font-weight: 700;
-  color: var(--ink);
-  line-height: 1.2;
+  font-size: calc(18px * var(--tile-font-scale, 1));
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
   word-break: break-word;
 }
 
 .tile-en {
   font-size: 13px;
-  font-weight: 500;
-  color: var(--ink-muted);
+  font-weight: 400;
+  color: var(--text-secondary);
   margin-top: 6px;
 }
 .tile-en.hidden { display: none; }
 
-/* HSKMAP States */
+/* States */
 .word-tile.is-know {
   background: var(--status-know-bg);
   border-color: var(--status-know-border);
@@ -261,33 +272,45 @@ html, body {
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: none;
-  background: rgba(0, 0, 0, 0.2);
-  color: var(--ink-muted);
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: var(--transition);
 }
-.audio-btn:hover { color: var(--ink); background: rgba(0, 0, 0, 0.4); transform: scale(1.1); }
+.audio-btn:hover { color: var(--text-primary); background: rgba(0, 0, 0, 0.08); transform: scale(1.08); }
 
 /* Status Indicator */
 .status-indicator {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--ink-dim);
+  border: 2px solid #d1d1d6;
   background: transparent;
 }
-.word-tile.is-know .status-indicator { background: var(--status-know-color); border-color: var(--status-know-color); }
-.word-tile.is-review .status-indicator { background: var(--status-review-color); border-color: var(--status-review-color); }
+.word-tile.is-know .status-indicator { background: var(--status-know-border); border-color: var(--status-know-border); }
+.word-tile.is-review .status-indicator { background: var(--status-review-border); border-color: var(--status-review-border); }
+
+/* Coming Soon Banner */
+.coming-soon-banner {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+.coming-soon-banner h3 { font-size: 20px; font-weight: 600; margin: 0 0 8px; }
+.coming-soon-banner p { color: var(--text-secondary); margin: 0; font-size: 14px; }
 
 @media (min-width: 550px) { .tile-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 850px) { .tile-grid { grid-template-columns: repeat(4, 1fr); } }
@@ -304,8 +327,8 @@ html, body {
         <div class="brand-info">
           <span class="brand-tag" id="current-level-badge">A1</span>
           <div>
-            <h1 class="display-title">DEUTSCHMAP</h1>
-            <div class="sub" id="level-subtitle">Official Goethe-Institut Vocabulary</div>
+            <h1>DEUTSCHMAP</h1>
+            <div class="sub">Goethe-Institut Vocabulary</div>
           </div>
         </div>
       </div>
@@ -317,8 +340,8 @@ html, body {
       <div class="stat-badge"><span class="dot unmarked"></span><span id="count-tolearn">0</span> To Learn</div>
       
       <div class="progressbar">
-        <span id="pb-known" style="background:#34C759"></span>
-        <span id="pb-review" style="background:#FFCC00"></span>
+        <span id="pb-known" style="background:#34c759"></span>
+        <span id="pb-review" style="background:#ff9500"></span>
       </div>
     </div>
   </div>
@@ -328,14 +351,14 @@ html, body {
   <div class="scroll-row" id="level-selector">
     <button class="level-pill active" data-level="a1" onclick="switchLevel('a1')">A1</button>
     <button class="level-pill" data-level="a2" onclick="switchLevel('a2')">A2</button>
-    <button class="level-pill" data-level="b1" onclick="switchLevel('b1')">B1</button>
-    <button class="level-pill" data-level="b2" onclick="switchLevel('b2')">B2</button>
-    <button class="level-pill" data-level="c1" onclick="switchLevel('c1')">C1</button>
-    <button class="level-pill" data-level="c2" onclick="switchLevel('c2')">C2</button>
+    <button class="level-pill" data-level="b1" onclick="switchLevel('b1')">B1 <span class="badge-coming">Coming Soon</span></button>
+    <button class="level-pill" data-level="b2" onclick="switchLevel('b2')">B2 <span class="badge-coming">Coming Soon</span></button>
+    <button class="level-pill" data-level="c1" onclick="switchLevel('c1')">C1 <span class="badge-coming">Coming Soon</span></button>
+    <button class="level-pill" data-level="c2" onclick="switchLevel('c2')">C2 <span class="badge-coming">Coming Soon</span></button>
   </div>
 
   <div class="search-box">
-    <input id="search" type="text" placeholder="Search for a word (e.g., Guten Tag, Wasser...)" />
+    <input id="search" type="text" placeholder="Search for a word..." />
   </div>
   
   <div class="scroll-row" id="status-filter">
@@ -348,23 +371,57 @@ html, body {
 
 <div class="content">
   <div class="shown-count" id="shown-count">Loading vocabulary...</div>
-  <div class="tile-grid" id="grid"></div>
+  <div id="grid-container">
+    <div class="tile-grid" id="grid"></div>
+  </div>
 </div>
 
 <script>
+// --- COOKIE MANAGEMENT SYSTEM --- //
+function setCookie(name, value, days = 365) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(JSON.stringify(value))}; ${expires}; path=/; SameSite=Lax`;
+}
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i].trim();
+    if (c.indexOf(nameEQ) === 0) {
+      try {
+        return JSON.parse(decodeURIComponent(c.substring(nameEQ.length, c.length)));
+      } catch(e) {
+        return null;
+      }
+    }
+  }
+  return null;
+}
+
+// --- APP STATE --- //
 let VOCABULARY_DB = {};
 let currentLevel = 'a1';
-let state = { status: {}, revealed: {}, query: "", statusFilter: "all" };
+let state = {
+  status: getCookie('deutschmap_status') || {},
+  revealed: {},
+  query: "",
+  statusFilter: "all"
+};
 
-// Dynamic font scale calculation
+function saveStateToCookie() {
+  setCookie('deutschmap_status', state.status);
+}
+
 function calculateFontScale(text) {
-  if (text.length > 18) return 0.6;
-  if (text.length > 14) return 0.72;
-  if (text.length > 10) return 0.85;
+  if (text.length > 18) return 0.65;
+  if (text.length > 14) return 0.78;
+  if (text.length > 10) return 0.88;
   return 1.0;
 }
 
-// Play audio corresponding to cleaned file name
 function playWordAudio(text) {
   const cleanName = text.replace(/ /g, "_").replace(/\//g, "_").replace(/\?/g, "").replace(/!/g, "").toLowerCase();
   const audio = new Audio(`./audio/${cleanName}.mp3`);
@@ -389,7 +446,6 @@ function speakWordFallback(text) {
   window.speechSynthesis.speak(utterance);
 }
 
-// Load JSON database
 async function loadVocabulary() {
   try {
     const response = await fetch('vocabulary.json');
@@ -403,7 +459,7 @@ async function loadVocabulary() {
       switchLevel('a1');
     }
   } catch (error) {
-    document.getElementById("shown-count").textContent = "Error: Unable to load vocabulary.json file";
+    document.getElementById("shown-count").textContent = "Error loading vocabulary data.";
   }
 }
 
@@ -411,21 +467,16 @@ function getLevelKey(lvl) {
   return Object.keys(VOCABULARY_DB).find(k => k.toLowerCase() === lvl.toLowerCase());
 }
 
-// Extraction adapted for { "word": "translation" } format
 function getCurrentWords() {
   const key = getLevelKey(currentLevel);
   if (!key || !VOCABULARY_DB[key]) return [];
   
   const levelData = VOCABULARY_DB[key];
-  
   if (Array.isArray(levelData.words)) {
     return levelData.words;
   }
   
-  return Object.entries(levelData).map(([de, en]) => ({
-    de: de,
-    en: en
-  }));
+  return Object.entries(levelData).map(([de, en]) => ({ de, en }));
 }
 
 function switchLevel(lvl) {
@@ -434,10 +485,8 @@ function switchLevel(lvl) {
   document.getElementById('search').value = "";
   
   const key = getLevelKey(lvl);
-  if (key) {
-    document.getElementById('current-level-badge').textContent = key.toUpperCase();
-  }
-  
+  document.getElementById('current-level-badge').textContent = (key || lvl).toUpperCase();
+
   document.querySelectorAll('#level-selector .level-pill').forEach(b => {
     b.classList.toggle('active', b.getAttribute('data-level').toLowerCase() === lvl.toLowerCase());
   });
@@ -451,6 +500,8 @@ function cycleStatus(id, event) {
   if (!cur) state.status[id] = "is-review";
   else if (cur === "is-review") state.status[id] = "is-know";
   else delete state.status[id];
+  
+  saveStateToCookie();
   render();
 }
 
@@ -468,7 +519,24 @@ function renderStats() {
 }
 
 function renderGrid() {
+  const container = document.getElementById("grid-container");
   const words = getCurrentWords();
+
+  // Handle levels with no data (Coming Soon)
+  if (['b1', 'b2', 'c1', 'c2'].includes(currentLevel.toLowerCase()) && words.length === 0) {
+    document.getElementById("shown-count").textContent = "Level " + currentLevel.toUpperCase();
+    container.innerHTML = `
+      <div class="coming-soon-banner">
+        <h3>Level ${currentLevel.toUpperCase()} is Coming Soon</h3>
+        <p>Vocabulary for this level is currently being prepared and will be available shortly.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = '<div class="tile-grid" id="grid"></div>';
+  const gridEl = document.getElementById("grid");
+
   const filtered = words.map((w, i) => ({ ...w, id: currentLevel + '-' + i })).filter(w => {
     const st = state.status[w.id] || "unmarked";
     if (state.statusFilter !== "all" && st !== state.statusFilter) return false;
@@ -477,8 +545,6 @@ function renderGrid() {
   });
 
   document.getElementById("shown-count").textContent = filtered.length + " of " + words.length + " words shown";
-  const gridEl = document.getElementById("grid");
-  gridEl.innerHTML = "";
 
   const frag = document.createDocumentFragment();
   filtered.forEach(w => {
