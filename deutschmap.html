@@ -3,1271 +3,534 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>DEUTSCHMAP — German Vocabulary</title>
+<title>DEUTSCHMAP — Interactive German Vocabulary Grid</title>
+<meta name="description" content="Learn German vocabulary from level A1 to C2 with DEUTSCHMAP. Interactive cards, German audio, and progress tracking." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* ==========================================================================
-   DEUTSCHMAP — design tokens
-   This file is organized in sections (TOKENS / LAYOUT / COMPONENTS /
-   RESPONSIVE) so it can be dropped into a website as-is.
-   Vocabulary data (DATA) and level config (LEVELS) live in the <script>
-   below, isolated from the UI: adding a level just means adding an object.
-   ========================================================================== */
-:root{
-  --bg: #14171c;
-  --panel: #1c2028;
-  --panel-2: #20242d;
-  --panel-border: #2b303a;
-  --ink: #f2efe6;
-  --ink-dim: #9199a6;
-  --red: #d1382e;
-  --blue: #2f5da8;
-  --yellow: #f0ab1c;
-  --green: #3f9457;
-  --tile-unmarked: #e8e2d3;
-  --tile-unmarked-ink: #1c2028;
-  --tile-review: #f0ab1c;
-  --tile-review-ink: #1c1608;
-  --tile-known: #3f9457;
-  --tile-known-ink: #f2f7f3;
-  --radius: 6px;
-}
-*{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
-html,body{margin:0;padding:0;}
-body{
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Inter', sans-serif;
-  min-height:100vh;
-  padding-bottom: 40px;
+:root {
+  --bg: #181b22;
+  --panel: #222732;
+  --panel-hover: #2b3240;
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --panel-border-hover: rgba(255, 255, 255, 0.2);
+  
+  --ink: #f4f4f6;
+  --ink-muted: #949ba8;
+  --ink-dim: #5c6475;
+
+  /* HSKMap Style Colors for States */
+  --status-know-bg: rgba(52, 199, 89, 0.12);
+  --status-know-border: #34C759;
+  --status-know-color: #34C759;
+
+  --status-review-bg: rgba(255, 204, 0, 0.12);
+  --status-review-border: #FFCC00;
+  --status-review-color: #FFCC00;
+
+  --accent-red: #d1382e;
+  --glass: rgba(24, 27, 34, 0.88);
+  
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ---------- scroll-row helper: used by level tabs, status filter, cats --- */
-.scroll-row{
-  display:flex;
-  gap: 6px;
+*, *::before, *::after { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  background-color: var(--bg); 
+  color: var(--ink); 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+  min-height: 100vh; 
+  padding-bottom: 60px; 
+  -webkit-font-smoothing: antialiased;
+}
+
+.display-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.03em; }
+
+.scroll-row {
+  display: flex;
+  gap: 10px;
   overflow-x: auto;
   scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 2px;
+  padding: 4px 0;
 }
-.scroll-row::-webkit-scrollbar{ display:none; }
-.scroll-row > *{ flex: none; }
+.scroll-row::-webkit-scrollbar { display: none; }
+.scroll-row > * { flex: none; }
 
-/* ---------- level bar (A1 / A2 / B1 ...) --------------------------------- */
-.levelbar{
-  background: #0e1014;
+/* Header */
+.header-wrapper {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--panel-border);
-  padding: 8px 14px;
-}
-.levelbar .scroll-row{ max-width: 1280px; margin: 0 auto; }
-.level-pill{
-  border: 1px solid var(--panel-border);
-  background: var(--panel);
-  color: var(--ink-dim);
-  font-family:'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.03em;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  white-space: nowrap;
-  display:flex;
-  align-items:center;
-  gap: 5px;
-}
-.level-pill.active{
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
-}
-.level-pill[disabled]{
-  opacity: 0.45;
-  cursor: default;
-}
-.level-pill .soon{
-  font-family:'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 9.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0.8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* ---------- top bar (brand + stats) -------------------------------------- */
-.topbar{
-  background: rgba(28, 32, 40, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 3px solid var(--red);
-  padding: 14px 14px 12px;
-  position: sticky;
-  top:0;
-  z-index: 20;
-}
-.brand-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 10px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.brand{ display:flex; align-items:center; gap: 9px; min-width:0; }
-.back-btn{
+.topbar { max-width: 1280px; margin: 0 auto; padding: 16px 24px; }
+.brand-row { display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 16px; }
+
+.back-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
   color: var(--ink);
   text-decoration: none;
-  font-size: 16px;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-}
-.back-btn:hover{
-  background: rgba(255,255,255,0.2);
-  transform: translateX(-2px);
-}
-.brand .mark{
-  font-family:'Space Grotesk', sans-serif;
-  font-weight:700;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  background: var(--red);
-  color: #fff;
-  padding: 3px 7px;
-  border-radius: 3px;
-  flex: none;
-}
-.brand-text{ min-width:0; }
-.brand h1{
-  font-family:'Space Grotesk', sans-serif;
-  font-size: 21px;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-}
-.brand .sub{
-  font-family:'IBM Plex Mono', monospace;
-  font-size: 10.5px;
-  color: var(--ink-dim);
-  letter-spacing: 0.02em;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-
-.stats{
-  max-width: 1280px;
-  margin: 10px auto 0;
-}
-.stats .scroll-row{ margin: 0 -14px; padding: 0 14px 2px; }
-.stat{
-  display:flex;
-  align-items:center;
-  gap:5px;
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--panel-border);
-  font-family:'IBM Plex Mono', monospace;
-  font-size: 12px;
-  white-space:nowrap;
-}
-.dot{width:7px;height:7px;border-radius:50%;flex:none;}
-.dot.known{background:var(--green);}
-.dot.review{background:var(--yellow);}
-.dot.unmarked{background:var(--tile-unmarked);}
-.stat b{font-weight:600;color:var(--ink);}
-
-.progressbar{
-  max-width:1280px;
-  margin: 10px auto 0;
-  height: 5px;
-  border-radius: 4px;
-  overflow:hidden;
-  display:flex;
-  background: rgba(255,255,255,0.06);
-}
-.progressbar span{height:100%;display:block; transition: width .2s ease;}
-
-/* ---------- controls: search / status filter / reset --------------------- */
-.controls{
-  max-width: 1280px;
-  margin: 12px auto 0;
-  display:flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  background: rgba(20, 23, 28, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--panel-border);
-  position: sticky;
-  top: 200px;
-  z-index: 15;
-}
-.search{
-  flex: 1 1 100%;
-  display:flex;
-  align-items:center;
-  gap: 8px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--panel-border);
-  border-radius: var(--radius);
-  padding: 9px 11px;
-}
-.search svg{flex:none; opacity:0.6;}
-.search input{
-  background:none;
-  border:none;
-  outline:none;
-  color: var(--ink);
-  font-family:'Inter', sans-serif;
   font-size: 14px;
-  width: 100%;
-  min-width: 0;
+  font-weight: 600;
+  transition: var(--transition);
 }
-.search input::placeholder{color: var(--ink-dim);}
+.back-btn:hover { background: var(--panel-hover); border-color: var(--panel-border-hover); }
 
-.filter-row{
-  flex: 1 1 100%;
-  display:flex;
+.brand-info { display: flex; align-items: center; gap: 12px; }
+.brand-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--accent-red);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.brand h1 { font-size: 22px; margin: 0; }
+.brand .sub { font-size: 13px; color: var(--ink-muted); font-weight: 500; }
+
+/* Statistics */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
   gap: 8px;
-  align-items:center;
-}
-.filter-row .scroll-row{ flex: 1 1 auto; min-width:0; }
-
-.pill-btn{
-  border: 1px solid var(--panel-border);
-  background: rgba(255,255,255,0.04);
-  color: var(--ink-dim);
-  font-family:'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 12.5px;
-  padding: 8px 12px;
+  padding: 6px 14px;
   border-radius: 999px;
-  cursor:pointer;
-  white-space:nowrap;
-  transition: background .15s, color .15s, border-color .15s;
-}
-.pill-btn:hover{ color: var(--ink); }
-.pill-btn.active{
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #14171c;
-}
-
-.reset-btn{
-  flex: none;
+  background: var(--panel);
   border: 1px solid var(--panel-border);
-  background: rgba(209,56,46,0.12);
-  color: #f0a49e;
-  font-family:'Inter', sans-serif;
-  font-weight:600;
-  font-size: 12px;
-  padding: 8px 11px;
-  border-radius: var(--radius);
-  cursor:pointer;
-}
-.reset-btn:hover{background: rgba(209,56,46,0.22);}
-
-.cats{
-  max-width: 1280px;
-  margin: 10px auto 0;
-}
-.cat-pill{
-  border: 1px solid var(--panel-border);
-  background: rgba(255,255,255,0.03);
-  color: var(--ink-dim);
-  font-family:'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 6px 11px;
+  color: var(--ink-muted);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot.known { background: #34C759; }
+.dot.review { background: #FFCC00; }
+.dot.unmarked { background: var(--ink-dim); }
+
+.progressbar {
+  flex: 1;
+  height: 6px;
   border-radius: 999px;
-  cursor:pointer;
-  white-space:nowrap;
+  overflow: hidden;
+  display: flex;
+  background: var(--panel);
 }
-.cat-pill:hover{ color: var(--ink); border-color:#3a4150; }
-.cat-pill.active{
-  background: var(--blue);
-  border-color: var(--blue);
-  color: #fff;
-}
+.progressbar span { height: 100%; transition: width 0.3s ease; }
 
-/* ---------- content / grid ------------------------------------------------ */
-.content{
+/* Controls & Search */
+.controls {
   max-width: 1280px;
-  margin: 16px auto 0;
-  padding: 0 14px;
-}
-.shown-count{
-  font-family:'IBM Plex Mono', monospace;
-  font-size: 11.5px;
-  color: var(--ink-dim);
-  margin-bottom: 10px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
+.search-box {
+  display: flex;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
 }
-
-.tile{
-  position:relative;
-  background: linear-gradient(135deg, rgba(232, 226, 211, 0.92), rgba(232, 226, 211, 0.85));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--tile-unmarked-ink);
-  border-radius: 8px;
-  padding: 12px 10px 10px;
-  min-height: 75px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  cursor:pointer;
-  user-select:none;
-  transition: transform .15s ease, box-shadow .2s ease, background .15s ease, border-color .15s ease;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  border: 1.5px solid rgba(255,255,255,0.3);
-}
-.tile:active{ transform: scale(0.96); }
-@media (hover:hover){
-  .tile:hover{ 
-    box-shadow: 0 12px 32px rgba(0,0,0,0.32);
-    transform: translateY(-2px);
-    border-color: rgba(255,255,255,0.5);
-  }
-}
-
-.tile.status-review{ 
-  background: linear-gradient(135deg, rgba(240, 171, 28, 0.92), rgba(240, 171, 28, 0.85));
-  color: var(--tile-review-ink); 
-}
-.tile.status-known{ 
-  background: linear-gradient(135deg, rgba(63, 148, 87, 0.92), rgba(63, 148, 87, 0.85));
-  color: var(--tile-known-ink); 
-}
-
-.tile .de{
-  font-family:'Space Grotesk', sans-serif;
-  font-weight:600;
-  font-size: 13.5px;
-  line-height:1.22;
-  word-break: break-word;
-}
-.tile .en{
-  font-family:'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 11px;
-  margin-top: 4px;
-  opacity: 0.85;
-  line-height:1.2;
-  word-break: break-word;
-}
-.tile .en.hidden{ visibility:hidden; height:0; margin:0; }
-
-.status-btn{
-  position:absolute;
-  top: 5px;
-  right: 5px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(0,0,0,0.25);
-  background: rgba(255,255,255,0.35);
-  cursor:pointer;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-.tile.status-known .status-btn, .tile.status-review .status-btn{
-  border-color: rgba(255,255,255,0.5);
-  background: rgba(0,0,0,0.15);
-}
-@media (hover:hover){ .status-btn:hover{ transform: scale(1.15); } }
-
-/* Audio and action buttons on tiles */
-.tile-actions{
-  position:absolute;
-  top: 4px;
-  left: 5px;
-  display:flex;
-  gap: 4px;
-}
-
-.tile-action-btn{
-  width: 24px;
-  height: 24px;
+.search-box input {
+  background: none;
   border: none;
+  outline: none;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+}
+.search-box input::placeholder { color: var(--ink-dim); }
+
+.pill-btn, .level-pill {
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  color: var(--ink-muted);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.pill-btn:hover, .level-pill:hover { border-color: var(--panel-border-hover); color: var(--ink); }
+.pill-btn.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.level-pill.active { background: var(--accent-red); border-color: var(--accent-red); color: #FFFFFF; }
+
+/* HSKMAP Style Grid */
+.content { max-width: 1280px; margin: 24px auto 0; padding: 0 24px; }
+.shown-count { font-size: 13px; font-weight: 600; color: var(--ink-muted); margin-bottom: 16px; }
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* HSKMAP Tile Button */
+.word-tile {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 12px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.word-tile:hover { 
+  transform: translateY(-2px); 
+  background: var(--panel-hover);
+  border-color: var(--panel-border-hover);
+}
+
+.tile-de {
+  font-size: calc(20px * var(--tile-font-scale, 1));
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.tile-en {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}
+.tile-en.hidden { display: none; }
+
+/* HSKMAP States */
+.word-tile.is-know {
+  background: var(--status-know-bg);
+  border-color: var(--status-know-border);
+}
+.word-tile.is-know .tile-de { color: var(--status-know-color); }
+
+.word-tile.is-review {
+  background: var(--status-review-bg);
+  border-color: var(--status-review-border);
+}
+.word-tile.is-review .tile-de { color: var(--status-review-color); }
+
+/* Audio Button */
+.audio-btn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: rgba(0,0,0,0.8);
-  font-size: 13px;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition: background .15s, transform .1s;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
 }
-.tile-action-btn:hover{
-  background: rgba(255,255,255,0.4);
-  transform: scale(1.1);
-}
-.tile-action-btn:active{
-  transform: scale(0.95);
-}
+.audio-btn:hover { color: var(--ink); background: rgba(0, 0, 0, 0.4); transform: scale(1.1); }
 
-.empty{
-  text-align:center;
-  padding: 50px 20px;
-  color: var(--ink-dim);
-  font-family:'IBM Plex Mono', monospace;
-  font-size: 13px;
+/* Status Indicator */
+.status-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--ink-dim);
+  background: transparent;
 }
+.word-tile.is-know .status-indicator { background: var(--status-know-color); border-color: var(--status-know-color); }
+.word-tile.is-review .status-indicator { background: var(--status-review-color); border-color: var(--status-review-color); }
 
-.hint{
-  max-width:1280px;
-  margin: 18px auto 0;
-  padding: 0 14px;
-  font-family:'IBM Plex Mono', monospace;
-  font-size: 10.5px;
-  color: var(--ink-dim);
-  line-height: 1.6;
-}
-.hint span{ display:block; }
-
-/* ---------- responsive: tablet / desktop widen the grid ------------------ */
-@media (min-width: 480px){
-  .grid{ grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .brand h1{ font-size: 26px; }
-  .brand .sub{ font-size: 11.5px; }
-  .tile .de{ font-size: 14.5px; }
-}
-@media (min-width: 720px){
-  .grid{ grid-template-columns: repeat(6, 1fr); }
-  .topbar{ padding: 18px 24px 16px; }
-  .content, .hint, .levelbar .scroll-row{ padding-left:24px; padding-right:24px; }
-  .search{ flex: 1 1 260px; }
-  .filter-row{ flex: 1 1 auto; }
-}
-@media (min-width: 1000px){
-  .grid{ grid-template-columns: repeat(8, 1fr); }
-}
+@media (min-width: 550px) { .tile-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 850px) { .tile-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1100px) { .tile-grid { grid-template-columns: repeat(6, 1fr); } }
 </style>
 </head>
 <body>
 
-<!-- ======================= LEVEL BAR (A1 / A2 / B1 / B2) ================= -->
-<div class="levelbar">
-  <div class="scroll-row" id="levelbar"></div>
-</div>
+<div class="header-wrapper">
+  <div class="topbar">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html" class="back-btn">← Back</a>
+        <div class="brand-info">
+          <span class="brand-tag" id="current-level-badge">A1</span>
+          <div>
+            <h1 class="display-title">DEUTSCHMAP</h1>
+            <div class="sub" id="level-subtitle">Official Goethe-Institut Vocabulary</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- ======================= HEADER: brand + live stats ===================== -->
-<div class="topbar">
-  <div class="brand-row">
-    <div class="brand">
-      <a href="index.html" class="back-btn" title="Back to Level Selection">← Back</a>
-      <span class="mark" id="level-mark">A1</span>
-      <div class="brand-text">
-        <h1>DEUTSCHMAP</h1>
-        <div class="sub" id="level-sub">German vocabulary · Goethe-Institut A1</div>
+    <div class="stats-bar">
+      <div class="stat-badge"><span class="dot known"></span><span id="count-mastered">0</span> Mastered</div>
+      <div class="stat-badge"><span class="dot review"></span><span id="count-review">0</span> To Review</div>
+      <div class="stat-badge"><span class="dot unmarked"></span><span id="count-tolearn">0</span> To Learn</div>
+      
+      <div class="progressbar">
+        <span id="pb-known" style="background:#34C759"></span>
+        <span id="pb-review" style="background:#FFCC00"></span>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="stats">
-    <div class="scroll-row">
-      <div class="stat"><span class="dot known"></span><b id="count-mastered">0</b>&nbsp;Mastered</div>
-      <div class="stat"><span class="dot review"></span><b id="count-review">0</b>&nbsp;To Review</div>
-      <div class="stat"><span class="dot unmarked"></span><b id="count-tolearn">0</b>&nbsp;To Learn</div>
-    </div>
-  </div>
-  <div class="progressbar" id="progressbar">
-    <span id="pb-known" style="background:var(--green)"></span>
-    <span id="pb-review" style="background:var(--yellow)"></span>
-  </div>
-
-  <div class="controls">
-    <div class="search">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input id="search" type="text" placeholder="Search a word…" />
-    </div>
-    <div class="filter-row">
-      <div class="scroll-row" id="status-filter">
-        <button class="pill-btn active" data-f="all">All Words</button>
-        <button class="pill-btn" data-f="unmarked">To Learn</button>
-        <button class="pill-btn" data-f="review">To Review</button>
-        <button class="pill-btn" data-f="known">Mastered</button>
-      </div>
-      <button class="reset-btn" id="reset-btn" title="Reset progress">↺</button>
-      <button class="reset-btn" id="export-btn" title="Export progress as JSON">⬇</button>
-      <button class="reset-btn" id="import-btn" title="Import progress from JSON">⬆</button>
-      <input type="file" id="import-file" accept=".json" style="display:none;" />
-    </div>
+<div class="controls">
+  <div class="scroll-row" id="level-selector">
+    <button class="level-pill active" data-level="a1" onclick="switchLevel('a1')">A1</button>
+    <button class="level-pill" data-level="a2" onclick="switchLevel('a2')">A2</button>
+    <button class="level-pill" data-level="b1" onclick="switchLevel('b1')">B1</button>
+    <button class="level-pill" data-level="b2" onclick="switchLevel('b2')">B2</button>
+    <button class="level-pill" data-level="c1" onclick="switchLevel('c1')">C1</button>
+    <button class="level-pill" data-level="c2" onclick="switchLevel('c2')">C2</button>
   </div>
 
-  <div class="cats">
-    <div class="scroll-row" id="cats"></div>
+  <div class="search-box">
+    <input id="search" type="text" placeholder="Search for a word (e.g., Guten Tag, Wasser...)" />
+  </div>
+  
+  <div class="scroll-row" id="status-filter">
+    <button class="pill-btn active" data-f="all">All Words</button>
+    <button class="pill-btn" data-f="unmarked">To Learn</button>
+    <button class="pill-btn" data-f="is-review">To Review</button>
+    <button class="pill-btn" data-f="is-know">Mastered</button>
   </div>
 </div>
 
-<!-- ======================= CONTENT: tile grid ============================= -->
 <div class="content">
   <div class="shown-count" id="shown-count">Loading vocabulary...</div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty" style="display:none;">No word matches your search.</div>
-</div>
-
-<div class="hint">
-  <span>Tap a word to reveal its translation. Tap the circle to change its status (To Learn → To Review → Mastered).</span>
-  <span>Your progress is saved automatically on this device.</span>
+  <div class="tile-grid" id="grid"></div>
 </div>
 
 <script>
-/* ============================================================================
-   DEUTSCHMAP — script
-   Sections: DATA (vocabulary) → LEVELS (level config) → STATE → STORAGE →
-   RENDER → EVENTS → INIT.
-   To add a level (A2, B1…): create a new word array with the same schema
-   {de, en, cat} and register it in LEVELS below.
-   ============================================================================ */
+let VOCABULARY_DB = {};
+let currentLevel = 'a1';
+let state = { status: {}, revealed: {}, query: "", statusFilter: "all" };
 
-/* ---------------------------- DATA: A1 -------------------------------------*/
-const VOCAB_A1 = [
-  // 1. Greetings
-  {de:"Hallo", en:"Hello", cat:"greetings"},
-  {de:"Guten Morgen", en:"Good morning", cat:"greetings"},
-  {de:"Guten Tag", en:"Good day", cat:"greetings"},
-  {de:"Guten Abend", en:"Good evening", cat:"greetings"},
-  {de:"Gute Nacht", en:"Good night", cat:"greetings"},
-  {de:"Auf Wiedersehen", en:"Goodbye", cat:"greetings"},
-  {de:"Tschüss", en:"Bye (informal)", cat:"greetings"},
-  {de:"Bis bald", en:"See you soon", cat:"greetings"},
-  {de:"Bis später", en:"See you later", cat:"greetings"},
-  {de:"Wie geht's?", en:"How are you?", cat:"greetings"},
-  {de:"Danke", en:"Thank you", cat:"greetings"},
-  {de:"Bitte", en:"Please / you're welcome", cat:"greetings"},
-  {de:"Entschuldigung", en:"Excuse me / sorry", cat:"greetings"},
-  {de:"Es tut mir leid", en:"I'm sorry", cat:"greetings"},
-  {de:"Ja", en:"Yes", cat:"greetings"},
-  {de:"Nein", en:"No", cat:"greetings"},
-  {de:"Vielleicht", en:"Maybe", cat:"greetings"},
-
-  // 2. Introducing yourself
-  {de:"der Name", en:"the name", cat:"introducing"},
-  {de:"der Vorname", en:"the first name", cat:"introducing"},
-  {de:"der Nachname", en:"the last name", cat:"introducing"},
-  {de:"heißen", en:"to be called", cat:"introducing"},
-  {de:"kommen aus", en:"to come from", cat:"introducing"},
-  {de:"wohnen", en:"to live (reside)", cat:"introducing"},
-  {de:"das Alter", en:"the age", cat:"introducing"},
-  {de:"alt sein", en:"to be ... years old", cat:"introducing"},
-  {de:"der Beruf", en:"the profession", cat:"introducing"},
-  {de:"arbeiten", en:"to work", cat:"introducing"},
-  {de:"sprechen", en:"to speak", cat:"introducing"},
-  {de:"die Sprache", en:"the language", cat:"introducing"},
-
-  // 3. Family
-  {de:"die Familie", en:"the family", cat:"famille"},
-  {de:"die Mutter", en:"the mother", cat:"famille"},
-  {de:"der Vater", en:"the father", cat:"famille"},
-  {de:"die Eltern", en:"the parents", cat:"famille"},
-  {de:"die Schwester", en:"the sister", cat:"famille"},
-  {de:"der Bruder", en:"the brother", cat:"famille"},
-  {de:"die Geschwister", en:"the siblings", cat:"famille"},
-  {de:"die Tochter", en:"the daughter", cat:"famille"},
-  {de:"der Sohn", en:"the son", cat:"famille"},
-  {de:"die Oma", en:"the grandmother", cat:"famille"},
-  {de:"der Opa", en:"the grandfather", cat:"famille"},
-  {de:"die Tante", en:"the aunt", cat:"famille"},
-  {de:"der Onkel", en:"the uncle", cat:"famille"},
-  {de:"die Kusine", en:"the cousin (female)", cat:"famille"},
-  {de:"der Cousin", en:"the cousin (male)", cat:"famille"},
-  {de:"die Frau", en:"the woman / Mrs.", cat:"famille"},
-  {de:"der Mann", en:"the man / Mr.", cat:"famille"},
-  {de:"das Kind", en:"the child", cat:"famille"},
-  {de:"der Ehemann", en:"the husband", cat:"famille"},
-  {de:"die Ehefrau", en:"the wife", cat:"famille"},
-
-  // 4. Numbers
-  {de:"null", en:"zero", cat:"numbers"},
-  {de:"eins", en:"one", cat:"numbers"},
-  {de:"zwei", en:"two", cat:"numbers"},
-  {de:"drei", en:"three", cat:"numbers"},
-  {de:"vier", en:"four", cat:"numbers"},
-  {de:"fünf", en:"five", cat:"numbers"},
-  {de:"sechs", en:"six", cat:"numbers"},
-  {de:"sieben", en:"seven", cat:"numbers"},
-  {de:"acht", en:"eight", cat:"numbers"},
-  {de:"neun", en:"nine", cat:"numbers"},
-  {de:"zehn", en:"ten", cat:"numbers"},
-  {de:"elf", en:"eleven", cat:"numbers"},
-  {de:"zwölf", en:"twelve", cat:"numbers"},
-  {de:"zwanzig", en:"twenty", cat:"numbers"},
-  {de:"dreißig", en:"thirty", cat:"numbers"},
-  {de:"vierzig", en:"forty", cat:"numbers"},
-  {de:"fünfzig", en:"fifty", cat:"numbers"},
-  {de:"hundert", en:"one hundred", cat:"numbers"},
-  {de:"tausend", en:"one thousand", cat:"numbers"},
-  {de:"erste", en:"first", cat:"numbers"},
-  {de:"zweite", en:"second", cat:"numbers"},
-  {de:"dritte", en:"third", cat:"numbers"},
-
-  // 5. Colors
-  {de:"rot", en:"red", cat:"colors"},
-  {de:"blau", en:"blue", cat:"colors"},
-  {de:"grün", en:"green", cat:"colors"},
-  {de:"gelb", en:"yellow", cat:"colors"},
-  {de:"schwarz", en:"black", cat:"colors"},
-  {de:"weiß", en:"white", cat:"colors"},
-  {de:"grau", en:"grey", cat:"colors"},
-  {de:"braun", en:"brown", cat:"colors"},
-  {de:"orange", en:"orange", cat:"colors"},
-  {de:"rosa", en:"pink", cat:"colors"},
-  {de:"lila", en:"purple", cat:"colors"},
-
-  // 6. Food & drink
-  {de:"das Brot", en:"the bread", cat:"food"},
-  {de:"die Butter", en:"the butter", cat:"food"},
-  {de:"der Käse", en:"the cheese", cat:"food"},
-  {de:"das Ei", en:"the egg", cat:"food"},
-  {de:"das Fleisch", en:"the meat", cat:"food"},
-  {de:"der Fisch", en:"the fish", cat:"food"},
-  {de:"das Gemüse", en:"the vegetables", cat:"food"},
-  {de:"das Obst", en:"the fruit", cat:"food"},
-  {de:"der Apfel", en:"the apple", cat:"food"},
-  {de:"die Banane", en:"the banana", cat:"food"},
-  {de:"die Kartoffel", en:"the potato", cat:"food"},
-  {de:"die Tomate", en:"the tomato", cat:"food"},
-  {de:"der Reis", en:"the rice", cat:"food"},
-  {de:"die Suppe", en:"the soup", cat:"food"},
-  {de:"der Zucker", en:"the sugar", cat:"food"},
-  {de:"das Salz", en:"the salt", cat:"food"},
-  {de:"das Wasser", en:"the water", cat:"food"},
-  {de:"der Kaffee", en:"the coffee", cat:"food"},
-  {de:"der Tee", en:"the tea", cat:"food"},
-  {de:"die Milch", en:"the milk", cat:"food"},
-  {de:"der Saft", en:"the juice", cat:"food"},
-  {de:"das Bier", en:"the beer", cat:"food"},
-  {de:"der Wein", en:"the wine", cat:"food"},
-  {de:"das Frühstück", en:"breakfast", cat:"food"},
-  {de:"das Mittagessen", en:"lunch", cat:"food"},
-  {de:"das Abendessen", en:"dinner", cat:"food"},
-  {de:"essen", en:"to eat", cat:"food"},
-  {de:"trinken", en:"to drink", cat:"food"},
-  {de:"kochen", en:"to cook", cat:"food"},
-  {de:"schmecken", en:"to taste (good)", cat:"food"},
-
-  // 7. Time & calendar
-  {de:"Montag", en:"Monday", cat:"time"},
-  {de:"Dienstag", en:"Tuesday", cat:"time"},
-  {de:"Mittwoch", en:"Wednesday", cat:"time"},
-  {de:"Donnerstag", en:"Thursday", cat:"time"},
-  {de:"Freitag", en:"Friday", cat:"time"},
-  {de:"Samstag", en:"Saturday", cat:"time"},
-  {de:"Sonntag", en:"Sunday", cat:"time"},
-  {de:"Januar", en:"January", cat:"time"},
-  {de:"Februar", en:"February", cat:"time"},
-  {de:"März", en:"March", cat:"time"},
-  {de:"April", en:"April", cat:"time"},
-  {de:"Mai", en:"May", cat:"time"},
-  {de:"Juni", en:"June", cat:"time"},
-  {de:"Juli", en:"July", cat:"time"},
-  {de:"August", en:"August", cat:"time"},
-  {de:"September", en:"September", cat:"time"},
-  {de:"Oktober", en:"October", cat:"time"},
-  {de:"November", en:"November", cat:"time"},
-  {de:"Dezember", en:"December", cat:"time"},
-  {de:"heute", en:"today", cat:"time"},
-  {de:"morgen", en:"tomorrow", cat:"time"},
-  {de:"gestern", en:"yesterday", cat:"time"},
-  {de:"jetzt", en:"now", cat:"time"},
-  {de:"später", en:"later", cat:"time"},
-  {de:"die Woche", en:"the week", cat:"time"},
-  {de:"der Monat", en:"the month", cat:"time"},
-  {de:"das Jahr", en:"the year", cat:"time"},
-  {de:"die Uhrzeit", en:"the (clock) time", cat:"time"},
-  {de:"die Stunde", en:"the hour", cat:"time"},
-  {de:"die Minute", en:"the minute", cat:"time"},
-  {de:"der Morgen", en:"the morning", cat:"time"},
-  {de:"der Mittag", en:"midday / noon", cat:"time"},
-  {de:"der Abend", en:"the evening", cat:"time"},
-  {de:"die Nacht", en:"the night", cat:"time"},
-
-  // 8. Home
-  {de:"die Wohnung", en:"the apartment", cat:"home"},
-  {de:"das Haus", en:"the house", cat:"home"},
-  {de:"das Zimmer", en:"the room", cat:"home"},
-  {de:"die Küche", en:"the kitchen", cat:"home"},
-  {de:"das Badezimmer", en:"the bathroom", cat:"home"},
-  {de:"das Wohnzimmer", en:"the living room", cat:"home"},
-  {de:"das Schlafzimmer", en:"the bedroom", cat:"home"},
-  {de:"der Tisch", en:"the table", cat:"home"},
-  {de:"der Stuhl", en:"the chair", cat:"home"},
-  {de:"das Bett", en:"the bed", cat:"home"},
-  {de:"das Fenster", en:"the window", cat:"home"},
-  {de:"die Tür", en:"the door", cat:"home"},
-  {de:"der Schrank", en:"the wardrobe / cupboard", cat:"home"},
-
-  // 9. Town & places
-  {de:"die Stadt", en:"the city", cat:"town"},
-  {de:"das Dorf", en:"the village", cat:"town"},
-  {de:"die Straße", en:"the street", cat:"town"},
-  {de:"der Bahnhof", en:"the train station", cat:"town"},
-  {de:"das Geschäft", en:"the shop", cat:"town"},
-  {de:"der Supermarkt", en:"the supermarket", cat:"town"},
-  {de:"die Schule", en:"the school", cat:"town"},
-  {de:"die Universität", en:"the university", cat:"town"},
-  {de:"das Krankenhaus", en:"the hospital", cat:"town"},
-  {de:"die Post", en:"the post office", cat:"town"},
-  {de:"die Bank", en:"the bank", cat:"town"},
-  {de:"das Restaurant", en:"the restaurant", cat:"town"},
-  {de:"das Café", en:"the café", cat:"town"},
-  {de:"der Park", en:"the park", cat:"town"},
-  {de:"die Kirche", en:"the church", cat:"town"},
-  {de:"das Hotel", en:"the hotel", cat:"town"},
-
-  // 10. Transport
-  {de:"das Auto", en:"the car", cat:"transport"},
-  {de:"der Bus", en:"the bus", cat:"transport"},
-  {de:"der Zug", en:"the train", cat:"transport"},
-  {de:"das Fahrrad", en:"the bicycle", cat:"transport"},
-  {de:"die U-Bahn", en:"the subway / metro", cat:"transport"},
-  {de:"das Flugzeug", en:"the airplane", cat:"transport"},
-  {de:"zu Fuß gehen", en:"to go on foot", cat:"transport"},
-  {de:"fahren", en:"to drive / to go (by vehicle)", cat:"transport"},
-  {de:"fliegen", en:"to fly", cat:"transport"},
-
-  // 11. Body & health
-  {de:"der Kopf", en:"the head", cat:"body"},
-  {de:"das Auge", en:"the eye", cat:"body"},
-  {de:"die Nase", en:"the nose", cat:"body"},
-  {de:"der Mund", en:"the mouth", cat:"body"},
-  {de:"das Ohr", en:"the ear", cat:"body"},
-  {de:"die Hand", en:"the hand", cat:"body"},
-  {de:"der Fuß", en:"the foot", cat:"body"},
-  {de:"der Arm", en:"the arm", cat:"body"},
-  {de:"das Bein", en:"the leg", cat:"body"},
-  {de:"krank sein", en:"to be sick", cat:"body"},
-  {de:"gesund sein", en:"to be healthy", cat:"body"},
-  {de:"der Arzt", en:"the doctor", cat:"body"},
-
-  // 12. Clothing
-  {de:"die Hose", en:"the trousers / pants", cat:"clothing"},
-  {de:"das Hemd", en:"the shirt", cat:"clothing"},
-  {de:"das T-Shirt", en:"the T-shirt", cat:"clothing"},
-  {de:"der Rock", en:"the skirt", cat:"clothing"},
-  {de:"das Kleid", en:"the dress", cat:"clothing"},
-  {de:"die Jacke", en:"the jacket", cat:"clothing"},
-  {de:"die Schuhe", en:"the shoes", cat:"clothing"},
-  {de:"die Mütze", en:"the beanie / hat", cat:"clothing"},
-
-  // 13. Verbs
-  {de:"sein", en:"to be", cat:"verbs"},
-  {de:"haben", en:"to have", cat:"verbs"},
-  {de:"machen", en:"to do / make", cat:"verbs"},
-  {de:"gehen", en:"to go", cat:"verbs"},
-  {de:"kommen", en:"to come", cat:"verbs"},
-  {de:"sehen", en:"to see", cat:"verbs"},
-  {de:"wissen", en:"to know (a fact)", cat:"verbs"},
-  {de:"können", en:"can / to be able to", cat:"verbs"},
-  {de:"müssen", en:"must / to have to", cat:"verbs"},
-  {de:"wollen", en:"to want", cat:"verbs"},
-  {de:"mögen", en:"to like", cat:"verbs"},
-  {de:"lieben", en:"to love", cat:"verbs"},
-  {de:"brauchen", en:"to need", cat:"verbs"},
-  {de:"kaufen", en:"to buy", cat:"verbs"},
-  {de:"verkaufen", en:"to sell", cat:"verbs"},
-  {de:"lesen", en:"to read", cat:"verbs"},
-  {de:"schreiben", en:"to write", cat:"verbs"},
-  {de:"hören", en:"to listen / hear", cat:"verbs"},
-  {de:"sagen", en:"to say", cat:"verbs"},
-  {de:"fragen", en:"to ask", cat:"verbs"},
-  {de:"antworten", en:"to answer", cat:"verbs"},
-  {de:"lernen", en:"to learn", cat:"verbs"},
-  {de:"verstehen", en:"to understand", cat:"verbs"},
-  {de:"spielen", en:"to play", cat:"verbs"},
-  {de:"helfen", en:"to help", cat:"verbs"},
-  {de:"geben", en:"to give", cat:"verbs"},
-  {de:"nehmen", en:"to take", cat:"verbs"},
-  {de:"finden", en:"to find", cat:"verbs"},
-  {de:"suchen", en:"to look for", cat:"verbs"},
-  {de:"warten", en:"to wait", cat:"verbs"},
-  {de:"beginnen", en:"to begin", cat:"verbs"},
-  {de:"enden", en:"to end", cat:"verbs"},
-
-  // 14. Adjectives
-  {de:"groß", en:"big", cat:"adjectives"},
-  {de:"klein", en:"small", cat:"adjectives"},
-  {de:"gut", en:"good", cat:"adjectives"},
-  {de:"schlecht", en:"bad", cat:"adjectives"},
-  {de:"neu", en:"new", cat:"adjectives"},
-  {de:"alt", en:"old", cat:"adjectives"},
-  {de:"schön", en:"beautiful", cat:"adjectives"},
-  {de:"hässlich", en:"ugly", cat:"adjectives"},
-  {de:"billig", en:"cheap", cat:"adjectives"},
-  {de:"teuer", en:"expensive", cat:"adjectives"},
-  {de:"schnell", en:"fast", cat:"adjectives"},
-  {de:"langsam", en:"slow", cat:"adjectives"},
-  {de:"einfach", en:"simple", cat:"adjectives"},
-  {de:"schwierig", en:"difficult", cat:"adjectives"},
-  {de:"glücklich", en:"happy", cat:"adjectives"},
-  {de:"traurig", en:"sad", cat:"adjectives"},
-  {de:"müde", en:"tired", cat:"adjectives"},
-  {de:"hungrig", en:"hungry", cat:"adjectives"},
-  {de:"durstig", en:"thirsty", cat:"adjectives"},
-
-  // 15. Question words
-  {de:"wer", en:"who", cat:"questions"},
-  {de:"was", en:"what", cat:"questions"},
-  {de:"wo", en:"where", cat:"questions"},
-  {de:"wann", en:"when", cat:"questions"},
-  {de:"warum", en:"why", cat:"questions"},
-  {de:"wie", en:"how", cat:"questions"},
-  {de:"wie viel", en:"how much", cat:"questions"},
-  {de:"welche", en:"which", cat:"questions"},
-
-  // 16. Prepositions
-  {de:"in", en:"in", cat:"prepositions"},
-  {de:"auf", en:"on", cat:"prepositions"},
-  {de:"unter", en:"under", cat:"prepositions"},
-  {de:"neben", en:"next to", cat:"prepositions"},
-  {de:"vor", en:"in front of", cat:"prepositions"},
-  {de:"hinter", en:"behind", cat:"prepositions"},
-  {de:"zwischen", en:"between", cat:"prepositions"},
-  {de:"mit", en:"with", cat:"prepositions"},
-  {de:"ohne", en:"without", cat:"prepositions"},
-  {de:"für", en:"for", cat:"prepositions"},
-  {de:"von", en:"from / of", cat:"prepositions"},
-  {de:"zu", en:"to", cat:"prepositions"},
-  {de:"nach", en:"after / to", cat:"prepositions"},
-  {de:"bei", en:"at / with (someone's place)", cat:"prepositions"},
-];
-
-/* ---------------------------- CATEGORIES: A1 -------------------------------*/
-const CATS_A1 = [
-  {id:"all", label:"All"},
-  {id:"greetings", label:"Greetings"},
-  {id:"introducing", label:"Introducing yourself"},
-  {id:"famille", label:"Family"},
-  {id:"numbers", label:"Numbers"},
-  {id:"colors", label:"Colors"},
-  {id:"food", label:"Food"},
-  {id:"time", label:"Time"},
-  {id:"home", label:"Home"},
-  {id:"town", label:"Town"},
-  {id:"transport", label:"Transport"},
-  {id:"body", label:"Body & health"},
-  {id:"clothing", label:"Clothing"},
-  {id:"verbs", label:"Verbs"},
-  {id:"adjectives", label:"Adjectives"},
-  {id:"questions", label:"Question words"},
-  {id:"prepositions", label:"Prepositions"},
-];
-
-/* ---------------------------- LEVELS config --------------------------------
-   Add a level later = add an object here with the same schema
-   {id, label, subtitle, available, vocab, cats}. "available:false" shows
-   the level greyed out with a "Soon" badge and disables the click.        */
-const LEVELS = [
-  {
-    id: "a1",
-    label: "A1",
-    subtitle: "German vocabulary · Goethe-Institut A1",
-    available: true,
-    vocab: VOCAB_A1,
-    cats: CATS_A1,
-  },
-  { id: "a2", label: "A2", subtitle: "", available: false, vocab: [], cats: [] },
-  { id: "b1", label: "B1", subtitle: "", available: false, vocab: [], cats: [] },
-  { id: "b2", label: "B2", subtitle: "", available: false, vocab: [], cats: [] },
-];
-
-/* ---------------------------------- STATE ---------------------------------*/
-let state = {
-  levelId: "a1",
-  status: {},       // wordId -> 'review' | 'known'
-  revealed: {},     // wordId -> true (translation visible)
-  query: "",
-  statusFilter: "all",
-  cat: "all",
-};
-
-function currentLevel(){
-  return LEVELS.find(l => l.id === state.levelId) || LEVELS[0];
-}
-function currentVocab(){
-  const lvl = currentLevel();
-  // stable id per word = level + index, avoids collisions between levels
-  return lvl.vocab.map((w, i) => ({ ...w, id: lvl.id + "-" + i }));
+// Dynamic font scale calculation
+function calculateFontScale(text) {
+  if (text.length > 18) return 0.6;
+  if (text.length > 14) return 0.72;
+  if (text.length > 10) return 0.85;
+  return 1.0;
 }
 
-/* --------------------------------- STORAGE ---------------------------------
-   One storage key per level: "deutschmap-progress-a1", etc.
-   Uses native localStorage (persistent, per user). Fails silently if the API
-   isn't available (e.g. private browsing). Supports manual export/import too.  */
-function storageKey(){ return "deutschmap-progress-" + state.levelId; }
+// Play audio corresponding to cleaned file name
+function playWordAudio(text) {
+  const cleanName = text.replace(/ /g, "_").replace(/\//g, "_").replace(/\?/g, "").replace(/!/g, "").toLowerCase();
+  const audio = new Audio(`./audio/${cleanName}.mp3`);
 
-function loadProgress(){
-  state.status = {};
-  try{
-    // Try native localStorage first
-    const stored = localStorage.getItem(storageKey());
-    if(stored){
-      const parsed = JSON.parse(stored);
-      state.status = parsed.status || {};
-      console.log("Progress loaded for level", state.levelId, ":", state.status);
-    }
-  }catch(e){
-    console.warn("Error loading progress:", e);
-  }
+  audio.play().catch(() => {
+    speakWordFallback(text);
+  });
 }
 
-let saveTimeout = null;
-function saveProgress(){
-  clearTimeout(saveTimeout);
-  saveTimeout = setTimeout(() => {
-    try{
-      // Use native localStorage with fallback
-      const data = JSON.stringify({status: state.status});
-      localStorage.setItem(storageKey(), data);
-      console.log("Progress saved for level", state.levelId);
-    }catch(e){
-      console.error("Save error:", e);
-    }
-  }, 250);
-}
-
-/* ---------------------------------- DOM refs -------------------------------*/
-const levelbarEl = document.getElementById("levelbar");
-const catsEl = document.getElementById("cats");
-const statusFilterEl = document.getElementById("status-filter");
-const gridEl = document.getElementById("grid");
-const emptyEl = document.getElementById("empty");
-const shownCountEl = document.getElementById("shown-count");
-const searchEl = document.getElementById("search");
-
-/* ---------------------------------- ACTIONS --------------------------------*/
-function speakWord(text) {
-  if(!('speechSynthesis' in window)) {
-    console.warn("Speech Synthesis not supported");
-    return;
-  }
-  
-  // Cancel any ongoing speech
+function speakWordFallback(text) {
+  if (!('speechSynthesis' in window)) return;
   window.speechSynthesis.cancel();
   
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = 'de-DE';
-  
-  // Dynamic German voice detection
+  utterance.rate = 0.85;
+
   const voices = window.speechSynthesis.getVoices();
-  const germanVoice = voices.find(v => 
-    v.lang.startsWith('de') || 
-    v.lang.includes('DE') ||
-    v.name.toLowerCase().includes('german')
-  );
-  if (germanVoice) {
-    utterance.voice = germanVoice;
-  }
-  
-  utterance.rate = 0.85; // Optimized for learning
-  utterance.pitch = 1.0;
-  utterance.volume = 1.0;
-  
+  const germanVoice = voices.find(v => v.lang.startsWith('de') || v.lang.includes('DE') || v.lang.includes('de_DE'));
+  if (germanVoice) utterance.voice = germanVoice;
+
   window.speechSynthesis.speak(utterance);
 }
 
-// Force voice loading on page start
-if ('speechSynthesis' in window) {
-  window.speechSynthesis.onvoiceschanged = () => {
-    window.speechSynthesis.getVoices();
-  };
+// Load JSON database
+async function loadVocabulary() {
+  try {
+    const response = await fetch('vocabulary.json');
+    VOCABULARY_DB = await response.json();
+    
+    const params = new URLSearchParams(window.location.search);
+    const lvlParam = params.get('level');
+    if (lvlParam && getLevelKey(lvlParam)) {
+      switchLevel(lvlParam);
+    } else {
+      switchLevel('a1');
+    }
+  } catch (error) {
+    document.getElementById("shown-count").textContent = "Error: Unable to load vocabulary.json file";
+  }
 }
 
-function cycleStatus(id){
-  const cur = state.status[id];
-  if(!cur) state.status[id] = "review";
-  else if(cur === "review") state.status[id] = "known";
-  else delete state.status[id];
-  saveProgress();
-  renderStats();
-  renderGrid();
+function getLevelKey(lvl) {
+  return Object.keys(VOCABULARY_DB).find(k => k.toLowerCase() === lvl.toLowerCase());
 }
 
-function toggleReveal(id){
-  state.revealed[id] = !state.revealed[id];
-  renderGrid();
+// Extraction adapted for { "word": "translation" } format
+function getCurrentWords() {
+  const key = getLevelKey(currentLevel);
+  if (!key || !VOCABULARY_DB[key]) return [];
+  
+  const levelData = VOCABULARY_DB[key];
+  
+  if (Array.isArray(levelData.words)) {
+    return levelData.words;
+  }
+  
+  return Object.entries(levelData).map(([de, en]) => ({
+    de: de,
+    en: en
+  }));
 }
 
-async function switchLevel(id){
-  const lvl = LEVELS.find(l => l.id === id);
-  if(!lvl || !lvl.available) return;
-  state.levelId = id;
+function switchLevel(lvl) {
+  currentLevel = lvl;
   state.query = "";
-  state.statusFilter = "all";
-  state.cat = "all";
-  state.revealed = {};
-  searchEl.value = "";
-  await loadProgress();
-  renderLevelBar();
-  renderHeaderForLevel();
-  renderCats();
-  renderStatusFilterActive();
+  document.getElementById('search').value = "";
+  
+  const key = getLevelKey(lvl);
+  if (key) {
+    document.getElementById('current-level-badge').textContent = key.toUpperCase();
+  }
+  
+  document.querySelectorAll('#level-selector .level-pill').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-level').toLowerCase() === lvl.toLowerCase());
+  });
+
   render();
 }
 
-/* ---------------------------------- FILTERING ------------------------------*/
-function matchesFilters(w){
-  if(state.cat !== "all" && w.cat !== state.cat) return false;
-  const st = state.status[w.id] || "unmarked";
-  if(state.statusFilter !== "all" && st !== state.statusFilter) return false;
-  if(state.query){
-    const q = state.query.toLowerCase();
-    if(!w.de.toLowerCase().includes(q) && !w.en.toLowerCase().includes(q)) return false;
-  }
-  return true;
+function cycleStatus(id, event) {
+  if (event) event.stopPropagation();
+  const cur = state.status[id];
+  if (!cur) state.status[id] = "is-review";
+  else if (cur === "is-review") state.status[id] = "is-know";
+  else delete state.status[id];
+  render();
 }
 
-/* ---------------------------------- RENDER ---------------------------------*/
-function renderLevelBar(){
-  levelbarEl.innerHTML = "";
-  LEVELS.forEach(lvl => {
-    const btn = document.createElement("button");
-    btn.className = "level-pill" + (lvl.id === state.levelId ? " active" : "");
-    if(!lvl.available) btn.setAttribute("disabled", "disabled");
-    btn.innerHTML = lvl.label + (!lvl.available ? '<span class="soon">Soon</span>' : "");
-    btn.addEventListener("click", () => switchLevel(lvl.id));
-    levelbarEl.appendChild(btn);
-  });
-}
-
-function renderHeaderForLevel(){
-  const lvl = currentLevel();
-  document.getElementById("level-mark").textContent = lvl.label;
-  document.getElementById("level-sub").textContent = lvl.subtitle;
-}
-
-function renderCats(){
-  const lvl = currentLevel();
-  catsEl.innerHTML = "";
-  lvl.cats.forEach(c => {
-    const btn = document.createElement("button");
-    btn.className = "cat-pill" + (c.id === state.cat ? " active" : "");
-    btn.textContent = c.label;
-    btn.addEventListener("click", () => {
-      state.cat = c.id;
-      renderCats();
-      renderGrid();
-    });
-    catsEl.appendChild(btn);
-  });
-}
-
-function renderStatusFilterActive(){
-  statusFilterEl.querySelectorAll("button").forEach(b => {
-    b.classList.toggle("active", b.getAttribute("data-f") === state.statusFilter);
-  });
-}
-
-function renderStats(){
-  const vocab = currentVocab();
-  const known = vocab.filter(w => state.status[w.id] === "known").length;
-  const review = vocab.filter(w => state.status[w.id] === "review").length;
-  const total = vocab.length || 1;
-  const unmarked = vocab.length - known - review;
+function renderStats() {
+  const words = getCurrentWords();
+  const known = words.filter((w, i) => state.status[currentLevel + '-' + i] === "is-know").length;
+  const review = words.filter((w, i) => state.status[currentLevel + '-' + i] === "is-review").length;
+  const total = words.length || 1;
+  
   document.getElementById("count-mastered").textContent = known;
   document.getElementById("count-review").textContent = review;
-  document.getElementById("count-tolearn").textContent = unmarked;
-  document.getElementById("pb-known").style.width = (known/total*100) + "%";
-  document.getElementById("pb-review").style.width = (review/total*100) + "%";
+  document.getElementById("count-tolearn").textContent = words.length - known - review;
+  document.getElementById("pb-known").style.width = (known / total * 100) + "%";
+  document.getElementById("pb-review").style.width = (review / total * 100) + "%";
 }
 
-function renderGrid(){
-  const vocab = currentVocab();
-  const filtered = vocab.filter(matchesFilters);
-  shownCountEl.textContent = filtered.length + " / " + vocab.length + " words shown";
+function renderGrid() {
+  const words = getCurrentWords();
+  const filtered = words.map((w, i) => ({ ...w, id: currentLevel + '-' + i })).filter(w => {
+    const st = state.status[w.id] || "unmarked";
+    if (state.statusFilter !== "all" && st !== state.statusFilter) return false;
+    if (state.query && !w.de.toLowerCase().includes(state.query.toLowerCase()) && !w.en.toLowerCase().includes(state.query.toLowerCase())) return false;
+    return true;
+  });
+
+  document.getElementById("shown-count").textContent = filtered.length + " of " + words.length + " words shown";
+  const gridEl = document.getElementById("grid");
   gridEl.innerHTML = "";
-  if(filtered.length === 0){
-    emptyEl.style.display = "block";
-  } else {
-    emptyEl.style.display = "none";
-    const frag = document.createDocumentFragment();
-    filtered.forEach(w => {
-      const st = state.status[w.id] || "unmarked";
-      const tile = document.createElement("div");
-      tile.className = "tile status-" + st;
-      tile.setAttribute("data-id", w.id);
 
-      // Action buttons (audio + info)
-      const actions = document.createElement("div");
-      actions.className = "tile-actions";
-      
-      const audioBtn = document.createElement("button");
-      audioBtn.className = "tile-action-btn";
-      audioBtn.innerHTML = "🔊";
-      audioBtn.title = "Speak German";
-      audioBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        speakWord(w.de);
-      });
-      
-      const infoBtn = document.createElement("button");
-      infoBtn.className = "tile-action-btn";
-      infoBtn.innerHTML = "ℹ️";
-      infoBtn.title = "Word info";
-      infoBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        // Reserved for future word details modal
-      });
-      
-      actions.appendChild(audioBtn);
-      actions.appendChild(infoBtn);
-      
-      const de = document.createElement("div");
-      de.className = "de";
-      de.textContent = w.de;
+  const frag = document.createDocumentFragment();
+  filtered.forEach(w => {
+    const st = state.status[w.id] || "";
+    const scale = calculateFontScale(w.de);
+    
+    const tile = document.createElement("button");
+    tile.type = "button";
+    tile.className = `word-tile ${st}`;
+    tile.style.setProperty('--tile-font-scale', scale);
+    
+    tile.innerHTML = `
+      <button type="button" class="audio-btn" title="Listen" onclick="event.stopPropagation(); playWordAudio('${w.de.replace(/'/g, "\\'")}')">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+      </button>
+      <div class="status-indicator" onclick="cycleStatus('${w.id}', event)"></div>
+      <div class="tile-de">${w.de}</div>
+      <div class="tile-en ${state.revealed[w.id] ? "" : "hidden"}">${w.en}</div>
+    `;
 
-      const en = document.createElement("div");
-      en.className = "en" + (state.revealed[w.id] ? "" : " hidden");
-      en.textContent = w.en;
-
-      const btn = document.createElement("div");
-      btn.className = "status-btn";
-      btn.title = "Change status";
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        cycleStatus(w.id);
-      });
-
-      tile.appendChild(actions);
-      tile.appendChild(de);
-      tile.appendChild(en);
-      tile.appendChild(btn);
-      tile.addEventListener("click", () => toggleReveal(w.id));
-
-      frag.appendChild(tile);
+    tile.addEventListener("click", () => {
+      state.revealed[w.id] = !state.revealed[w.id];
+      renderGrid();
     });
-    gridEl.appendChild(frag);
-  }
+
+    frag.appendChild(tile);
+  });
+  gridEl.appendChild(frag);
 }
 
-function render(){
+function render() {
   renderStats();
   renderGrid();
 }
 
-/* --------------------------------- EVENTS -----------------------------------*/
-searchEl.addEventListener("input", (e) => {
+document.getElementById("search").addEventListener("input", (e) => {
   state.query = e.target.value;
   renderGrid();
 });
 
-statusFilterEl.addEventListener("click", (e) => {
+document.getElementById("status-filter").addEventListener("click", (e) => {
   const btn = e.target.closest("button");
-  if(!btn) return;
+  if (!btn) return;
   state.statusFilter = btn.getAttribute("data-f");
-  renderStatusFilterActive();
+  document.querySelectorAll("#status-filter button").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
   renderGrid();
 });
 
-document.getElementById("reset-btn").addEventListener("click", () => {
-  if(!confirm("Reset progress for this level? This cannot be undone.")) return;
-  state.status = {};
-  try{
-    localStorage.setItem(storageKey(), JSON.stringify({status: {}}));
-  }catch(e){ console.error(e); }
-  render();
+window.addEventListener("DOMContentLoaded", () => {
+  loadVocabulary();
 });
-
-// Export progress
-document.getElementById("export-btn").addEventListener("click", () => {
-  try{
-    const data = {
-      level: state.levelId,
-      timestamp: new Date().toISOString(),
-      status: state.status
-    };
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "deutschmap-backup-" + state.levelId + "-" + new Date().getTime() + ".json";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    console.log("Progress exported for level", state.levelId);
-  }catch(e){
-    console.error("Export error:", e);
-    alert("Error exporting progress");
-  }
-});
-
-// Import progress
-document.getElementById("import-btn").addEventListener("click", () => {
-  document.getElementById("import-file").click();
-});
-
-document.getElementById("import-file").addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if(!file) return;
-  
-  const reader = new FileReader();
-  reader.onload = (event) => {
-    try{
-      const content = event.target.result;
-      const data = JSON.parse(content);
-      
-      if(!data.status){
-        alert("Invalid backup file format");
-        return;
-      }
-      
-      state.status = data.status || {};
-      try{
-        localStorage.setItem(storageKey(), JSON.stringify({status: state.status}));
-      }catch(e){ console.error(e); }
-      
-      render();
-      alert("Progress imported successfully!");
-      console.log("Progress imported for level", state.levelId, ":", state.status);
-    }catch(e){
-      console.error("Import error:", e);
-      alert("Error importing backup file: " + e.message);
-    }
-  };
-  reader.readAsText(file);
-  
-  // Reset file input
-  e.target.value = "";
-});
-
-/* ---------------------------------- INIT -------------------------------------*/
-function init(){
-  renderLevelBar();
-  renderHeaderForLevel();
-  renderCats();
-  renderStatusFilterActive();
-  loadProgress();
-  render();
-}
-init();
 </script>
 </body>
 </html>
-
